@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>activ lernen Köln – Deutsch lernen mitten in Köln | Sprachkurse A1–C1, telc & TestDaF</title>
+<meta name="description" content="Deutsch als Fremdsprache in Köln – seit 1998. Intensiv-, Gruppen- & Einzelkurse von A1 bis C1, lizenziertes telc- & TestDaF-Prüfungszentrum. Kleine Gruppen, faire Preise, kostenlose Probestunde. 4,9 ★ bei über 200 Bewertungen." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="assets/logo.png" />
+<style>
+  :root{
+    --blue:#2b5288;
+    --blue-mid:#1f4276;
+    --blue-deep:#15304f;
+    --ink:#16233a;
+    --ink-2:#33425c;
+    --muted:#657189;
+    --accent:#e0673a;
+    --accent-soft:#f6e4d9;
+    --gold:#e0a43c;
+    --line:#e7e9ef;
+    --bg:#ffffff;
+    --cream:#faf6f0;
+    --cream-2:#f4eee4;
+    --soft:#f2f5f9;
+    --radius:18px;
+    --shadow:0 20px 55px -22px rgba(21,48,79,.34);
+    --shadow-sm:0 10px 28px -14px rgba(21,48,79,.22);
+    --maxw:1170px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--bg);
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,h4,.display{font-family:'Fraunces',Georgia,serif;line-height:1.1;letter-spacing:-.01em;font-weight:600}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;
+    font-family:'Inter',sans-serif;font-weight:700;font-size:.74rem;
+    letter-spacing:.18em;text-transform:uppercase;color:var(--accent);
+    margin-bottom:16px;
+  }
+  .eyebrow::before{content:"";width:26px;height:2px;background:var(--accent);border-radius:2px}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:9px;
+    font-family:'Inter',sans-serif;font-weight:600;font-size:1rem;
+    padding:15px 26px;border-radius:999px;cursor:pointer;border:0;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn-primary{background:linear-gradient(120deg,var(--accent),#ee7d4e);color:#fff;box-shadow:0 12px 26px -10px rgba(224,103,58,.7)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 16px 32px -10px rgba(224,103,58,.8)}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1.5px solid rgba(255,255,255,.55);backdrop-filter:blur(4px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.18);transform:translateY(-2px)}
+  .btn-blue{background:var(--blue);color:#fff}
+  .btn-blue:hover{background:var(--blue-mid);transform:translateY(-2px)}
+  .btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+
+  /* HEADER */
+  header{
+    position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);
+    backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand img{height:38px;width:auto}
+  .brand .bt{font-family:'Fraunces',serif;font-weight:600;font-size:1.34rem;color:var(--blue-deep);letter-spacing:-.02em}
+  .brand .bt span{color:var(--accent)}
+  .nav-links{display:flex;align-items:center;gap:26px}
+  .nav-links a{font-weight:500;font-size:.95rem;color:var(--ink-2);transition:color .15s}
+  .nav-links a:hover{color:var(--accent)}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-phone{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--ink)}
+  .nav-phone svg{color:var(--accent)}
+  .burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
+  .burger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.2s}
+
+  /* HERO */
+  .hero{position:relative;min-height:660px;display:flex;align-items:center;color:#fff;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;z-index:0}
+  .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
+  .hero-bg::after{content:"";position:absolute;inset:0;
+    background:linear-gradient(103deg,rgba(15,33,57,.94) 0%,rgba(15,33,57,.78) 42%,rgba(15,33,57,.34) 100%);}
+  .hero .wrap{position:relative;z-index:2;padding-top:80px;padding-bottom:80px}
+  .hero-inner{max-width:720px}
+  .hero .eyebrow{color:#ffb98f}
+  .hero .eyebrow::before{background:#ffb98f}
+  .hero h1{font-size:clamp(2.35rem,6vw,4.15rem);font-weight:600;margin-bottom:20px}
+  .hero h1 .hl{color:#ffcf8f;font-style:italic}
+  .hero p.lead{font-size:clamp(1.05rem,2.2vw,1.28rem);color:rgba(255,255,255,.9);max-width:600px;margin-bottom:20px;font-weight:400}
+  .hero .slogan{font-family:'Fraunces',serif;font-style:italic;font-size:1.02rem;color:rgba(255,255,255,.7);margin-bottom:30px}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:38px}
+  .hero-chips{display:flex;flex-wrap:wrap;gap:12px}
+  .chip{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);
+    font-size:.86rem;font-weight:600;backdrop-filter:blur(4px)}
+  .chip svg{color:#ffcf8f}
+  .chip .star{color:var(--gold)}
+
+  /* STATS */
+  .stats{background:var(--blue-deep)}
+  .stats .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:38px 0}
+  .stat{text-align:center;padding:8px 12px;position:relative;color:#fff}
+  .stat:not(:last-child)::after{content:"";position:absolute;right:0;top:22%;height:56%;width:1px;background:rgba(255,255,255,.15)}
+  .stat .num{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(1.6rem,4vw,2.4rem);color:#fff;line-height:1}
+  .stat .num span{color:#ffcf8f}
+  .stat .lbl{font-size:.78rem;color:rgba(255,255,255,.68);margin-top:9px;font-weight:500}
+
+  /* SECTIONS */
+  section{padding:90px 0}
+  .sec-head{max-width:680px;margin-bottom:52px}
+  .sec-head.center{margin:0 auto 52px;text-align:center}
+  .sec-head h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:600;margin-bottom:16px}
+  .sec-head p{color:var(--muted);font-size:1.08rem}
+  .cream{background:var(--cream)}
+  .soft{background:var(--soft)}
+
+  /* WHY */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+  .vcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;
+    box-shadow:var(--shadow-sm);transition:transform .2s, box-shadow .2s}
+  .vcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .vicon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+    background:var(--accent-soft);color:var(--accent);margin-bottom:18px}
+  .vcard h3{font-size:1.2rem;font-weight:600;margin-bottom:9px}
+  .vcard p{color:var(--muted);font-size:.96rem}
+
+  /* EINBLICKE */
+  .glimpse{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .glimpse figure{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/10;box-shadow:var(--shadow-sm);cursor:pointer;margin:0}
+  .glimpse img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+  .glimpse figure:hover img{transform:scale(1.05)}
+  .glimpse figure::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(15,33,57,.55),transparent 55%)}
+  .glimpse figcaption{position:absolute;left:20px;bottom:16px;z-index:2;color:#fff;font-weight:600;font-size:.98rem}
+
+  /* COURSES */
+  .course-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .course{cursor:pointer;border:1px solid var(--line);border-radius:var(--radius);padding:30px 28px;background:#fff;
+    transition:transform .18s, box-shadow .18s, border-color .18s;position:relative;overflow:hidden}
+  .course::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(var(--accent),var(--gold));opacity:0;transition:opacity .18s}
+  .course:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .course:hover::before{opacity:1}
+  .course .cicon{width:46px;height:46px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:var(--soft);color:var(--blue);margin-bottom:16px}
+  .course .tag{position:absolute;top:22px;right:22px;font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:5px 10px;border-radius:999px}
+  .course h3{font-size:1.24rem;font-weight:600;margin-bottom:7px}
+  .course p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+  .course .more{font-size:.84rem;color:var(--accent);display:inline-flex;align-items:center;gap:6px;font-weight:600}
+  .course .more svg{transition:transform .18s}
+  .course:hover .more svg{transform:translateX(3px)}
+
+  /* LEVELS */
+  .lvl-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .lvl{border:1px solid var(--line);border-radius:16px;padding:26px 22px;background:#fff;box-shadow:var(--shadow-sm);position:relative;transition:transform .2s,box-shadow .2s}
+  .lvl:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .lvl .code{font-family:'Fraunces',serif;font-weight:700;font-size:2rem;color:var(--blue);line-height:1}
+  .lvl .lname{font-weight:600;font-size:.96rem;margin:8px 0 8px}
+  .lvl p{color:var(--muted);font-size:.86rem}
+  .lvl-note{text-align:center;color:var(--muted);margin-top:30px;font-size:.96rem}
+  .lvl-note b{color:var(--ink)}
+
+  /* EXAM BAND */
+  .exam{background:linear-gradient(120deg,var(--blue-deep),var(--blue-mid));color:#fff;border-radius:26px;padding:52px 48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center}
+  .exam h2{color:#fff;font-size:clamp(1.7rem,3.4vw,2.3rem);margin-bottom:14px}
+  .exam p{color:rgba(255,255,255,.82);font-size:1.04rem;margin-bottom:18px}
+  .exam .badges{display:flex;flex-wrap:wrap;gap:12px}
+  .exam .badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:12px 16px;font-weight:600;font-size:.92rem;display:flex;align-items:center;gap:9px}
+  .exam .badge svg{color:#ffcf8f}
+  .exam .ecard{background:#fff;color:var(--ink);border-radius:18px;padding:30px}
+  .exam .ecard h3{font-size:1.24rem;font-weight:600;margin-bottom:10px;color:var(--blue-deep)}
+  .exam .ecard ul{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:6px}
+  .exam .ecard li{display:flex;gap:10px;font-size:.94rem;color:var(--ink-2)}
+  .exam .ecard li svg{color:var(--accent);flex:none;margin-top:3px}
+
+  /* PRICES */
+  .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:20px}
+  .pcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow-sm);position:relative;transition:transform .2s,box-shadow .2s;text-align:center}
+  .pcard:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .pcard.feat{border:2px solid var(--accent);box-shadow:0 20px 46px -18px rgba(224,103,58,.42)}
+  .pcard .ptag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(120deg,var(--accent),#ee7d4e);color:#fff;font-weight:700;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;padding:5px 14px;border-radius:999px;white-space:nowrap}
+  .pcard .dur{font-weight:600;font-size:1.02rem;color:var(--ink);margin-bottom:12px}
+  .pcard .price{font-family:'Fraunces',serif;font-weight:700;font-size:2.1rem;color:var(--blue-deep);line-height:1}
+  .pcard .price small{display:block;font-size:.8rem;font-weight:500;color:var(--muted);margin-top:6px;font-family:'Inter'}
+  .price-note{text-align:center;color:var(--muted);margin-top:30px;font-size:.96rem;max-width:760px;margin-left:auto;margin-right:auto}
+  .price-note b{color:var(--ink)}
+
+  /* REVIEWS */
+  .rev-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
+  .rev-score{background:linear-gradient(150deg,var(--cream),var(--cream-2));border:1px solid var(--line);border-radius:24px;padding:44px 40px;text-align:center}
+  .rev-score .big{font-family:'Fraunces',serif;font-weight:700;font-size:4.4rem;color:var(--blue-deep);line-height:1}
+  .rev-score .stars{color:var(--gold);font-size:1.5rem;letter-spacing:3px;margin:10px 0 8px}
+  .rev-score .cnt{color:var(--muted);font-weight:500;font-size:.98rem}
+  .rev-score .src{margin-top:14px;font-size:.82rem;color:var(--muted)}
+  .rev-points{display:flex;flex-direction:column;gap:16px}
+  .rev-pt{display:flex;gap:15px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-sm)}
+  .rev-pt .ri{width:44px;height:44px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent)}
+  .rev-pt h4{font-size:1.06rem;font-weight:600;margin-bottom:3px}
+  .rev-pt p{color:var(--muted);font-size:.92rem}
+
+  /* LOCATION / CONTACT */
+  .contact{background:var(--blue-deep);color:#fff}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:52px;align-items:start}
+  .contact h2{color:#fff;font-size:clamp(1.9rem,4vw,2.7rem);margin-bottom:16px}
+  .contact .lead{color:rgba(255,255,255,.74);font-size:1.08rem;margin-bottom:30px}
+  .cinfo{display:flex;flex-direction:column;gap:16px;margin-bottom:28px}
+  .cinfo a,.cinfo div.ci-row{display:flex;align-items:center;gap:14px;color:#fff;font-weight:500}
+  .cinfo .ci{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;color:#ffcf8f;flex:none}
+  .cinfo small{display:block;color:rgba(255,255,255,.55);font-weight:500;font-size:.78rem}
+  .hours-box{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:20px 22px;margin-bottom:26px}
+  .hours-box h4{font-family:'Inter';font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#ffcf8f;margin-bottom:12px}
+  .hours-box .row{display:flex;justify-content:space-between;gap:14px;font-size:.92rem;padding:6px 0;border-bottom:1px dashed rgba(255,255,255,.14);color:rgba(255,255,255,.86)}
+  .hours-box .row:last-child{border-bottom:0}
+  .socials{display:flex;gap:12px}
+  .socials a{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;transition:background .2s}
+  .socials a:hover{background:var(--accent)}
+  .form-card{background:#fff;border-radius:22px;padding:34px;color:var(--ink);box-shadow:var(--shadow)}
+  .form-card h3{font-size:1.4rem;font-weight:600;margin-bottom:6px}
+  .form-card p.fh{color:var(--muted);font-size:.94rem;margin-bottom:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:600;font-size:.85rem;margin-bottom:7px}
+  .field input,.field select,.field textarea{
+    width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit;
+    font-size:.96rem;background:var(--soft);transition:border-color .15s, background .15s;color:var(--ink)}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:#fff}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .form-note{font-size:.78rem;color:var(--muted);margin-top:6px}
+  .form-success{display:none;text-align:center;padding:30px 10px}
+  .form-success svg{color:var(--accent);margin-bottom:14px}
+  .form-success h3{margin-bottom:8px}
+  .form-success p{color:var(--muted)}
+
+  /* FOOTER */
+  footer{background:#0f2138;color:rgba(255,255,255,.6);padding:56px 0 30px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:36px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot-logo{background:#fff;border-radius:12px;padding:10px 14px;display:inline-flex;align-items:center;gap:9px;margin-bottom:16px}
+  .foot-logo img{height:30px}
+  .foot-logo b{font-family:'Fraunces',serif;color:var(--blue-deep);font-size:1.1rem}
+  .foot-col h4{color:#fff;font-family:'Inter';font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;margin-bottom:16px}
+  .foot-col a,.foot-col p{color:rgba(255,255,255,.6);font-size:.92rem;display:block;margin-bottom:9px;transition:color .15s}
+  .foot-col a:hover{color:#fff}
+  .foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-top:22px;font-size:.82rem;color:rgba(255,255,255,.42)}
+  .foot-desc{font-size:.92rem;max-width:320px;margin-bottom:16px}
+
+  /* MODAL */
+  .modal-overlay{position:fixed;inset:0;background:rgba(12,24,42,.68);backdrop-filter:blur(4px);
+    z-index:100;display:none;align-items:center;justify-content:center;padding:20px}
+  .modal-overlay.open{display:flex;animation:fade .2s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .modal{background:#fff;border-radius:22px;max-width:540px;width:100%;max-height:90vh;overflow-y:auto;
+    box-shadow:0 30px 80px -20px rgba(0,0,0,.5);animation:pop .25s cubic-bezier(.2,.8,.3,1)}
+  @keyframes pop{from{transform:translateY(16px) scale(.98);opacity:0}to{transform:none;opacity:1}}
+  .modal-head{padding:30px 32px 22px;border-bottom:1px solid var(--line);position:relative}
+  .modal-head .cat{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+  .modal-head h3{font-size:1.5rem;font-weight:600;margin-top:6px}
+  .modal-close{position:absolute;top:22px;right:22px;width:38px;height:38px;border-radius:10px;border:1px solid var(--line);
+    background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s}
+  .modal-close:hover{background:var(--soft);transform:rotate(90deg)}
+  .modal-body{padding:26px 32px 32px}
+  .modal-body p{color:var(--ink-2);margin-bottom:16px}
+  .modal-body ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin-bottom:22px}
+  .modal-body li{display:flex;gap:10px;font-size:.95rem;color:var(--ink-2)}
+  .modal-body li svg{color:var(--accent);flex:none;margin-top:3px}
+  .modal-body .btn{width:100%}
+  .modal-body .disc{font-size:.76rem;color:var(--muted);margin-top:14px;text-align:center}
+
+  @media(max-width:940px){
+    .nav-links,.nav-phone{display:none}
+    .why-grid{grid-template-columns:repeat(2,1fr)}
+    .course-grid{grid-template-columns:repeat(2,1fr)}
+    .lvl-grid{grid-template-columns:repeat(2,1fr)}
+    .exam{grid-template-columns:1fr;padding:40px 34px}
+    .rev-wrap,.contact-grid{grid-template-columns:1fr}
+    .stats .grid{grid-template-columns:repeat(3,1fr);gap:22px 8px}
+    .stat:nth-child(3)::after{display:none}
+    .foot-grid{grid-template-columns:1fr;gap:26px}
+    .burger{display:flex}
+    .nav-cta .btn{display:none}
+    .mobile-menu.open{display:flex}
+  }
+  @media(max-width:560px){
+    section{padding:64px 0}
+    .frow{grid-template-columns:1fr}
+    .why-grid,.course-grid,.lvl-grid,.glimpse{grid-template-columns:1fr}
+    .stats .grid{grid-template-columns:repeat(2,1fr)}
+    .stat::after{display:none!important}
+    .rev-score{padding:34px 26px}
+    .exam{padding:32px 24px}
+  }
+  .mobile-menu{display:none;flex-direction:column;gap:2px;padding:12px 22px 20px;border-top:1px solid var(--line);background:#fff}
+  .mobile-menu a{padding:12px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink-2)}
+  .mobile-menu .btn{margin-top:12px}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><img src="assets/logo.png" alt="activ lernen Köln Logo" /><span class="bt">activ <span>lernen</span></span></a>
+    <nav class="nav-links">
+      <a href="#kurse">Kurse</a>
+      <a href="#stufen">Stufen A1–C1</a>
+      <a href="#pruefungen">Prüfungen</a>
+      <a href="#preise">Preise</a>
+      <a href="#bewertungen">Bewertungen</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+492219525186" class="nav-phone">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        0221 9525186
+      </a>
+      <button class="btn btn-primary" onclick="openEnquiry()">Kostenlose Probestunde</button>
+    </div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menü"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#kurse" onclick="toggleMenu()">Kurse</a>
+    <a href="#stufen" onclick="toggleMenu()">Stufen A1–C1</a>
+    <a href="#pruefungen" onclick="toggleMenu()">Prüfungen</a>
+    <a href="#preise" onclick="toggleMenu()">Preise</a>
+    <a href="#bewertungen" onclick="toggleMenu()">Bewertungen</a>
+    <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
+    <button class="btn btn-primary" onclick="toggleMenu();openEnquiry()">Kostenlose Probestunde</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top" style="padding:0">
+  <div class="hero-bg"><img src="assets/hero.jpg" alt="Deutschkurs in Köln – Sprachschule activ lernen" /></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">Sprachschule in Köln · seit 1998</span>
+      <h1>Deutsch lernen <span class="hl">mitten in Köln</span>.</h1>
+      <p class="lead">Deutsch als Fremdsprache von A1 bis C1 – in kleinen Gruppen, mit erfahrenen Lehrkräften und offiziellen telc- &amp; TestDaF-Prüfungen. Direkt am Kaiser-Wilhelm-Ring, am MediaPark.</p>
+      <p class="slogan">„Die Sprache ist der Schlüssel zur Welt."</p>
+      <div class="hero-cta">
+        <button class="btn btn-primary" onclick="openEnquiry()">Kostenlose Einstufung sichern</button>
+        <a href="#kurse" class="btn btn-ghost">Kurse ansehen</a>
+      </div>
+      <div class="hero-chips">
+        <span class="chip"><span class="star">★</span> 4,9 · über 200 Bewertungen</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>telc- &amp; TestDaF-Prüfungszentrum</span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Kostenlose Probestunde</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="wrap">
+    <div class="grid">
+      <div class="stat"><div class="num">seit<span> 1998</span></div><div class="lbl">Erfahrung in Köln</div></div>
+      <div class="stat"><div class="num">4,9<span> ★</span></div><div class="lbl">über 200 Bewertungen</div></div>
+      <div class="stat"><div class="num">A1–C1</div><div class="lbl">alle Niveaustufen</div></div>
+      <div class="stat"><div class="num">telc<span> · TestDaF</span></div><div class="lbl">Prüfungszentrum</div></div>
+      <div class="stat"><div class="num">1000<span>e</span></div><div class="lbl">erfolgreiche Absolvent:innen</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section id="warum">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Warum activ lernen</span>
+      <h2>Effektives Sprachtraining in angenehmer Atmosphäre.</h2>
+      <p>Seit unserer Gründung 1998 haben mehrere tausend Teilnehmer:innen bei uns erfolgreich Deutsch oder eine Fremdsprache gelernt – mit erfahrenen, bestens ausgebildeten Lehrkräften zu fairen Preisen.</p>
+    </div>
+    <div class="why-grid">
+      <div class="vcard">
+        <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Kleine Gruppen</h3>
+        <p>Begrenzte Teilnehmerzahl und ein Einstufungstest sorgen dafür, dass jede:r die passende Gruppe findet und wirklich zu Wort kommt.</p>
+      </div>
+      <div class="vcard">
+        <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+        <h3>Offizielle Prüfungen</h3>
+        <p>Lizenziertes telc- &amp; TestDaF-Prüfungszentrum und FaDaF-Mitglied. Jede Stufe endet mit Test und anerkanntem Zertifikat – im Kurspreis inbegriffen.</p>
+      </div>
+      <div class="vcard">
+        <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11a8 8 0 0 0-16 0c0 6.5 8 11 8 11z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
+        <h3>Zentrale Lage</h3>
+        <p>Mitten in der Kölner Innenstadt am Kaiser-Wilhelm-Ring, direkt am MediaPark – hervorragend mit Bahn und Bus erreichbar.</p>
+      </div>
+      <div class="vcard">
+        <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Praxisnaher Unterricht</h3>
+        <p>Abwechslungsreich statt trocken: Diskussionen, Rollenspiele, Interviews sowie Gruppen- und Einzelarbeit – Deutsch, das im Alltag und Beruf funktioniert.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EINBLICKE -->
+<section id="einblicke" class="soft" style="padding-top:76px;padding-bottom:76px">
+  <div class="wrap">
+    <div class="glimpse">
+      <figure onclick="openImg('assets/students.jpg')"><img src="assets/students.jpg" alt="Deutschkurs für Fortgeschrittene bei activ lernen Köln" loading="lazy"><figcaption>Lernen in kleinen Gruppen</figcaption></figure>
+      <figure onclick="openImg('assets/office.jpg')"><img src="assets/office.jpg" alt="Lounge der Sprachschule activ lernen in der Kölner Innenstadt" loading="lazy"><figcaption>Mitten in Köln, am MediaPark</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section id="kurse" class="cream">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Unsere Kurse</span>
+      <h2>Der richtige Kurs für Dein Ziel.</h2>
+      <p>Ob Intensivkurs, Abendkurs oder Einzeltraining – tippe auf einen Kurs für alle Details.</p>
+    </div>
+    <div class="course-grid" id="courseGrid"></div>
+    <p style="text-align:center;color:var(--muted);margin-top:36px;font-size:.96rem">Nicht sicher, welcher Kurs passt? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Wir beraten Dich kostenlos &rarr;</a></p>
+  </div>
+</section>
+
+<!-- LEVELS -->
+<section id="stufen">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Niveaustufen</span>
+      <h2>Vom ersten Wort bis zur Hochschulreife: A1 bis C1.</h2>
+      <p>Unser Kursstufensystem folgt dem Gemeinsamen Europäischen Referenzrahmen (GER). Du steigst genau dort ein, wo Du stehst.</p>
+    </div>
+    <div class="lvl-grid">
+      <div class="lvl"><div class="code">A1</div><div class="lname">Anfänger:in</div><p>Erste Sätze für den Alltag: sich vorstellen, einfache Fragen stellen und beantworten.</p></div>
+      <div class="lvl"><div class="code">A2</div><div class="lname">Grundlagen</div><p>Vertraute Situationen meistern – Einkaufen, Arbeit, direkte Umgebung und Alltag.</p></div>
+      <div class="lvl"><div class="code">B1</div><div class="lname">Mittelstufe</div><p>Selbstständig im Alltag zurechtkommen, Erfahrungen schildern, Meinungen begründen.</p></div>
+      <div class="lvl"><div class="code">B2</div><div class="lname">Fortgeschritten</div><p>Fit für Beruf &amp; Studium – auch die B2-Prüfung für die Anerkennung von Pflegekräften.</p></div>
+      <div class="lvl"><div class="code">C1</div><div class="lname">Fachkundig</div><p>Komplexe Themen sicher beherrschen – Grundlage für TestDaF und Studium in Deutschland.</p></div>
+    </div>
+    <p class="lvl-note">Jede Niveaustufe dauert <b>2 Kursmonate = 8 Wochen (160 Unterrichtsstunden)</b> und endet mit einem Test samt Zertifikat gemäß GER – <b>im Kurspreis inbegriffen</b>. Für Anfänger:innen ohne Vorkenntnisse startet am ersten Werktag jedes zweiten Monats ein neuer Intensivkurs; Fortgeschrittene steigen praktisch jederzeit ein.</p>
+  </div>
+</section>
+
+<!-- EXAM BAND -->
+<section id="pruefungen" class="soft" style="padding-top:0;padding-bottom:90px">
+  <div class="wrap" style="padding-top:90px">
+    <div class="exam">
+      <div>
+        <span class="eyebrow" style="color:#ffcf8f">Prüfungen &amp; Zertifikate</span>
+        <h2>Offizielles telc- &amp; TestDaF-Prüfungszentrum.</h2>
+        <p>activ lernen ist lizenziertes Prüfungszentrum für telc und TestDaF sowie Mitglied im FaDaF – dem Fachverband Deutsch als Fremdsprache. Deine Zertifikate sind offiziell anerkannt, für Job, Studium oder Anerkennung.</p>
+        <div class="badges">
+          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>telc</span>
+          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>TestDaF</span>
+          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>FaDaF-Mitglied</span>
+        </div>
+      </div>
+      <div class="ecard">
+        <h3>Prüfung ablegen</h3>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Jede Kursstufe endet mit Test &amp; Zertifikat gemäß GER – im Preis enthalten.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Externe Prüfung A1–C1 (activ-lernen-Zertifikat): 100&nbsp;€, Termine individuell.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Vorbereitung auf telc- &amp; TestDaF-Prüfungen aller Stufen.</span></li>
+        </ul>
+        <button class="btn btn-blue" style="width:100%" onclick="openEnquiry('Prüfung / Zertifikat')">Prüfungstermin anfragen</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICES -->
+<section id="preise" class="cream">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Preise</span>
+      <h2>Faire Preise, transparent aufgeführt.</h2>
+      <p>Intensivkurse in der Gruppe – teilnehmerfreundlich kalkuliert und seit 1998 bewährt. Einstufung, Prüfung &amp; Zertifikat sind inbegriffen.</p>
+    </div>
+    <div class="price-grid">
+      <div class="pcard"><div class="dur">1 Monat</div><div class="price">ab 395&nbsp;€<small>Intensivkurs</small></div></div>
+      <div class="pcard"><div class="dur">2 Monate</div><div class="price">ab 720&nbsp;€<small>eine Niveaustufe</small></div></div>
+      <div class="pcard feat"><span class="ptag">Frühbucher-Preis</span><div class="dur">4 Monate</div><div class="price">1.299&nbsp;€<small>zwei Niveaustufen</small></div></div>
+      <div class="pcard"><div class="dur">6 Monate</div><div class="price">1.849&nbsp;€<small>Frühbucher-Preis</small></div></div>
+      <div class="pcard"><div class="dur">10 Monate</div><div class="price">ab 2.899&nbsp;€<small>Komplettpaket</small></div></div>
+    </div>
+    <p class="price-note"><b>Inklusive:</b> Einstufungstest, Prüfung &amp; Zertifikat gemäß GER. Zusätzlich: <b>Einzeltraining Deutsch ab 39&nbsp;€</b> / Unterrichtsstunde (45&nbsp;Min), weitere Sprachen ab 44&nbsp;€, jeweils zzgl. einmaliger Anmeldegebühr. Wir bieten Dir immer eine <b>kostenlose, unverbindliche Probestunde</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Bei Fragen einfach anfragen &rarr;</a></p>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="bewertungen">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Das sagen die Teilnehmer:innen</span>
+      <h2>Ausgezeichnet bewertet in Köln.</h2>
+    </div>
+    <div class="rev-wrap">
+      <div class="rev-score">
+        <div class="big">4,9</div>
+        <div class="stars">★★★★★</div>
+        <div class="cnt">über 200 Bewertungen</div>
+        <div class="src">Öffentliche Google-Bewertungen</div>
+      </div>
+      <div class="rev-points">
+        <div class="rev-pt">
+          <div class="ri"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4H4l1 12h14l1-12z"/></svg></div>
+          <div><h4>Kompetente, freundliche Lehrkräfte</h4><p>Erfahrene, bestens ausgebildete Lehrer:innen und eine angenehme Lernatmosphäre – immer wieder das meistgenannte Lob.</p></div>
+        </div>
+        <div class="rev-pt">
+          <div class="ri"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div><h4>Starkes Preis-Leistungs-Verhältnis</h4><p>Unterricht auf hohem Niveau zu fairen, teilnehmerfreundlichen Preisen – seit über 25 Jahren.</p></div>
+        </div>
+        <div class="rev-pt">
+          <div class="ri"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
+          <div><h4>Echte Lernerfolge</h4><p>Teilnehmer:innen erreichen ihre Ziele – vom ersten Wort bis zur bestandenen telc- oder TestDaF-Prüfung.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="kontakt" class="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <span class="eyebrow" style="color:#ffcf8f">Kontakt &amp; Anmeldung</span>
+        <h2>Sichere Dir Deine kostenlose Einstufung.</h2>
+        <p class="lead">Schreib uns – wir finden gemeinsam den passenden Kurs und Deinen Starttermin. Persönliche Beratung auf Deutsch, Englisch, Spanisch, Französisch &amp; Portugiesisch.</p>
+        <div class="cinfo">
+          <a href="tel:+492219525186"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span>0221 9525186<small>Ruf uns direkt an</small></span></a>
+          <a href="mailto:info@activlernen.de"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></span><span>info@activlernen.de<small>Schreib uns eine E-Mail</small></span></a>
+          <div class="ci-row"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11a8 8 0 0 0-16 0c0 6.5 8 11 8 11z"/><circle cx="12" cy="11" r="2.5"/></svg></span><span>Kaiser-Wilhelm-Ring 24, 50672 Köln<small>Innenstadt · am MediaPark</small></span></div>
+        </div>
+        <div class="hours-box">
+          <h4>Öffnungszeiten Büro</h4>
+          <div class="row"><span>Montag – Freitag</span><span>10:00 – 17:00 Uhr</span></div>
+          <div class="row"><span>Ohne Termin</span><span>einfach vorbeikommen</span></div>
+          <div class="row"><span>Unterricht</span><span>Mo–Fr, 09:00 – 21:30 Uhr</span></div>
+        </div>
+        <div class="socials">
+          <a href="https://www.instagram.com/activ_lernen/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <!-- FORM -->
+      <div class="form-card">
+        <div id="formInner">
+          <h3>Kostenlose Einstufung &amp; Probestunde</h3>
+          <p class="fh">Fülle das Formular aus – wir melden uns mit Deinem passenden Kurs und Termin.</p>
+          <form onsubmit="submitForm(event)">
+            <div class="frow">
+              <div class="field"><label>Vor- &amp; Nachname</label><input required type="text" placeholder="Dein Name"></div>
+              <div class="field"><label>Telefon</label><input required type="tel" placeholder="Deine Nummer"></div>
+            </div>
+            <div class="field"><label>E-Mail</label><input type="email" placeholder="deine@email.de"></div>
+            <div class="frow">
+              <div class="field"><label>Kurs</label>
+                <select id="f_course">
+                  <option>Intensivkurs Deutsch</option>
+                  <option>Gruppenkurs Deutsch</option>
+                  <option>Abendkurs</option>
+                  <option>Minigruppe Pflegekräfte (B2)</option>
+                  <option>Einzeltraining Deutsch</option>
+                  <option>Fremdsprache (Einzelunterricht)</option>
+                  <option>Prüfung / Zertifikat</option>
+                  <option>Noch unsicher</option>
+                </select>
+              </div>
+              <div class="field"><label>Niveau</label>
+                <select><option>Anfänger:in (A1)</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>Weiß ich nicht</option></select>
+              </div>
+            </div>
+            <div class="field"><label>Nachricht (optional)</label><textarea rows="2" placeholder="Wann möchtest Du starten? Deine Frage an uns…"></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Anfrage absenden</button>
+            <p class="form-note">Mit dem Absenden erklärst Du Dich mit unseren Datenschutzbestimmungen einverstanden.</p>
+          </form>
+        </div>
+        <div class="form-success" id="formSuccess">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+          <h3>Danke, wir haben Deine Anfrage!</h3>
+          <p>Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin. Bis bald bei activ lernen!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-logo"><img src="assets/logo.png" alt="activ lernen"><b>activ lernen</b></div>
+        <p class="foot-desc">Institut für Sprachen und Nachhilfe. Deutsch als Fremdsprache &amp; Fremdsprachen in Köln – seit 1998, mit offiziellen telc- &amp; TestDaF-Prüfungen.</p>
+        <div class="socials">
+          <a href="https://www.instagram.com/activ_lernen/" target="_blank" rel="noopener" aria-label="Instagram" style="width:42px;height:42px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Standort</h4>
+        <p>Kaiser-Wilhelm-Ring 24<br>50672 Köln (Innenstadt)</p>
+        <p>Mo–Fr 10:00–17:00 Uhr<br>ohne Termin</p>
+      </div>
+      <div class="foot-col">
+        <h4>Kontakt</h4>
+        <a href="tel:+492219525186">0221 9525186</a>
+        <a href="mailto:info@activlernen.de">info@activlernen.de</a>
+        <a href="#kurse">Kurse</a>
+        <a href="#preise">Preise</a>
+        <a href="#kontakt">Kostenlose Probestunde</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 activ lernen – Institut für Sprachen und Nachhilfe</span>
+      <span>Impressum · Datenschutz</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
+  <div class="modal" id="modalBox"></div>
+</div>
+
+<script>
+/* ---- Kurse (nur real angebotene Kurse) ---- */
+const COURSES = [
+  {icon:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+   tag:'Beliebteste Wahl', name:'Intensivkurs Deutsch', short:'Deutsch von Montag bis Freitag – der schnellste Weg zum nächsten Niveau.',
+   desc:'Unser Herzstück: der Deutsch-Intensivkurs von Montag bis Freitag. Für Anfänger:innen ohne Vorkenntnisse beginnt am ersten Werktag jedes zweiten Monats ein neuer Kurs. Fortgeschrittene steigen in einen laufenden Kurs praktisch jederzeit ein.',
+   points:['Montag bis Freitag, in kleinen Gruppen','Jede Niveaustufe = 8 Wochen / 160 Unterrichtsstunden','Einstufungstest, Prüfung &amp; Zertifikat inklusive']},
+  {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+   tag:'', name:'Gruppenkurs Deutsch', short:'Abwechslungsreicher Unterricht in einer begrenzten Gruppengröße.',
+   desc:'Deutsch lernen in der Gruppe – lebendig und praxisnah. Durch die begrenzte Teilnehmerzahl und einen vorherigen Einstufungstest findet jede:r die passende Gruppe und kommt aktiv zu Wort.',
+   points:['Begrenzte Teilnehmeranzahl','Diskussionen, Rollenspiele, Interviews, Gruppen- &amp; Einzelarbeit','Alle Niveaustufen A1 bis C1']},
+  {icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+   tag:'', name:'Abendkurs', short:'Deutsch nach Feierabend – für Berufstätige.',
+   desc:'Für alle, die tagsüber arbeiten: Deutsch am Abend, damit sich Dein Sprachkurs gut in Deinen Alltag einfügt. In kleinen Gruppen und mit denselben erfahrenen Lehrkräften wie im Intensivkurs.',
+   points:['Kurszeiten am Abend','Kleine Gruppen &amp; persönliche Betreuung','Alle Niveaustufen A1 bis C1']},
+  {icon:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+   tag:'B2 für die Anerkennung', name:'Minigruppe für Pflegekräfte', short:'Zielgerichtete B2-Vorbereitung für Pflegekräfte aus dem Ausland.',
+   desc:'Sie sind Pflegedienstleiter:in oder verantwortlich für Personal bzw. Weiterbildung in einem Krankenhaus? Wir bereiten Pflegekräfte aus dem Ausland seit Jahren erfolgreich auf die B2-Prüfung vor – notwendig für die Anerkennung.',
+   points:['Fokus B2-Prüfung Pflege','Kleine Minigruppen','Auf Wunsch für Kliniken &amp; Arbeitgeber']},
+  {icon:'<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+   tag:'', name:'Einzeltraining Deutsch', short:'Individueller Unterricht, ganz auf Dein Ziel zugeschnitten.',
+   desc:'Maximale Flexibilität im Einzelunterricht: Tempo, Inhalte und Termine richten sich nach Dir. Ideal für schnelle Fortschritte, gezielte Prüfungsvorbereitung oder Fachdeutsch.',
+   points:['39&nbsp;€ pro Unterrichtsstunde (45&nbsp;Min), zzgl. einmalig 40&nbsp;€ Anmeldung','Flexible Termine nach Absprache','Kostenlose, unverbindliche Probestunde']},
+  {icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
+   tag:'', name:'Fremdsprachen', short:'Einzelunterricht in vielen weiteren Sprachen.',
+   desc:'Neben Deutsch bietet activ lernen auf Anfrage Einzelunterricht in einer Vielzahl von Fremdsprachen – z. B. Englisch, Französisch, Spanisch, Russisch, Griechisch, Türkisch und Portugiesisch.',
+   points:['Englisch, Französisch, Spanisch, Russisch, Türkisch u.&nbsp;v.&nbsp;m.','Individueller Einzelunterricht','44&nbsp;€ pro Unterrichtsstunde (45&nbsp;Min), zzgl. Anmeldung']},
+];
+const grid=document.getElementById('courseGrid');
+COURSES.forEach((c,i)=>{
+  const el=document.createElement('div');
+  el.className='course';
+  el.onclick=()=>openCourse(i);
+  el.innerHTML=`${c.tag?`<span class="tag">${c.tag}</span>`:''}
+    <div class="cicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${c.icon}</svg></div>
+    <h3>${c.name}</h3><p>${c.short}</p>
+    <span class="more">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>`;
+  grid.appendChild(el);
+});
+
+const modal=document.getElementById('modal'), box=document.getElementById('modalBox');
+function openCourse(i){
+  const c=COURSES[i];
+  box.innerHTML=`
+    <div class="modal-head">
+      <button class="modal-close" onclick="closeModal()" aria-label="Schließen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <span class="cat">Kurs</span>
+      <h3>${c.name}</h3>
+    </div>
+    <div class="modal-body">
+      <p>${c.desc}</p>
+      <ul>${c.points.map(p=>`<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>${p}</span></li>`).join('')}</ul>
+      <button class="btn btn-primary" onclick="closeModal();openEnquiry('${c.name.replace(/'/g,'')}')">${c.name} anfragen</button>
+      <p class="disc">Kostenlose &amp; unverbindliche Beratung bei activ lernen in Köln.</p>
+    </div>`;
+  modal.classList.add('open'); document.body.style.overflow='hidden';
+}
+function openImg(src){
+  box.innerHTML=`<button class="modal-close" onclick="closeModal()" style="position:absolute;top:16px;right:16px;z-index:3" aria-label="Schließen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button><img src="${src}" alt="activ lernen Köln" style="border-radius:22px;width:100%">`;
+  box.style.background='transparent';box.style.boxShadow='none';box.style.position='relative';box.style.maxWidth='640px';
+  modal.classList.add('open'); document.body.style.overflow='hidden';
+}
+function openEnquiry(course){
+  box.style.background='';box.style.boxShadow='';box.style.position='';box.style.maxWidth='';
+  const opts=['Intensivkurs Deutsch','Gruppenkurs Deutsch','Abendkurs','Minigruppe Pflegekräfte (B2)','Einzeltraining Deutsch','Fremdsprache (Einzelunterricht)','Prüfung / Zertifikat','Noch unsicher'];
+  const sel=opts.map(o=>`<option ${course&&o.startsWith(course.split(' ')[0])?'selected':''}>${o}</option>`).join('');
+  box.innerHTML=`
+    <div class="modal-head">
+      <button class="modal-close" onclick="closeModal()" aria-label="Schließen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <span class="cat">Anmeldung</span>
+      <h3>Kostenlose Einstufung sichern</h3>
+    </div>
+    <div class="modal-body" id="mBody">
+      <form onsubmit="submitForm(event,true)">
+        <div class="field"><label>Vor- &amp; Nachname</label><input required type="text" placeholder="Dein Name"></div>
+        <div class="frow">
+          <div class="field"><label>Telefon</label><input required type="tel" placeholder="Deine Nummer"></div>
+          <div class="field"><label>E-Mail</label><input type="email" placeholder="deine@email.de"></div>
+        </div>
+        <div class="field"><label>Kurs</label><select>${sel}</select></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Anfrage absenden</button>
+        <p class="disc" style="margin-top:12px">Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin.</p>
+      </form>
+    </div>`;
+  modal.classList.add('open'); document.body.style.overflow='hidden';
+}
+function closeModal(){modal.classList.remove('open');document.body.style.overflow='';box.style.maxWidth='';box.style.background='';box.style.boxShadow='';box.style.position='';}
+function submitForm(e,inModal){
+  e.preventDefault();
+  if(inModal){
+    document.getElementById('mBody').innerHTML=`<div style="text-align:center;padding:20px 6px">
+      <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#e0673a" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
+      <h3 style="margin:14px 0 8px;font-family:Fraunces,serif;font-weight:600">Danke, wir haben Deine Anfrage!</h3>
+      <p style="color:var(--muted)">Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin. Bis bald bei activ lernen!</p></div>`;
+  }else{
+    document.getElementById('formInner').style.display='none';
+    document.getElementById('formSuccess').style.display='block';
+  }
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+</script>
+</body>
+</html>
