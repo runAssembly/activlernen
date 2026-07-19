@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>activ lernen Köln – Deutsch lernen mitten in Köln | Sprachkurse A1–C1, telc & TestDaF</title>
-<meta name="description" content="Deutsch als Fremdsprache in Köln – seit 1998. Intensiv-, Gruppen- & Einzelkurse von A1 bis C1, lizenziertes telc- & TestDaF-Prüfungszentrum. Kleine Gruppen, faire Preise, kostenlose Probestunde. 4,9 ★ bei über 200 Bewertungen." />
+<title id="pageTitle">activ lernen Cologne – Learn German in the heart of Cologne | Courses A1–C1, telc &amp; TestDaF</title>
+<meta name="description" id="metaDesc" content="German as a foreign language in Cologne – since 1998. Intensive, group &amp; one-to-one courses from A1 to C1, licensed telc &amp; TestDaF exam centre. Small groups, fair prices, free trial lesson. 5.0 ★ from 371 reviews." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -33,14 +33,17 @@
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   body{
-    font-family:'Inter',system-ui,sans-serif;
+    font-family:'Inter','Noto Sans','Noto Sans Arabic','Noto Sans Devanagari',system-ui,sans-serif;
     color:var(--ink);
     background:var(--bg);
     line-height:1.62;
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
-  h1,h2,h3,h4,.display{font-family:'Fraunces',Georgia,serif;line-height:1.1;letter-spacing:-.01em;font-weight:600}
+  h1,h2,h3,h4,.display{font-family:'Fraunces','Noto Serif','Noto Naskh Arabic','Noto Serif Devanagari',Georgia,serif;line-height:1.1;letter-spacing:-.01em;font-weight:600}
+  html[lang="ar"] body,html[lang="hi"] body{font-family:'Noto Sans Arabic','Noto Sans Devanagari','Inter',system-ui,sans-serif}
+  html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] h4,
+  html[lang="hi"] h1,html[lang="hi"] h2,html[lang="hi"] h3,html[lang="hi"] h4{font-family:'Noto Naskh Arabic','Noto Serif Devanagari','Fraunces',Georgia,serif}
   img{max-width:100%;display:block}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
@@ -80,11 +83,29 @@
   .nav-links{display:flex;align-items:center;gap:26px}
   .nav-links a{font-weight:500;font-size:.95rem;color:var(--ink-2);transition:color .15s}
   .nav-links a:hover{color:var(--accent)}
-  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-cta{display:flex;align-items:center;gap:14px}
   .nav-phone{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--ink)}
   .nav-phone svg{color:var(--accent)}
   .burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:8px}
   .burger span{width:24px;height:2.5px;background:var(--ink);border-radius:2px;transition:.2s}
+
+  /* LANGUAGE SWITCHER */
+  .lang-switch{position:relative}
+  .lang-btn{display:inline-flex;align-items:center;gap:7px;font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;color:var(--ink);background:#fff;border:1.5px solid var(--line);padding:9px 13px;border-radius:999px;cursor:pointer;transition:border-color .15s,color .15s}
+  .lang-btn:hover{border-color:var(--accent);color:var(--accent)}
+  .lang-btn .chev{transition:transform .2s;color:var(--muted)}
+  .lang-switch.open .chev{transform:rotate(180deg)}
+  .lang-flag{font-size:1.05rem;line-height:1}
+  .lang-menu{position:absolute;top:calc(100% + 8px);right:0;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);padding:7px;display:none;flex-direction:column;gap:2px;min-width:196px;z-index:80}
+  .lang-switch.open .lang-menu{display:flex}
+  .lang-menu button{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;cursor:pointer;font-family:'Inter',sans-serif;font-size:.92rem;font-weight:500;color:var(--ink-2);padding:9px 11px;border-radius:9px;transition:background .15s,color .15s}
+  .lang-menu button:hover{background:var(--soft);color:var(--accent)}
+  .lang-menu button.active{background:var(--accent-soft);color:var(--accent);font-weight:600}
+  .lang-menu .lc{margin-left:auto;font-size:.74rem;font-weight:700;letter-spacing:.06em;color:var(--muted)}
+  .lang-menu button.active .lc{color:var(--accent)}
+  .lang-mob{display:flex;flex-wrap:wrap;gap:8px;padding:16px 0 4px}
+  .lang-mob button{flex:1 1 auto;min-width:72px;display:flex;align-items:center;justify-content:center;gap:6px;background:var(--soft);border:1.5px solid var(--line);border-radius:10px;padding:10px 8px;font-family:'Inter',sans-serif;font-weight:600;font-size:.85rem;color:var(--ink-2);cursor:pointer}
+  .lang-mob button.active{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 
   /* HERO */
   .hero{position:relative;min-height:660px;display:flex;align-items:center;color:#fff;overflow:hidden}
@@ -196,18 +217,12 @@
 
   /* REVIEWS */
   .rev-wrap{display:block}
-  .rev-score{max-width:340px;margin:0 auto 40px}
-  .rev-score{background:linear-gradient(150deg,var(--cream),var(--cream-2));border:1px solid var(--line);border-radius:24px;padding:44px 40px;text-align:center}
+  .rev-score{max-width:360px;margin:0 auto 40px;background:linear-gradient(150deg,var(--cream),var(--cream-2));border:1px solid var(--line);border-radius:24px;padding:40px 40px 34px;text-align:center;position:relative}
   .rev-score .big{font-family:'Fraunces',serif;font-weight:700;font-size:4.4rem;color:var(--blue-deep);line-height:1}
   .rev-score .stars{color:var(--gold);font-size:1.5rem;letter-spacing:3px;margin:10px 0 8px}
   .rev-score .cnt{color:var(--muted);font-weight:500;font-size:.98rem}
-  .rev-score .src{margin-top:14px;font-size:.82rem;color:var(--muted)}
-  .rev-points{display:flex;flex-direction:column;gap:16px}
-  .rev-pt{display:flex;gap:15px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;box-shadow:var(--shadow-sm)}
-  .rev-pt .ri{width:44px;height:44px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent)}
-  .rev-pt h4{font-size:1.06rem;font-weight:600;margin-bottom:3px}
-  .rev-pt p{color:var(--muted);font-size:.92rem}
-  .rev-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+  .rev-score .src{margin-top:14px;font-size:.82rem;color:var(--muted);display:inline-flex;align-items:center;gap:7px;justify-content:center}
+  .rev-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px;align-items:start}
   .rev-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 28px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
   .rev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
   .rev-card-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
@@ -287,7 +302,7 @@
   .modal-body .disc{font-size:.76rem;color:var(--muted);margin-top:14px;text-align:center}
 
   @media(max-width:940px){
-    .nav-links,.nav-phone{display:none}
+    .nav-links,.nav-phone,.lang-switch{display:none}
     .why-grid{grid-template-columns:repeat(2,1fr)}
     .course-grid{grid-template-columns:repeat(2,1fr)}
     .lvl-grid{grid-template-columns:repeat(2,1fr)}
@@ -312,6 +327,21 @@
   .mobile-menu{display:none;flex-direction:column;gap:2px;padding:12px 22px 20px;border-top:1px solid var(--line);background:#fff}
   .mobile-menu a{padding:12px 4px;font-weight:600;border-bottom:1px solid var(--line);color:var(--ink-2)}
   .mobile-menu .btn{margin-top:12px}
+
+  /* RTL */
+  [dir=rtl] .stat:not(:last-child)::after{right:auto;left:0}
+  [dir=rtl] .course::before{left:auto;right:0}
+  [dir=rtl] .course .tag{right:auto;left:22px}
+  [dir=rtl] .modal-close{right:auto;left:22px}
+  [dir=rtl] .glimpse figcaption{left:auto;right:20px}
+  [dir=rtl] .hero-bg::after{background:linear-gradient(257deg,rgba(15,33,57,.94) 0%,rgba(15,33,57,.78) 42%,rgba(15,33,57,.34) 100%)}
+  [dir=rtl] .lang-menu{right:auto;left:0}
+  [dir=rtl] .lang-menu button{text-align:right}
+  [dir=rtl] .lang-menu .lc{margin-left:0;margin-right:auto}
+  [dir=rtl] .rev-cards{direction:ltr;text-align:left}
+  [dir=rtl] .price-note,[dir=rtl] .lvl-note{text-align:center}
+  [dir=rtl] .modal-body .disc{text-align:center}
+  [dir=rtl] .field label{text-align:right}
 </style>
 </head>
 <body>
@@ -319,66 +349,73 @@
 <!-- HEADER -->
 <header>
   <div class="wrap nav">
-    <a href="#top" class="brand"><img src="assets/logo.png" alt="activ lernen Köln Logo" /><span class="bt">activ <span>lernen</span></span></a>
+    <a href="#top" class="brand"><img src="assets/logo.png" alt="activ lernen Cologne Logo" /><span class="bt">activ <span>lernen</span></span></a>
     <nav class="nav-links">
-      <a href="#kurse">Kurse</a>
-      <a href="#stufen">Stufen A1–C1</a>
-      <a href="#pruefungen">Prüfungen</a>
-      <a href="#preise">Preise</a>
-      <a href="#bewertungen">Bewertungen</a>
-      <a href="#kontakt">Kontakt</a>
+      <a href="#kurse" data-i18n="nav.courses">Courses</a>
+      <a href="#stufen" data-i18n="nav.levels">Levels A1–C1</a>
+      <a href="#pruefungen" data-i18n="nav.exams">Exams</a>
+      <a href="#preise" data-i18n="nav.prices">Prices</a>
+      <a href="#bewertungen" data-i18n="nav.reviews">Reviews</a>
+      <a href="#kontakt" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="nav-cta">
       <a href="tel:+492219525186" class="nav-phone">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         0221 9525186
       </a>
-      <button class="btn btn-primary" onclick="openEnquiry()">Kostenlose Probestunde</button>
+      <div class="lang-switch" id="langSwitch">
+        <button class="lang-btn" onclick="toggleLang(event)" aria-label="Language">
+          <span class="lang-flag" id="langFlag">🇬🇧</span><span id="langCode">EN</span>
+          <svg class="chev" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m6 9 6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu"></div>
+      </div>
+      <button class="btn btn-primary" onclick="openEnquiry()" data-i18n="cta.trial">Free trial lesson</button>
     </div>
-    <button class="burger" onclick="toggleMenu()" aria-label="Menü"><span></span><span></span><span></span></button>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#kurse" onclick="toggleMenu()">Kurse</a>
-    <a href="#stufen" onclick="toggleMenu()">Stufen A1–C1</a>
-    <a href="#pruefungen" onclick="toggleMenu()">Prüfungen</a>
-    <a href="#preise" onclick="toggleMenu()">Preise</a>
-    <a href="#bewertungen" onclick="toggleMenu()">Bewertungen</a>
-    <a href="#kontakt" onclick="toggleMenu()">Kontakt</a>
-    <button class="btn btn-primary" onclick="toggleMenu();openEnquiry()">Kostenlose Probestunde</button>
+    <a href="#kurse" onclick="toggleMenu()" data-i18n="nav.courses">Courses</a>
+    <a href="#stufen" onclick="toggleMenu()" data-i18n="nav.levels">Levels A1–C1</a>
+    <a href="#pruefungen" onclick="toggleMenu()" data-i18n="nav.exams">Exams</a>
+    <a href="#preise" onclick="toggleMenu()" data-i18n="nav.prices">Prices</a>
+    <a href="#bewertungen" onclick="toggleMenu()" data-i18n="nav.reviews">Reviews</a>
+    <a href="#kontakt" onclick="toggleMenu()" data-i18n="nav.contact">Contact</a>
+    <button class="btn btn-primary" onclick="toggleMenu();openEnquiry()" data-i18n="cta.trial">Free trial lesson</button>
+    <div class="lang-mob" id="langMob"></div>
   </div>
 </header>
 
 <!-- HERO -->
 <section class="hero" id="top" style="padding:0">
-  <div class="hero-bg"><img src="assets/hero.jpg" alt="Deutschkurs in Köln – Sprachschule activ lernen" /></div>
+  <div class="hero-bg"><img src="assets/hero.jpg" alt="German course in Cologne – activ lernen language school" /></div>
   <div class="wrap">
     <div class="hero-inner">
-      <span class="eyebrow">Sprachschule in Köln · seit 1998</span>
-      <h1>Deutsch lernen <span class="hl">mitten in Köln</span>.</h1>
-      <p class="lead">Deutsch als Fremdsprache von A1 bis C1 – in kleinen Gruppen, mit erfahrenen Lehrkräften und offiziellen telc- &amp; TestDaF-Prüfungen. Direkt am Kaiser-Wilhelm-Ring, am MediaPark.</p>
-      <p class="slogan">„Die Sprache ist der Schlüssel zur Welt."</p>
+      <span class="eyebrow" data-i18n="hero.eyebrow">Language school in Cologne · since 1998</span>
+      <h1 data-i18n-html="hero.h1">Learn German <span class="hl">in the heart of Cologne</span>.</h1>
+      <p class="lead" data-i18n="hero.lead">German as a foreign language from A1 to C1 – in small groups, with experienced teachers and official telc &amp; TestDaF exams. Right on Kaiser-Wilhelm-Ring, at the MediaPark.</p>
+      <p class="slogan" data-i18n="hero.slogan">“Language is the key to the world.”</p>
       <div class="hero-cta">
-        <button class="btn btn-primary" onclick="openEnquiry()">Kostenlose Einstufung sichern</button>
-        <a href="#kurse" class="btn btn-ghost">Kurse ansehen</a>
+        <button class="btn btn-primary" onclick="openEnquiry()" data-i18n="hero.cta1">Get your free placement</button>
+        <a href="#kurse" class="btn btn-ghost" data-i18n="hero.cta2">View courses</a>
       </div>
       <div class="hero-chips">
-        <span class="chip"><span class="star">★</span> 4,9 · über 200 Bewertungen</span>
-        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>telc- &amp; TestDaF-Prüfungszentrum</span>
-        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg>Kostenlose Probestunde</span>
+        <span class="chip"><span class="star">★</span> <span data-i18n="hero.chip1">5.0 · 371 reviews</span></span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.chip2">telc &amp; TestDaF exam centre</span></span>
+        <span class="chip"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="hero.chip3">Free trial lesson</span></span>
       </div>
     </div>
   </div>
 </section>
-
 <!-- STATS -->
 <div class="stats">
   <div class="wrap">
     <div class="grid">
-      <div class="stat"><div class="num">seit<span> 1998</span></div><div class="lbl">Erfahrung in Köln</div></div>
-      <div class="stat"><div class="num">4,9<span> ★</span></div><div class="lbl">über 200 Bewertungen</div></div>
-      <div class="stat"><div class="num">A1–C1</div><div class="lbl">alle Niveaustufen</div></div>
-      <div class="stat"><div class="num">telc<span> · TestDaF</span></div><div class="lbl">Prüfungszentrum</div></div>
-      <div class="stat"><div class="num">1000<span>e</span></div><div class="lbl">erfolgreiche Absolvent:innen</div></div>
+      <div class="stat"><div class="num" data-i18n-html="stat1.num">since<span> 1998</span></div><div class="lbl" data-i18n="stat1.lbl">Experience in Cologne</div></div>
+      <div class="stat"><div class="num" data-i18n-html="stat2.num">5.0<span> ★</span></div><div class="lbl" data-i18n="stat2.lbl">371 reviews</div></div>
+      <div class="stat"><div class="num">A1–C1</div><div class="lbl" data-i18n="stat3.lbl">all levels</div></div>
+      <div class="stat"><div class="num">telc<span> · TestDaF</span></div><div class="lbl" data-i18n="stat4.lbl">Exam centre</div></div>
+      <div class="stat"><div class="num" data-i18n-html="stat5.num">1000<span>s</span></div><div class="lbl" data-i18n="stat5.lbl">successful graduates</div></div>
     </div>
   </div>
 </div>
@@ -387,30 +424,30 @@
 <section id="warum">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Warum activ lernen</span>
-      <h2>Effektives Sprachtraining in angenehmer Atmosphäre.</h2>
-      <p>Seit unserer Gründung 1998 haben mehrere tausend Teilnehmer:innen bei uns erfolgreich Deutsch oder eine Fremdsprache gelernt – mit erfahrenen, bestens ausgebildeten Lehrkräften zu fairen Preisen.</p>
+      <span class="eyebrow" data-i18n="why.eyebrow">Why activ lernen</span>
+      <h2 data-i18n="why.h2">Effective language training in a pleasant atmosphere.</h2>
+      <p data-i18n="why.p">Since we were founded in 1998, several thousand participants have successfully learned German or a foreign language with us – with experienced, superbly trained teachers at fair prices.</p>
     </div>
     <div class="why-grid">
       <div class="vcard">
         <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-        <h3>Kleine Gruppen</h3>
-        <p>Begrenzte Teilnehmerzahl und ein Einstufungstest sorgen dafür, dass jede:r die passende Gruppe findet und wirklich zu Wort kommt.</p>
+        <h3 data-i18n="why.c1.h">Small groups</h3>
+        <p data-i18n="why.c1.p">A limited number of participants and a placement test ensure that everyone finds the right group and really gets to speak.</p>
       </div>
       <div class="vcard">
         <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
-        <h3>Offizielle Prüfungen</h3>
-        <p>Lizenziertes telc- &amp; TestDaF-Prüfungszentrum und FaDaF-Mitglied. Jede Stufe endet mit Test und anerkanntem Zertifikat – im Kurspreis inbegriffen.</p>
+        <h3 data-i18n="why.c2.h">Official exams</h3>
+        <p data-i18n="why.c2.p">Licensed telc &amp; TestDaF exam centre and FaDaF member. Every level ends with a test and a recognised certificate – included in the course price.</p>
       </div>
       <div class="vcard">
         <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11a8 8 0 0 0-16 0c0 6.5 8 11 8 11z"/><circle cx="12" cy="11" r="2.5"/></svg></div>
-        <h3>Zentrale Lage</h3>
-        <p>Mitten in der Kölner Innenstadt am Kaiser-Wilhelm-Ring, direkt am MediaPark – hervorragend mit Bahn und Bus erreichbar.</p>
+        <h3 data-i18n="why.c3.h">Central location</h3>
+        <p data-i18n="why.c3.p">In the middle of Cologne city centre on Kaiser-Wilhelm-Ring, right by the MediaPark – excellently reachable by train and bus.</p>
       </div>
       <div class="vcard">
         <div class="vicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-        <h3>Praxisnaher Unterricht</h3>
-        <p>Abwechslungsreich statt trocken: Diskussionen, Rollenspiele, Interviews sowie Gruppen- und Einzelarbeit – Deutsch, das im Alltag und Beruf funktioniert.</p>
+        <h3 data-i18n="why.c4.h">Hands-on lessons</h3>
+        <p data-i18n="why.c4.p">Varied instead of dry: discussions, role-plays, interviews as well as group and individual work – German that works in everyday life and at work.</p>
       </div>
     </div>
   </div>
@@ -420,8 +457,8 @@
 <section id="einblicke" class="soft" style="padding-top:76px;padding-bottom:76px">
   <div class="wrap">
     <div class="glimpse">
-      <figure onclick="openImg('assets/students.jpg')"><img src="assets/students.jpg" alt="Deutschkurs für Fortgeschrittene bei activ lernen Köln" loading="lazy"><figcaption>Lernen in kleinen Gruppen</figcaption></figure>
-      <figure onclick="openImg('assets/office.jpg')"><img src="assets/office.jpg" alt="Lounge der Sprachschule activ lernen in der Kölner Innenstadt" loading="lazy"><figcaption>Mitten in Köln, am MediaPark</figcaption></figure>
+      <figure onclick="openImg('assets/students.jpg')"><img src="assets/students.jpg" alt="German course at activ lernen Cologne" loading="lazy"><figcaption data-i18n="glimpse.cap1">Learning in small groups</figcaption></figure>
+      <figure onclick="openImg('assets/office.jpg')"><img src="assets/office.jpg" alt="Lounge of the activ lernen language school in Cologne city centre" loading="lazy"><figcaption data-i18n="glimpse.cap2">In the heart of Cologne, at the MediaPark</figcaption></figure>
     </div>
   </div>
 </section>
@@ -430,12 +467,12 @@
 <section id="kurse" class="cream">
   <div class="wrap">
     <div class="sec-head center">
-      <span class="eyebrow">Unsere Kurse</span>
-      <h2>Der richtige Kurs für Dein Ziel.</h2>
-      <p>Ob Intensivkurs, Abendkurs oder Einzeltraining – tippe auf einen Kurs für alle Details.</p>
+      <span class="eyebrow" data-i18n="courses.eyebrow">Our courses</span>
+      <h2 data-i18n="courses.h2">The right course for your goal.</h2>
+      <p data-i18n="courses.p">Whether intensive course, evening course or one-to-one training – tap a course for all the details.</p>
     </div>
     <div class="course-grid" id="courseGrid"></div>
-    <p style="text-align:center;color:var(--muted);margin-top:36px;font-size:.96rem">Nicht sicher, welcher Kurs passt? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Wir beraten Dich kostenlos &rarr;</a></p>
+    <p style="text-align:center;color:var(--muted);margin-top:36px;font-size:.96rem" data-i18n-html="courses.help">Not sure which course fits? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">We'll advise you free of charge &rarr;</a></p>
   </div>
 </section>
 
@@ -443,18 +480,18 @@
 <section id="stufen">
   <div class="wrap">
     <div class="sec-head center">
-      <span class="eyebrow">Niveaustufen</span>
-      <h2>Vom ersten Wort bis zur Hochschulreife: A1 bis C1.</h2>
-      <p>Unser Kursstufensystem folgt dem Gemeinsamen Europäischen Referenzrahmen (GER). Du steigst genau dort ein, wo Du stehst.</p>
+      <span class="eyebrow" data-i18n="levels.eyebrow">Levels</span>
+      <h2 data-i18n="levels.h2">From your first word to university entrance: A1 to C1.</h2>
+      <p data-i18n="levels.p">Our level system follows the Common European Framework of Reference (CEFR). You join exactly where you are.</p>
     </div>
     <div class="lvl-grid">
-      <div class="lvl"><div class="code">A1</div><div class="lname">Anfänger:in</div><p>Erste Sätze für den Alltag: sich vorstellen, einfache Fragen stellen und beantworten.</p></div>
-      <div class="lvl"><div class="code">A2</div><div class="lname">Grundlagen</div><p>Vertraute Situationen meistern – Einkaufen, Arbeit, direkte Umgebung und Alltag.</p></div>
-      <div class="lvl"><div class="code">B1</div><div class="lname">Mittelstufe</div><p>Selbstständig im Alltag zurechtkommen, Erfahrungen schildern, Meinungen begründen.</p></div>
-      <div class="lvl"><div class="code">B2</div><div class="lname">Fortgeschritten</div><p>Fit für Beruf &amp; Studium – auch die B2-Prüfung für die Anerkennung von Pflegekräften.</p></div>
-      <div class="lvl"><div class="code">C1</div><div class="lname">Fachkundig</div><p>Komplexe Themen sicher beherrschen – Grundlage für TestDaF und Studium in Deutschland.</p></div>
+      <div class="lvl"><div class="code">A1</div><div class="lname" data-i18n="lvl.a1.n">Beginner</div><p data-i18n="lvl.a1.p">First sentences for everyday life: introducing yourself, asking and answering simple questions.</p></div>
+      <div class="lvl"><div class="code">A2</div><div class="lname" data-i18n="lvl.a2.n">Elementary</div><p data-i18n="lvl.a2.p">Handling familiar situations – shopping, work, your immediate surroundings and daily life.</p></div>
+      <div class="lvl"><div class="code">B1</div><div class="lname" data-i18n="lvl.b1.n">Intermediate</div><p data-i18n="lvl.b1.p">Getting by independently in daily life, describing experiences, giving reasons for opinions.</p></div>
+      <div class="lvl"><div class="code">B2</div><div class="lname" data-i18n="lvl.b2.n">Upper intermediate</div><p data-i18n="lvl.b2.p">Ready for work &amp; study – including the B2 exam for the recognition of nursing staff.</p></div>
+      <div class="lvl"><div class="code">C1</div><div class="lname" data-i18n="lvl.c1.n">Advanced</div><p data-i18n="lvl.c1.p">Mastering complex topics with confidence – the basis for TestDaF and university study in Germany.</p></div>
     </div>
-    <p class="lvl-note">Jede Niveaustufe dauert <b>2 Kursmonate = 8 Wochen (160 Unterrichtsstunden)</b> und endet mit einem Test samt Zertifikat gemäß GER – <b>im Kurspreis inbegriffen</b>. Für Anfänger:innen ohne Vorkenntnisse startet am ersten Werktag jedes zweiten Monats ein neuer Intensivkurs; Fortgeschrittene steigen praktisch jederzeit ein.</p>
+    <p class="lvl-note" data-i18n-html="levels.note">Each level lasts <b>2 course months = 8 weeks (160 teaching hours)</b> and ends with a test and a CEFR certificate – <b>included in the course price</b>. For complete beginners, a new intensive course starts on the first working day of every second month; advanced learners can join almost any time.</p>
   </div>
 </section>
 
@@ -463,23 +500,23 @@
   <div class="wrap" style="padding-top:90px">
     <div class="exam">
       <div>
-        <span class="eyebrow" style="color:#ffcf8f">Prüfungen &amp; Zertifikate</span>
-        <h2>Offizielles telc- &amp; TestDaF-Prüfungszentrum.</h2>
-        <p>activ lernen ist lizenziertes Prüfungszentrum für telc und TestDaF sowie Mitglied im FaDaF – dem Fachverband Deutsch als Fremdsprache. Deine Zertifikate sind offiziell anerkannt, für Job, Studium oder Anerkennung.</p>
+        <span class="eyebrow" style="color:#ffcf8f" data-i18n="exam.eyebrow">Exams &amp; certificates</span>
+        <h2 data-i18n="exam.h2">Official telc &amp; TestDaF exam centre.</h2>
+        <p data-i18n="exam.p">activ lernen is a licensed exam centre for telc and TestDaF and a member of FaDaF – the professional association for German as a Foreign Language. Your certificates are officially recognised, for work, study or professional recognition.</p>
         <div class="badges">
           <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>telc</span>
           <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>TestDaF</span>
-          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg>FaDaF-Mitglied</span>
+          <span class="badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="exam.badge3">FaDaF member</span></span>
         </div>
       </div>
       <div class="ecard">
-        <h3>Prüfung ablegen</h3>
+        <h3 data-i18n="exam.ecard.h">Take an exam</h3>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Jede Kursstufe endet mit Test &amp; Zertifikat gemäß GER – im Preis enthalten.</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Externe Prüfung A1–C1 (activ-lernen-Zertifikat): 100&nbsp;€, Termine individuell.</span></li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>Vorbereitung auf telc- &amp; TestDaF-Prüfungen aller Stufen.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="exam.ecard.li1">Every course level ends with a test &amp; CEFR certificate – included in the price.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n-html="exam.ecard.li2">External exam A1–C1 (activ lernen certificate): 100&nbsp;€, dates arranged individually.</span></li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="exam.ecard.li3">Preparation for telc &amp; TestDaF exams at all levels.</span></li>
         </ul>
-        <button class="btn btn-blue" style="width:100%" onclick="openEnquiry('Prüfung / Zertifikat')">Prüfungstermin anfragen</button>
+        <button class="btn btn-blue" style="width:100%" onclick="openEnquiry('exam')" data-i18n="exam.ecard.btn">Request an exam date</button>
       </div>
     </div>
   </div>
@@ -489,34 +526,33 @@
 <section id="preise" class="cream">
   <div class="wrap">
     <div class="sec-head center">
-      <span class="eyebrow">Preise</span>
-      <h2>Faire Preise, transparent aufgeführt.</h2>
-      <p>Intensivkurse in der Gruppe – teilnehmerfreundlich kalkuliert und seit 1998 bewährt. Einstufung, Prüfung &amp; Zertifikat sind inbegriffen.</p>
+      <span class="eyebrow" data-i18n="prices.eyebrow">Prices</span>
+      <h2 data-i18n="prices.h2">Fair prices, transparently listed.</h2>
+      <p data-i18n="prices.p">Intensive group courses – calculated to be participant-friendly and proven since 1998. Placement, exam &amp; certificate are included.</p>
     </div>
     <div class="price-grid">
-      <div class="pcard"><div class="dur">1 Monat</div><div class="price">ab 395&nbsp;€<small>Intensivkurs</small></div></div>
-      <div class="pcard"><div class="dur">2 Monate</div><div class="price">ab 720&nbsp;€<small>eine Niveaustufe</small></div></div>
-      <div class="pcard feat"><span class="ptag">Frühbucher-Preis</span><div class="dur">4 Monate</div><div class="price">1.299&nbsp;€<small>zwei Niveaustufen</small></div></div>
-      <div class="pcard"><div class="dur">6 Monate</div><div class="price">1.849&nbsp;€<small>Frühbucher-Preis</small></div></div>
-      <div class="pcard"><div class="dur">10 Monate</div><div class="price">ab 2.899&nbsp;€<small>Komplettpaket</small></div></div>
+      <div class="pcard"><div class="dur" data-i18n="price.p1.dur">1 month</div><div class="price"><span data-i18n="price.from">from</span> 395&nbsp;€<small data-i18n="price.p1.s">Intensive course</small></div></div>
+      <div class="pcard"><div class="dur" data-i18n="price.p2.dur">2 months</div><div class="price"><span data-i18n="price.from">from</span> 720&nbsp;€<small data-i18n="price.p2.s">one level</small></div></div>
+      <div class="pcard feat"><span class="ptag" data-i18n="price.p3.tag">Early-bird price</span><div class="dur" data-i18n="price.p3.dur">4 months</div><div class="price">1.299&nbsp;€<small data-i18n="price.p3.s">two levels</small></div></div>
+      <div class="pcard"><div class="dur" data-i18n="price.p4.dur">6 months</div><div class="price">1.849&nbsp;€<small data-i18n="price.p4.s">Early-bird price</small></div></div>
+      <div class="pcard"><div class="dur" data-i18n="price.p5.dur">10 months</div><div class="price"><span data-i18n="price.from">from</span> 2.899&nbsp;€<small data-i18n="price.p5.s">Complete package</small></div></div>
     </div>
-    <p class="price-note"><b>Inklusive:</b> Einstufungstest, Prüfung &amp; Zertifikat gemäß GER. Zusätzlich: <b>Einzeltraining Deutsch ab 39&nbsp;€</b> / Unterrichtsstunde (45&nbsp;Min), weitere Sprachen ab 44&nbsp;€, jeweils zzgl. einmaliger Anmeldegebühr. Wir bieten Dir immer eine <b>kostenlose, unverbindliche Probestunde</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Bei Fragen einfach anfragen &rarr;</a></p>
+    <p class="price-note" data-i18n-html="prices.note"><b>Included:</b> placement test, exam &amp; CEFR certificate. In addition: <b>one-to-one German training from 39&nbsp;€</b> per teaching hour (45&nbsp;min), other languages from 44&nbsp;€, each plus a one-time registration fee. We always offer you a <b>free, no-obligation trial lesson</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Just ask if you have questions &rarr;</a></p>
   </div>
 </section>
-
 <!-- REVIEWS -->
 <section id="bewertungen">
   <div class="wrap">
     <div class="sec-head center">
-      <span class="eyebrow">Das sagen die Teilnehmer:innen</span>
-      <h2>Ausgezeichnet bewertet in Köln.</h2>
+      <span class="eyebrow" data-i18n="reviews.eyebrow">What our students say</span>
+      <h2 data-i18n="reviews.h2">Excellently rated in Cologne.</h2>
     </div>
     <div class="rev-wrap">
       <div class="rev-score">
-        <div class="big">4,9</div>
+        <div class="big">5.0</div>
         <div class="stars">★★★★★</div>
-        <div class="cnt">über 200 Bewertungen</div>
-        <div class="src">Öffentliche Google-Bewertungen</div>
+        <div class="cnt" data-i18n="reviews.count">371 reviews</div>
+        <div class="src"><svg width="15" height="15" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg><span data-i18n="reviews.src">Public Google reviews</span></div>
       </div>
       <div class="rev-cards">
         <figure class="rev-card">
@@ -584,19 +620,19 @@
   <div class="wrap">
     <div class="contact-grid">
       <div>
-        <span class="eyebrow" style="color:#ffcf8f">Kontakt &amp; Anmeldung</span>
-        <h2>Sichere Dir Deine kostenlose Einstufung.</h2>
-        <p class="lead">Schreib uns – wir finden gemeinsam den passenden Kurs und Deinen Starttermin. Persönliche Beratung auf Deutsch, Englisch, Spanisch, Französisch &amp; Portugiesisch.</p>
+        <span class="eyebrow" style="color:#ffcf8f" data-i18n="contact.eyebrow">Contact &amp; registration</span>
+        <h2 data-i18n="contact.h2">Secure your free placement.</h2>
+        <p class="lead" data-i18n="contact.lead">Write to us – together we'll find the right course and your start date. Personal advice in German, English, Spanish, French &amp; Portuguese.</p>
         <div class="cinfo">
-          <a href="tel:+492219525186"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span>0221 9525186<small>Ruf uns direkt an</small></span></a>
-          <a href="mailto:info@activlernen.de"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></span><span>info@activlernen.de<small>Schreib uns eine E-Mail</small></span></a>
-          <div class="ci-row"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11a8 8 0 0 0-16 0c0 6.5 8 11 8 11z"/><circle cx="12" cy="11" r="2.5"/></svg></span><span>Kaiser-Wilhelm-Ring 24, 50672 Köln<small>Innenstadt · am MediaPark</small></span></div>
+          <a href="tel:+492219525186"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><span>0221 9525186<small data-i18n="contact.phone.s">Call us directly</small></span></a>
+          <a href="mailto:info@activlernen.de"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></span><span>info@activlernen.de<small data-i18n="contact.email.s">Send us an email</small></span></a>
+          <div class="ci-row"><span class="ci"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11a8 8 0 0 0-16 0c0 6.5 8 11 8 11z"/><circle cx="12" cy="11" r="2.5"/></svg></span><span data-i18n-html="contact.addr">Kaiser-Wilhelm-Ring 24, 50672 Cologne<small>City centre · at the MediaPark</small></span></div>
         </div>
         <div class="hours-box">
-          <h4>Öffnungszeiten Büro</h4>
-          <div class="row"><span>Montag – Freitag</span><span>10:00 – 17:00 Uhr</span></div>
-          <div class="row"><span>Ohne Termin</span><span>einfach vorbeikommen</span></div>
-          <div class="row"><span>Unterricht</span><span>Mo–Fr, 09:00 – 21:30 Uhr</span></div>
+          <h4 data-i18n="hours.title">Office hours</h4>
+          <div class="row"><span data-i18n="hours.r1a">Monday – Friday</span><span data-i18n="hours.r1b">10:00 – 17:00</span></div>
+          <div class="row"><span data-i18n="hours.r2a">Without appointment</span><span data-i18n="hours.r2b">just drop by</span></div>
+          <div class="row"><span data-i18n="hours.r3a">Classes</span><span data-i18n="hours.r3b">Mon–Fri, 09:00 – 21:30</span></div>
         </div>
         <div class="socials">
           <a href="https://www.instagram.com/activ_lernen/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
@@ -605,40 +641,31 @@
       <!-- FORM -->
       <div class="form-card">
         <div id="formInner">
-          <h3>Kostenlose Einstufung &amp; Probestunde</h3>
-          <p class="fh">Fülle das Formular aus – wir melden uns mit Deinem passenden Kurs und Termin.</p>
+          <h3 data-i18n="form.h">Free placement &amp; trial lesson</h3>
+          <p class="fh" data-i18n="form.fh">Fill in the form – we'll get back to you with your matching course and start date.</p>
           <form onsubmit="submitForm(event)">
             <div class="frow">
-              <div class="field"><label>Vor- &amp; Nachname</label><input required type="text" placeholder="Dein Name"></div>
-              <div class="field"><label>Telefon</label><input required type="tel" placeholder="Deine Nummer"></div>
+              <div class="field"><label data-i18n="form.name.l">First &amp; last name</label><input required type="text" data-i18n-ph="form.name.ph" placeholder="Your name"></div>
+              <div class="field"><label data-i18n="form.phone.l">Phone</label><input required type="tel" data-i18n-ph="form.phone.ph" placeholder="Your number"></div>
             </div>
-            <div class="field"><label>E-Mail</label><input type="email" placeholder="deine@email.de"></div>
+            <div class="field"><label data-i18n="form.email.l">Email</label><input type="email" data-i18n-ph="form.email.ph" placeholder="you@email.com"></div>
             <div class="frow">
-              <div class="field"><label>Kurs</label>
-                <select id="f_course">
-                  <option>Intensivkurs Deutsch</option>
-                  <option>Gruppenkurs Deutsch</option>
-                  <option>Abendkurs</option>
-                  <option>Minigruppe Pflegekräfte (B2)</option>
-                  <option>Einzeltraining Deutsch</option>
-                  <option>Fremdsprache (Einzelunterricht)</option>
-                  <option>Prüfung / Zertifikat</option>
-                  <option>Noch unsicher</option>
-                </select>
+              <div class="field"><label data-i18n="form.course.l">Course</label>
+                <select id="f_course" data-i18n-opts="courseOpts"></select>
               </div>
-              <div class="field"><label>Niveau</label>
-                <select><option>Anfänger:in (A1)</option><option>A2</option><option>B1</option><option>B2</option><option>C1</option><option>Weiß ich nicht</option></select>
+              <div class="field"><label data-i18n="form.level.l">Level</label>
+                <select data-i18n-opts="levelOpts"></select>
               </div>
             </div>
-            <div class="field"><label>Nachricht (optional)</label><textarea rows="2" placeholder="Wann möchtest Du starten? Deine Frage an uns…"></textarea></div>
-            <button type="submit" class="btn btn-primary" style="width:100%">Anfrage absenden</button>
-            <p class="form-note">Mit dem Absenden erklärst Du Dich mit unseren Datenschutzbestimmungen einverstanden.</p>
+            <div class="field"><label data-i18n="form.msg.l">Message (optional)</label><textarea rows="2" data-i18n-ph="form.msg.ph" placeholder="When would you like to start? Your question for us…"></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%" data-i18n="form.submit">Send enquiry</button>
+            <p class="form-note" data-i18n="form.note">By submitting, you agree to our privacy policy.</p>
           </form>
         </div>
         <div class="form-success" id="formSuccess">
           <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
-          <h3>Danke, wir haben Deine Anfrage!</h3>
-          <p>Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin. Bis bald bei activ lernen!</p>
+          <h3 data-i18n="success.h">Thank you, we've got your enquiry!</h3>
+          <p data-i18n="success.p">We'll get back to you as soon as possible with your matching course and start date. See you soon at activ lernen!</p>
         </div>
       </div>
     </div>
@@ -651,28 +678,28 @@
     <div class="foot-grid">
       <div>
         <div class="foot-logo"><img src="assets/logo.png" alt="activ lernen"><b>activ lernen</b></div>
-        <p class="foot-desc">Institut für Sprachen und Nachhilfe. Deutsch als Fremdsprache &amp; Fremdsprachen in Köln – seit 1998, mit offiziellen telc- &amp; TestDaF-Prüfungen.</p>
+        <p class="foot-desc" data-i18n="foot.desc">Institute for Languages and Tutoring. German as a foreign language &amp; foreign languages in Cologne – since 1998, with official telc &amp; TestDaF exams.</p>
         <div class="socials">
           <a href="https://www.instagram.com/activ_lernen/" target="_blank" rel="noopener" aria-label="Instagram" style="width:42px;height:42px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
       </div>
       <div class="foot-col">
-        <h4>Standort</h4>
-        <p>Kaiser-Wilhelm-Ring 24<br>50672 Köln (Innenstadt)</p>
-        <p>Mo–Fr 10:00–17:00 Uhr<br>ohne Termin</p>
+        <h4 data-i18n="foot.loc.h">Location</h4>
+        <p data-i18n-html="foot.loc.addr">Kaiser-Wilhelm-Ring 24<br>50672 Cologne (city centre)</p>
+        <p data-i18n-html="foot.loc.hours">Mon–Fri 10:00–17:00<br>without appointment</p>
       </div>
       <div class="foot-col">
-        <h4>Kontakt</h4>
+        <h4 data-i18n="foot.contact.h">Contact</h4>
         <a href="tel:+492219525186">0221 9525186</a>
         <a href="mailto:info@activlernen.de">info@activlernen.de</a>
-        <a href="#kurse">Kurse</a>
-        <a href="#preise">Preise</a>
-        <a href="#kontakt">Kostenlose Probestunde</a>
+        <a href="#kurse" data-i18n="nav.courses">Courses</a>
+        <a href="#preise" data-i18n="nav.prices">Prices</a>
+        <a href="#kontakt" data-i18n="cta.trial">Free trial lesson</a>
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© 2026 activ lernen – Institut für Sprachen und Nachhilfe</span>
-      <span>Impressum · Datenschutz</span>
+      <span data-i18n="foot.copy">© 2026 activ lernen – Institute for Languages and Tutoring</span>
+      <span data-i18n="foot.legal">Imprint · Privacy</span>
     </div>
   </div>
 </footer>
@@ -683,87 +710,757 @@
 </div>
 
 <script>
-/* ---- Kurse (nur real angebotene Kurse) ---- */
-const COURSES = [
-  {icon:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
-   tag:'Beliebteste Wahl', name:'Intensivkurs Deutsch', short:'Deutsch von Montag bis Freitag – der schnellste Weg zum nächsten Niveau.',
-   desc:'Unser Herzstück: der Deutsch-Intensivkurs von Montag bis Freitag. Für Anfänger:innen ohne Vorkenntnisse beginnt am ersten Werktag jedes zweiten Monats ein neuer Kurs. Fortgeschrittene steigen in einen laufenden Kurs praktisch jederzeit ein.',
-   points:['Montag bis Freitag, in kleinen Gruppen','Jede Niveaustufe = 8 Wochen / 160 Unterrichtsstunden','Einstufungstest, Prüfung &amp; Zertifikat inklusive']},
-  {icon:'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
-   tag:'', name:'Gruppenkurs Deutsch', short:'Abwechslungsreicher Unterricht in einer begrenzten Gruppengröße.',
-   desc:'Deutsch lernen in der Gruppe – lebendig und praxisnah. Durch die begrenzte Teilnehmerzahl und einen vorherigen Einstufungstest findet jede:r die passende Gruppe und kommt aktiv zu Wort.',
-   points:['Begrenzte Teilnehmeranzahl','Diskussionen, Rollenspiele, Interviews, Gruppen- &amp; Einzelarbeit','Alle Niveaustufen A1 bis C1']},
-  {icon:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
-   tag:'', name:'Abendkurs', short:'Deutsch nach Feierabend – für Berufstätige.',
-   desc:'Für alle, die tagsüber arbeiten: Deutsch am Abend, damit sich Dein Sprachkurs gut in Deinen Alltag einfügt. In kleinen Gruppen und mit denselben erfahrenen Lehrkräften wie im Intensivkurs.',
-   points:['Kurszeiten am Abend','Kleine Gruppen &amp; persönliche Betreuung','Alle Niveaustufen A1 bis C1']},
-  {icon:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
-   tag:'B2 für die Anerkennung', name:'Minigruppe für Pflegekräfte', short:'Zielgerichtete B2-Vorbereitung für Pflegekräfte aus dem Ausland.',
-   desc:'Sie sind Pflegedienstleiter:in oder verantwortlich für Personal bzw. Weiterbildung in einem Krankenhaus? Wir bereiten Pflegekräfte aus dem Ausland seit Jahren erfolgreich auf die B2-Prüfung vor – notwendig für die Anerkennung.',
-   points:['Fokus B2-Prüfung Pflege','Kleine Minigruppen','Auf Wunsch für Kliniken &amp; Arbeitgeber']},
-  {icon:'<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
-   tag:'', name:'Einzeltraining Deutsch', short:'Individueller Unterricht, ganz auf Dein Ziel zugeschnitten.',
-   desc:'Maximale Flexibilität im Einzelunterricht: Tempo, Inhalte und Termine richten sich nach Dir. Ideal für schnelle Fortschritte, gezielte Prüfungsvorbereitung oder Fachdeutsch.',
-   points:['39&nbsp;€ pro Unterrichtsstunde (45&nbsp;Min), zzgl. einmalig 40&nbsp;€ Anmeldung','Flexible Termine nach Absprache','Kostenlose, unverbindliche Probestunde']},
-  {icon:'<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>',
-   tag:'', name:'Fremdsprachen', short:'Einzelunterricht in vielen weiteren Sprachen.',
-   desc:'Neben Deutsch bietet activ lernen auf Anfrage Einzelunterricht in einer Vielzahl von Fremdsprachen – z. B. Englisch, Französisch, Spanisch, Russisch, Griechisch, Türkisch und Portugiesisch.',
-   points:['Englisch, Französisch, Spanisch, Russisch, Türkisch u.&nbsp;v.&nbsp;m.','Individueller Einzelunterricht','44&nbsp;€ pro Unterrichtsstunde (45&nbsp;Min), zzgl. Anmeldung']},
+/* ================= i18n DATA ================= */
+const I18N={};
+I18N.en={
+title:`activ lernen Cologne – Learn German in the heart of Cologne | Courses A1–C1, telc & TestDaF`,
+metaDesc:`German as a foreign language in Cologne – since 1998. Intensive, group & one-to-one courses from A1 to C1, licensed telc & TestDaF exam centre. Small groups, fair prices, free trial lesson. 5.0 ★ from 371 reviews.`,
+"nav.courses":`Courses`,"nav.levels":`Levels A1–C1`,"nav.exams":`Exams`,"nav.prices":`Prices`,"nav.reviews":`Reviews`,"nav.contact":`Contact`,
+"cta.trial":`Free trial lesson`,
+"hero.eyebrow":`Language school in Cologne · since 1998`,
+"hero.h1":`Learn German <span class="hl">in the heart of Cologne</span>.`,
+"hero.lead":`German as a foreign language from A1 to C1 – in small groups, with experienced teachers and official telc &amp; TestDaF exams. Right on Kaiser-Wilhelm-Ring, at the MediaPark.`,
+"hero.slogan":`“Language is the key to the world.”`,
+"hero.cta1":`Get your free placement`,"hero.cta2":`View courses`,
+"hero.chip1":`5.0 · 371 reviews`,"hero.chip2":`telc & TestDaF exam centre`,"hero.chip3":`Free trial lesson`,
+"stat1.num":`since<span> 1998</span>`,"stat1.lbl":`Experience in Cologne`,
+"stat2.num":`5.0<span> ★</span>`,"stat2.lbl":`371 reviews`,
+"stat3.lbl":`all levels`,"stat4.lbl":`Exam centre`,
+"stat5.num":`1000<span>s</span>`,"stat5.lbl":`successful graduates`,
+"why.eyebrow":`Why activ lernen`,"why.h2":`Effective language training in a pleasant atmosphere.`,
+"why.p":`Since we were founded in 1998, several thousand participants have successfully learned German or a foreign language with us – with experienced, superbly trained teachers at fair prices.`,
+"why.c1.h":`Small groups`,"why.c1.p":`A limited number of participants and a placement test ensure that everyone finds the right group and really gets to speak.`,
+"why.c2.h":`Official exams`,"why.c2.p":`Licensed telc & TestDaF exam centre and FaDaF member. Every level ends with a test and a recognised certificate – included in the course price.`,
+"why.c3.h":`Central location`,"why.c3.p":`In the middle of Cologne city centre on Kaiser-Wilhelm-Ring, right by the MediaPark – excellently reachable by train and bus.`,
+"why.c4.h":`Hands-on lessons`,"why.c4.p":`Varied instead of dry: discussions, role-plays, interviews as well as group and individual work – German that works in everyday life and at work.`,
+"glimpse.cap1":`Learning in small groups`,"glimpse.cap2":`In the heart of Cologne, at the MediaPark`,
+"courses.eyebrow":`Our courses`,"courses.h2":`The right course for your goal.`,
+"courses.p":`Whether intensive course, evening course or one-to-one training – tap a course for all the details.`,
+"courses.help":`Not sure which course fits? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">We'll advise you free of charge &rarr;</a>`,
+"levels.eyebrow":`Levels`,"levels.h2":`From your first word to university entrance: A1 to C1.`,
+"levels.p":`Our level system follows the Common European Framework of Reference (CEFR). You join exactly where you are.`,
+"lvl.a1.n":`Beginner`,"lvl.a1.p":`First sentences for everyday life: introducing yourself, asking and answering simple questions.`,
+"lvl.a2.n":`Elementary`,"lvl.a2.p":`Handling familiar situations – shopping, work, your immediate surroundings and daily life.`,
+"lvl.b1.n":`Intermediate`,"lvl.b1.p":`Getting by independently in daily life, describing experiences, giving reasons for opinions.`,
+"lvl.b2.n":`Upper intermediate`,"lvl.b2.p":`Ready for work & study – including the B2 exam for the recognition of nursing staff.`,
+"lvl.c1.n":`Advanced`,"lvl.c1.p":`Mastering complex topics with confidence – the basis for TestDaF and university study in Germany.`,
+"levels.note":`Each level lasts <b>2 course months = 8 weeks (160 teaching hours)</b> and ends with a test and a CEFR certificate – <b>included in the course price</b>. For complete beginners, a new intensive course starts on the first working day of every second month; advanced learners can join almost any time.`,
+"exam.eyebrow":`Exams & certificates`,"exam.h2":`Official telc & TestDaF exam centre.`,
+"exam.p":`activ lernen is a licensed exam centre for telc and TestDaF and a member of FaDaF – the professional association for German as a Foreign Language. Your certificates are officially recognised, for work, study or professional recognition.`,
+"exam.badge3":`FaDaF member`,"exam.ecard.h":`Take an exam`,
+"exam.ecard.li1":`Every course level ends with a test & CEFR certificate – included in the price.`,
+"exam.ecard.li2":`External exam A1–C1 (activ lernen certificate): 100&nbsp;€, dates arranged individually.`,
+"exam.ecard.li3":`Preparation for telc & TestDaF exams at all levels.`,
+"exam.ecard.btn":`Request an exam date`,
+"prices.eyebrow":`Prices`,"prices.h2":`Fair prices, transparently listed.`,
+"prices.p":`Intensive group courses – calculated to be participant-friendly and proven since 1998. Placement, exam & certificate are included.`,
+"price.from":`from`,"price.p1.dur":`1 month`,"price.p1.s":`Intensive course`,"price.p2.dur":`2 months`,"price.p2.s":`one level`,
+"price.p3.tag":`Early-bird price`,"price.p3.dur":`4 months`,"price.p3.s":`two levels`,
+"price.p4.dur":`6 months`,"price.p4.s":`Early-bird price`,"price.p5.dur":`10 months`,"price.p5.s":`Complete package`,
+"prices.note":`<b>Included:</b> placement test, exam &amp; CEFR certificate. In addition: <b>one-to-one German training from 39&nbsp;€</b> per teaching hour (45&nbsp;min), other languages from 44&nbsp;€, each plus a one-time registration fee. We always offer you a <b>free, no-obligation trial lesson</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Just ask if you have questions &rarr;</a>`,
+"reviews.eyebrow":`What our students say`,"reviews.h2":`Excellently rated in Cologne.`,"reviews.count":`371 reviews`,"reviews.src":`Public Google reviews`,
+"contact.eyebrow":`Contact & registration`,"contact.h2":`Secure your free placement.`,
+"contact.lead":`Write to us – together we'll find the right course and your start date. Personal advice in German, English, Spanish, French & Portuguese.`,
+"contact.phone.s":`Call us directly`,"contact.email.s":`Send us an email`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 Cologne<small>City centre · at the MediaPark</small>`,
+"hours.title":`Office hours`,"hours.r1a":`Monday – Friday`,"hours.r1b":`10:00 – 17:00`,
+"hours.r2a":`Without appointment`,"hours.r2b":`just drop by`,"hours.r3a":`Classes`,"hours.r3b":`Mon–Fri, 09:00 – 21:30`,
+"form.h":`Free placement & trial lesson`,"form.fh":`Fill in the form – we'll get back to you with your matching course and start date.`,
+"form.name.l":`First & last name`,"form.name.ph":`Your name`,"form.phone.l":`Phone`,"form.phone.ph":`Your number`,
+"form.email.l":`Email`,"form.email.ph":`you@email.com`,"form.course.l":`Course`,"form.level.l":`Level`,
+"form.msg.l":`Message (optional)`,"form.msg.ph":`When would you like to start? Your question for us…`,
+"form.submit":`Send enquiry`,"form.note":`By submitting, you agree to our privacy policy.`,
+"success.h":`Thank you, we've got your enquiry!`,"success.p":`We'll get back to you as soon as possible with your matching course and start date. See you soon at activ lernen!`,
+"foot.desc":`Institute for Languages and Tutoring. German as a foreign language & foreign languages in Cologne – since 1998, with official telc & TestDaF exams.`,
+"foot.loc.h":`Location`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 Cologne (city centre)`,"foot.loc.hours":`Mon–Fri 10:00–17:00<br>without appointment`,
+"foot.contact.h":`Contact`,"foot.copy":`© 2026 activ lernen – Institute for Languages and Tutoring`,"foot.legal":`Imprint · Privacy`,
+"more":`Details`,"modal.courseCat":`Course`,"modal.disc":`Free & no-obligation consultation at activ lernen in Cologne.`,
+"reqCourse":`Request %s`,"modal.enqCat":`Registration`,"modal.enqH":`Secure your free placement`,
+"modal.enqDisc":`We'll get back to you as soon as possible with your matching course and start date.`,
+courseOpts:[`Intensive German course`,`German group course`,`Evening course`,`Mini-group for nurses (B2)`,`One-to-one German`,`Foreign language (one-to-one)`,`Exam / certificate`,`Not sure yet`],
+levelOpts:[`Beginner (A1)`,`A2`,`B1`,`B2`,`C1`,`I don't know`]
+};
+I18N.de={
+title:`activ lernen Köln – Deutsch lernen mitten in Köln | Sprachkurse A1–C1, telc & TestDaF`,
+metaDesc:`Deutsch als Fremdsprache in Köln – seit 1998. Intensiv-, Gruppen- & Einzelkurse von A1 bis C1, lizenziertes telc- & TestDaF-Prüfungszentrum. Kleine Gruppen, faire Preise, kostenlose Probestunde. 5,0 ★ bei 371 Bewertungen.`,
+"nav.courses":`Kurse`,"nav.levels":`Stufen A1–C1`,"nav.exams":`Prüfungen`,"nav.prices":`Preise`,"nav.reviews":`Bewertungen`,"nav.contact":`Kontakt`,
+"cta.trial":`Kostenlose Probestunde`,
+"hero.eyebrow":`Sprachschule in Köln · seit 1998`,
+"hero.h1":`Deutsch lernen <span class="hl">mitten in Köln</span>.`,
+"hero.lead":`Deutsch als Fremdsprache von A1 bis C1 – in kleinen Gruppen, mit erfahrenen Lehrkräften und offiziellen telc- &amp; TestDaF-Prüfungen. Direkt am Kaiser-Wilhelm-Ring, am MediaPark.`,
+"hero.slogan":`„Die Sprache ist der Schlüssel zur Welt.“`,
+"hero.cta1":`Kostenlose Einstufung sichern`,"hero.cta2":`Kurse ansehen`,
+"hero.chip1":`5,0 · 371 Bewertungen`,"hero.chip2":`telc- & TestDaF-Prüfungszentrum`,"hero.chip3":`Kostenlose Probestunde`,
+"stat1.num":`seit<span> 1998</span>`,"stat1.lbl":`Erfahrung in Köln`,
+"stat2.num":`5,0<span> ★</span>`,"stat2.lbl":`371 Bewertungen`,
+"stat3.lbl":`alle Niveaustufen`,"stat4.lbl":`Prüfungszentrum`,
+"stat5.num":`1000<span>e</span>`,"stat5.lbl":`erfolgreiche Absolvent:innen`,
+"why.eyebrow":`Warum activ lernen`,"why.h2":`Effektives Sprachtraining in angenehmer Atmosphäre.`,
+"why.p":`Seit unserer Gründung 1998 haben mehrere tausend Teilnehmer:innen bei uns erfolgreich Deutsch oder eine Fremdsprache gelernt – mit erfahrenen, bestens ausgebildeten Lehrkräften zu fairen Preisen.`,
+"why.c1.h":`Kleine Gruppen`,"why.c1.p":`Begrenzte Teilnehmerzahl und ein Einstufungstest sorgen dafür, dass jede:r die passende Gruppe findet und wirklich zu Wort kommt.`,
+"why.c2.h":`Offizielle Prüfungen`,"why.c2.p":`Lizenziertes telc- & TestDaF-Prüfungszentrum und FaDaF-Mitglied. Jede Stufe endet mit Test und anerkanntem Zertifikat – im Kurspreis inbegriffen.`,
+"why.c3.h":`Zentrale Lage`,"why.c3.p":`Mitten in der Kölner Innenstadt am Kaiser-Wilhelm-Ring, direkt am MediaPark – hervorragend mit Bahn und Bus erreichbar.`,
+"why.c4.h":`Praxisnaher Unterricht`,"why.c4.p":`Abwechslungsreich statt trocken: Diskussionen, Rollenspiele, Interviews sowie Gruppen- und Einzelarbeit – Deutsch, das im Alltag und Beruf funktioniert.`,
+"glimpse.cap1":`Lernen in kleinen Gruppen`,"glimpse.cap2":`Mitten in Köln, am MediaPark`,
+"courses.eyebrow":`Unsere Kurse`,"courses.h2":`Der richtige Kurs für Dein Ziel.`,
+"courses.p":`Ob Intensivkurs, Abendkurs oder Einzeltraining – tippe auf einen Kurs für alle Details.`,
+"courses.help":`Nicht sicher, welcher Kurs passt? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Wir beraten Dich kostenlos &rarr;</a>`,
+"levels.eyebrow":`Niveaustufen`,"levels.h2":`Vom ersten Wort bis zur Hochschulreife: A1 bis C1.`,
+"levels.p":`Unser Kursstufensystem folgt dem Gemeinsamen Europäischen Referenzrahmen (GER). Du steigst genau dort ein, wo Du stehst.`,
+"lvl.a1.n":`Anfänger:in`,"lvl.a1.p":`Erste Sätze für den Alltag: sich vorstellen, einfache Fragen stellen und beantworten.`,
+"lvl.a2.n":`Grundlagen`,"lvl.a2.p":`Vertraute Situationen meistern – Einkaufen, Arbeit, direkte Umgebung und Alltag.`,
+"lvl.b1.n":`Mittelstufe`,"lvl.b1.p":`Selbstständig im Alltag zurechtkommen, Erfahrungen schildern, Meinungen begründen.`,
+"lvl.b2.n":`Fortgeschritten`,"lvl.b2.p":`Fit für Beruf & Studium – auch die B2-Prüfung für die Anerkennung von Pflegekräften.`,
+"lvl.c1.n":`Fachkundig`,"lvl.c1.p":`Komplexe Themen sicher beherrschen – Grundlage für TestDaF und Studium in Deutschland.`,
+"levels.note":`Jede Niveaustufe dauert <b>2 Kursmonate = 8 Wochen (160 Unterrichtsstunden)</b> und endet mit einem Test samt Zertifikat gemäß GER – <b>im Kurspreis inbegriffen</b>. Für Anfänger:innen ohne Vorkenntnisse startet am ersten Werktag jedes zweiten Monats ein neuer Intensivkurs; Fortgeschrittene steigen praktisch jederzeit ein.`,
+"exam.eyebrow":`Prüfungen & Zertifikate`,"exam.h2":`Offizielles telc- & TestDaF-Prüfungszentrum.`,
+"exam.p":`activ lernen ist lizenziertes Prüfungszentrum für telc und TestDaF sowie Mitglied im FaDaF – dem Fachverband Deutsch als Fremdsprache. Deine Zertifikate sind offiziell anerkannt, für Job, Studium oder Anerkennung.`,
+"exam.badge3":`FaDaF-Mitglied`,"exam.ecard.h":`Prüfung ablegen`,
+"exam.ecard.li1":`Jede Kursstufe endet mit Test & Zertifikat gemäß GER – im Preis enthalten.`,
+"exam.ecard.li2":`Externe Prüfung A1–C1 (activ-lernen-Zertifikat): 100&nbsp;€, Termine individuell.`,
+"exam.ecard.li3":`Vorbereitung auf telc- & TestDaF-Prüfungen aller Stufen.`,
+"exam.ecard.btn":`Prüfungstermin anfragen`,
+"prices.eyebrow":`Preise`,"prices.h2":`Faire Preise, transparent aufgeführt.`,
+"prices.p":`Intensivkurse in der Gruppe – teilnehmerfreundlich kalkuliert und seit 1998 bewährt. Einstufung, Prüfung & Zertifikat sind inbegriffen.`,
+"price.from":`ab`,"price.p1.dur":`1 Monat`,"price.p1.s":`Intensivkurs`,"price.p2.dur":`2 Monate`,"price.p2.s":`eine Niveaustufe`,
+"price.p3.tag":`Frühbucher-Preis`,"price.p3.dur":`4 Monate`,"price.p3.s":`zwei Niveaustufen`,
+"price.p4.dur":`6 Monate`,"price.p4.s":`Frühbucher-Preis`,"price.p5.dur":`10 Monate`,"price.p5.s":`Komplettpaket`,
+"prices.note":`<b>Inklusive:</b> Einstufungstest, Prüfung &amp; Zertifikat gemäß GER. Zusätzlich: <b>Einzeltraining Deutsch ab 39&nbsp;€</b> / Unterrichtsstunde (45&nbsp;Min), weitere Sprachen ab 44&nbsp;€, jeweils zzgl. einmaliger Anmeldegebühr. Wir bieten Dir immer eine <b>kostenlose, unverbindliche Probestunde</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Bei Fragen einfach anfragen &rarr;</a>`,
+"reviews.eyebrow":`Das sagen die Teilnehmer:innen`,"reviews.h2":`Ausgezeichnet bewertet in Köln.`,"reviews.count":`371 Bewertungen`,"reviews.src":`Öffentliche Google-Bewertungen`,
+"contact.eyebrow":`Kontakt & Anmeldung`,"contact.h2":`Sichere Dir Deine kostenlose Einstufung.`,
+"contact.lead":`Schreib uns – wir finden gemeinsam den passenden Kurs und Deinen Starttermin. Persönliche Beratung auf Deutsch, Englisch, Spanisch, Französisch & Portugiesisch.`,
+"contact.phone.s":`Ruf uns direkt an`,"contact.email.s":`Schreib uns eine E-Mail`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 Köln<small>Innenstadt · am MediaPark</small>`,
+"hours.title":`Öffnungszeiten Büro`,"hours.r1a":`Montag – Freitag`,"hours.r1b":`10:00 – 17:00 Uhr`,
+"hours.r2a":`Ohne Termin`,"hours.r2b":`einfach vorbeikommen`,"hours.r3a":`Unterricht`,"hours.r3b":`Mo–Fr, 09:00 – 21:30 Uhr`,
+"form.h":`Kostenlose Einstufung & Probestunde`,"form.fh":`Fülle das Formular aus – wir melden uns mit Deinem passenden Kurs und Termin.`,
+"form.name.l":`Vor- & Nachname`,"form.name.ph":`Dein Name`,"form.phone.l":`Telefon`,"form.phone.ph":`Deine Nummer`,
+"form.email.l":`E-Mail`,"form.email.ph":`deine@email.de`,"form.course.l":`Kurs`,"form.level.l":`Niveau`,
+"form.msg.l":`Nachricht (optional)`,"form.msg.ph":`Wann möchtest Du starten? Deine Frage an uns…`,
+"form.submit":`Anfrage absenden`,"form.note":`Mit dem Absenden erklärst Du Dich mit unseren Datenschutzbestimmungen einverstanden.`,
+"success.h":`Danke, wir haben Deine Anfrage!`,"success.p":`Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin. Bis bald bei activ lernen!`,
+"foot.desc":`Institut für Sprachen und Nachhilfe. Deutsch als Fremdsprache & Fremdsprachen in Köln – seit 1998, mit offiziellen telc- & TestDaF-Prüfungen.`,
+"foot.loc.h":`Standort`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 Köln (Innenstadt)`,"foot.loc.hours":`Mo–Fr 10:00–17:00 Uhr<br>ohne Termin`,
+"foot.contact.h":`Kontakt`,"foot.copy":`© 2026 activ lernen – Institut für Sprachen und Nachhilfe`,"foot.legal":`Impressum · Datenschutz`,
+"more":`Details`,"modal.courseCat":`Kurs`,"modal.disc":`Kostenlose & unverbindliche Beratung bei activ lernen in Köln.`,
+"reqCourse":`%s anfragen`,"modal.enqCat":`Anmeldung`,"modal.enqH":`Kostenlose Einstufung sichern`,
+"modal.enqDisc":`Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin.`,
+courseOpts:[`Intensivkurs Deutsch`,`Gruppenkurs Deutsch`,`Abendkurs`,`Minigruppe Pflegekräfte (B2)`,`Einzeltraining Deutsch`,`Fremdsprache (Einzelunterricht)`,`Prüfung / Zertifikat`,`Noch unsicher`],
+levelOpts:[`Anfänger:in (A1)`,`A2`,`B1`,`B2`,`C1`,`Weiß ich nicht`]
+};
+I18N.tr={
+title:`activ lernen Köln – Köln'ün kalbinde Almanca öğrenin | A1–C1 kursları, telc & TestDaF`,
+metaDesc:`Köln'de yabancı dil olarak Almanca – 1998'den beri. A1'den C1'e yoğun, grup ve birebir kurslar, lisanslı telc & TestDaF sınav merkezi. Küçük gruplar, uygun fiyatlar, ücretsiz deneme dersi. 371 değerlendirmede 5,0 ★.`,
+"nav.courses":`Kurslar`,"nav.levels":`Seviyeler A1–C1`,"nav.exams":`Sınavlar`,"nav.prices":`Fiyatlar`,"nav.reviews":`Yorumlar`,"nav.contact":`İletişim`,
+"cta.trial":`Ücretsiz deneme dersi`,
+"hero.eyebrow":`Köln'de dil okulu · 1998'den beri`,
+"hero.h1":`<span class="hl">Köln'ün kalbinde</span> Almanca öğrenin.`,
+"hero.lead":`A1'den C1'e yabancı dil olarak Almanca – küçük gruplarda, deneyimli öğretmenlerle ve resmi telc &amp; TestDaF sınavlarıyla. Kaiser-Wilhelm-Ring'de, MediaPark'ın yanında.`,
+"hero.slogan":`„Dil, dünyanın anahtarıdır.“`,
+"hero.cta1":`Ücretsiz seviye tespitinizi alın`,"hero.cta2":`Kursları inceleyin`,
+"hero.chip1":`5,0 · 371 değerlendirme`,"hero.chip2":`telc & TestDaF sınav merkezi`,"hero.chip3":`Ücretsiz deneme dersi`,
+"stat1.num":`1998<span></span>`,"stat1.lbl":`1998'den beri Köln'de`,
+"stat2.num":`5,0<span> ★</span>`,"stat2.lbl":`371 değerlendirme`,
+"stat3.lbl":`tüm seviyeler`,"stat4.lbl":`Sınav merkezi`,
+"stat5.num":`1000<span>+</span>`,"stat5.lbl":`başarılı mezun`,
+"why.eyebrow":`Neden activ lernen`,"why.h2":`Keyifli bir ortamda etkili dil eğitimi.`,
+"why.p":`1998'deki kuruluşumuzdan bu yana binlerce katılımcı, deneyimli ve son derece iyi eğitimli öğretmenlerle uygun fiyatlarla bizde başarıyla Almanca ya da bir yabancı dil öğrendi.`,
+"why.c1.h":`Küçük gruplar`,"why.c1.p":`Sınırlı katılımcı sayısı ve bir seviye tespit sınavı, herkesin kendine uygun grubu bulmasını ve gerçekten söz almasını sağlar.`,
+"why.c2.h":`Resmi sınavlar`,"why.c2.p":`Lisanslı telc & TestDaF sınav merkezi ve FaDaF üyesi. Her seviye bir sınav ve tanınan bir sertifikayla sona erer – kurs ücretine dahildir.`,
+"why.c3.h":`Merkezi konum`,"why.c3.p":`Köln şehir merkezinde, Kaiser-Wilhelm-Ring'de, MediaPark'ın hemen yanında – tren ve otobüsle çok kolay ulaşılır.`,
+"why.c4.h":`Uygulamalı dersler`,"why.c4.p":`Sıkıcı değil, çeşitli: tartışmalar, rol yapma ve röportajların yanı sıra grup ve bireysel çalışmalar – günlük hayatta ve işte işe yarayan Almanca.`,
+"glimpse.cap1":`Küçük gruplarda öğrenim`,"glimpse.cap2":`Köln'ün kalbinde, MediaPark'ta`,
+"courses.eyebrow":`Kurslarımız`,"courses.h2":`Hedefiniz için doğru kurs.`,
+"courses.p":`İster yoğun kurs, ister akşam kursu ya da birebir eğitim olsun – tüm ayrıntılar için bir kursa dokunun.`,
+"courses.help":`Hangi kursun uygun olduğundan emin değil misiniz? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Size ücretsiz danışmanlık verelim &rarr;</a>`,
+"levels.eyebrow":`Seviyeler`,"levels.h2":`İlk kelimeden üniversiteye: A1'den C1'e.`,
+"levels.p":`Seviye sistemimiz Avrupa Ortak Dil Çerçevesi'ni (CEFR) izler. Tam bulunduğunuz yerden başlarsınız.`,
+"lvl.a1.n":`Başlangıç`,"lvl.a1.p":`Günlük yaşam için ilk cümleler: kendini tanıtma, basit sorular sorma ve yanıtlama.`,
+"lvl.a2.n":`Temel`,"lvl.a2.p":`Tanıdık durumların üstesinden gelme – alışveriş, iş, yakın çevre ve günlük hayat.`,
+"lvl.b1.n":`Orta`,"lvl.b1.p":`Günlük hayatta kendi başına idare etme, deneyimleri anlatma, görüşleri gerekçelendirme.`,
+"lvl.b2.n":`Orta-üst`,"lvl.b2.p":`İş ve öğrenim için hazır – yurt dışından gelen hemşirelerin denkliği için B2 sınavı dahil.`,
+"lvl.c1.n":`İleri`,"lvl.c1.p":`Karmaşık konulara güvenle hâkim olma – TestDaF ve Almanya'da üniversite öğrenimi için temel.`,
+"levels.note":`Her seviye <b>2 kurs ayı = 8 hafta (160 ders saati)</b> sürer ve CEFR'ye uygun bir sınav ve sertifikayla sona erer – <b>kurs ücretine dahildir</b>. Ön bilgisi olmayan başlangıç seviyesindekiler için her iki ayda bir, ayın ilk iş gününde yeni bir yoğun kurs başlar; ileri seviyedekiler neredeyse her zaman katılabilir.`,
+"exam.eyebrow":`Sınavlar & sertifikalar`,"exam.h2":`Resmi telc & TestDaF sınav merkezi.`,
+"exam.p":`activ lernen, telc ve TestDaF için lisanslı bir sınav merkezi ve FaDaF – Yabancı Dil Olarak Almanca meslek birliği üyesidir. Sertifikalarınız iş, öğrenim veya denklik için resmen tanınır.`,
+"exam.badge3":`FaDaF üyesi`,"exam.ecard.h":`Sınava girin`,
+"exam.ecard.li1":`Her kurs seviyesi CEFR'ye uygun bir sınav ve sertifikayla sona erer – fiyata dahildir.`,
+"exam.ecard.li2":`Harici sınav A1–C1 (activ lernen sertifikası): 100&nbsp;€, tarihler bireysel olarak belirlenir.`,
+"exam.ecard.li3":`Tüm seviyelerde telc & TestDaF sınavlarına hazırlık.`,
+"exam.ecard.btn":`Sınav tarihi talep edin`,
+"prices.eyebrow":`Fiyatlar`,"prices.h2":`Adil fiyatlar, şeffafça listelenmiş.`,
+"prices.p":`Grup hâlinde yoğun kurslar – katılımcı dostu hesaplanmış ve 1998'den beri kanıtlanmış. Seviye tespiti, sınav ve sertifika dahildir.`,
+"price.from":`asgari`,"price.p1.dur":`1 ay`,"price.p1.s":`Yoğun kurs`,"price.p2.dur":`2 ay`,"price.p2.s":`bir seviye`,
+"price.p3.tag":`Erken kayıt fiyatı`,"price.p3.dur":`4 ay`,"price.p3.s":`iki seviye`,
+"price.p4.dur":`6 ay`,"price.p4.s":`Erken kayıt fiyatı`,"price.p5.dur":`10 ay`,"price.p5.s":`Komple paket`,
+"prices.note":`<b>Dahil:</b> seviye tespit sınavı, sınav &amp; CEFR sertifikası. Ayrıca: <b>birebir Almanca eğitimi 39&nbsp;€'dan itibaren</b> ders saati başına (45&nbsp;dk), diğer diller 44&nbsp;€'dan itibaren, her biri tek seferlik kayıt ücreti hariç. Size her zaman <b>ücretsiz, bağlayıcı olmayan bir deneme dersi</b> sunuyoruz. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Sorularınız için bize ulaşın &rarr;</a>`,
+"reviews.eyebrow":`Katılımcılarımız ne diyor`,"reviews.h2":`Köln'de mükemmel değerlendirildi.`,"reviews.count":`371 değerlendirme`,"reviews.src":`Herkese açık Google değerlendirmeleri`,
+"contact.eyebrow":`İletişim & kayıt`,"contact.h2":`Ücretsiz seviye tespitinizi ayırtın.`,
+"contact.lead":`Bize yazın – doğru kursu ve başlangıç tarihinizi birlikte bulalım. Almanca, İngilizce, İspanyolca, Fransızca & Portekizce kişisel danışmanlık.`,
+"contact.phone.s":`Bizi hemen arayın`,"contact.email.s":`Bize e-posta gönderin`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 Köln<small>Şehir merkezi · MediaPark'ta</small>`,
+"hours.title":`Ofis çalışma saatleri`,"hours.r1a":`Pazartesi – Cuma`,"hours.r1b":`10:00 – 17:00`,
+"hours.r2a":`Randevusuz`,"hours.r2b":`uğrayabilirsiniz`,"hours.r3a":`Dersler`,"hours.r3b":`Pzt–Cum, 09:00 – 21:30`,
+"form.h":`Ücretsiz seviye tespiti & deneme dersi`,"form.fh":`Formu doldurun – size uygun kurs ve başlangıç tarihiyle geri döneceğiz.`,
+"form.name.l":`Ad & soyad`,"form.name.ph":`Adınız`,"form.phone.l":`Telefon`,"form.phone.ph":`Numaranız`,
+"form.email.l":`E-posta`,"form.email.ph":`siz@email.com`,"form.course.l":`Kurs`,"form.level.l":`Seviye`,
+"form.msg.l":`Mesaj (isteğe bağlı)`,"form.msg.ph":`Ne zaman başlamak istersiniz? Bize sorunuz…`,
+"form.submit":`Talebi gönder`,"form.note":`Göndererek gizlilik politikamızı kabul etmiş olursunuz.`,
+"success.h":`Teşekkürler, talebinizi aldık!`,"success.p":`Size uygun kurs ve başlangıç tarihiyle en kısa sürede geri döneceğiz. activ lernen'de görüşmek üzere!`,
+"foot.desc":`Diller ve Özel Ders Enstitüsü. Köln'de yabancı dil olarak Almanca & yabancı diller – 1998'den beri, resmi telc & TestDaF sınavlarıyla.`,
+"foot.loc.h":`Konum`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 Köln (şehir merkezi)`,"foot.loc.hours":`Pzt–Cum 10:00–17:00<br>randevusuz`,
+"foot.contact.h":`İletişim`,"foot.copy":`© 2026 activ lernen – Diller ve Özel Ders Enstitüsü`,"foot.legal":`Künye · Gizlilik`,
+"more":`Ayrıntılar`,"modal.courseCat":`Kurs`,"modal.disc":`activ lernen Köln'de ücretsiz & bağlayıcı olmayan danışmanlık.`,
+"reqCourse":`%s için talep gönder`,"modal.enqCat":`Kayıt`,"modal.enqH":`Ücretsiz seviye tespitinizi ayırtın`,
+"modal.enqDisc":`Size uygun kurs ve başlangıç tarihiyle en kısa sürede geri döneceğiz.`,
+courseOpts:[`Yoğun Almanca kursu`,`Almanca grup kursu`,`Akşam kursu`,`Hemşireler için mini grup (B2)`,`Birebir Almanca`,`Yabancı dil (birebir)`,`Sınav / sertifika`,`Henüz emin değilim`],
+levelOpts:[`Başlangıç (A1)`,`A2`,`B1`,`B2`,`C1`,`Bilmiyorum`]
+};
+I18N.pt={
+title:`activ lernen Colônia – Aprenda alemão no coração de Colônia | Cursos A1–C1, telc & TestDaF`,
+metaDesc:`Alemão como língua estrangeira em Colônia – desde 1998. Cursos intensivos, em grupo e individuais de A1 a C1, centro de exames licenciado telc & TestDaF. Turmas pequenas, preços justos, aula experimental gratuita. 5,0 ★ em 371 avaliações.`,
+"nav.courses":`Cursos`,"nav.levels":`Níveis A1–C1`,"nav.exams":`Exames`,"nav.prices":`Preços`,"nav.reviews":`Avaliações`,"nav.contact":`Contato`,
+"cta.trial":`Aula experimental gratuita`,
+"hero.eyebrow":`Escola de idiomas em Colônia · desde 1998`,
+"hero.h1":`Aprenda alemão <span class="hl">no coração de Colônia</span>.`,
+"hero.lead":`Alemão como língua estrangeira de A1 a C1 – em turmas pequenas, com professores experientes e exames oficiais telc &amp; TestDaF. Bem na Kaiser-Wilhelm-Ring, no MediaPark.`,
+"hero.slogan":`“O idioma é a chave para o mundo.”`,
+"hero.cta1":`Garanta seu nivelamento gratuito`,"hero.cta2":`Ver cursos`,
+"hero.chip1":`5,0 · 371 avaliações`,"hero.chip2":`Centro de exames telc & TestDaF`,"hero.chip3":`Aula experimental gratuita`,
+"stat1.num":`desde<span> 1998</span>`,"stat1.lbl":`Experiência em Colônia`,
+"stat2.num":`5,0<span> ★</span>`,"stat2.lbl":`371 avaliações`,
+"stat3.lbl":`todos os níveis`,"stat4.lbl":`Centro de exames`,
+"stat5.num":`1000<span>+</span>`,"stat5.lbl":`formandos de sucesso`,
+"why.eyebrow":`Por que activ lernen`,"why.h2":`Ensino de idiomas eficaz em um ambiente agradável.`,
+"why.p":`Desde a nossa fundação em 1998, milhares de participantes aprenderam alemão ou uma língua estrangeira conosco com sucesso – com professores experientes e muito bem formados, a preços justos.`,
+"why.c1.h":`Turmas pequenas`,"why.c1.p":`Um número limitado de participantes e um teste de nivelamento garantem que cada pessoa encontre a turma certa e realmente tenha voz.`,
+"why.c2.h":`Exames oficiais`,"why.c2.p":`Centro de exames licenciado telc & TestDaF e membro da FaDaF. Cada nível termina com um teste e um certificado reconhecido – incluído no preço do curso.`,
+"why.c3.h":`Localização central`,"why.c3.p":`No centro de Colônia, na Kaiser-Wilhelm-Ring, bem ao lado do MediaPark – com ótimo acesso de trem e ônibus.`,
+"why.c4.h":`Aulas práticas`,"why.c4.p":`Variadas em vez de monótonas: debates, dramatizações, entrevistas, além de trabalho em grupo e individual – alemão que funciona no dia a dia e no trabalho.`,
+"glimpse.cap1":`Aprender em turmas pequenas`,"glimpse.cap2":`No coração de Colônia, no MediaPark`,
+"courses.eyebrow":`Nossos cursos`,"courses.h2":`O curso certo para o seu objetivo.`,
+"courses.p":`Seja curso intensivo, curso noturno ou aula individual – toque em um curso para ver todos os detalhes.`,
+"courses.help":`Não sabe qual curso combina com você? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Nós orientamos você gratuitamente &rarr;</a>`,
+"levels.eyebrow":`Níveis`,"levels.h2":`Da primeira palavra ao ingresso na universidade: A1 a C1.`,
+"levels.p":`Nosso sistema de níveis segue o Quadro Europeu Comum de Referência (CEFR). Você começa exatamente de onde está.`,
+"lvl.a1.n":`Iniciante`,"lvl.a1.p":`Primeiras frases para o dia a dia: apresentar-se, fazer e responder perguntas simples.`,
+"lvl.a2.n":`Básico`,"lvl.a2.p":`Dominar situações familiares – compras, trabalho, o ambiente imediato e o cotidiano.`,
+"lvl.b1.n":`Intermediário`,"lvl.b1.p":`Virar-se sozinho no dia a dia, relatar experiências, justificar opiniões.`,
+"lvl.b2.n":`Intermediário superior`,"lvl.b2.p":`Preparado para o trabalho e os estudos – inclusive o exame B2 para o reconhecimento de profissionais de enfermagem.`,
+"lvl.c1.n":`Avançado`,"lvl.c1.p":`Dominar temas complexos com segurança – base para o TestDaF e para estudar na Alemanha.`,
+"levels.note":`Cada nível dura <b>2 meses de curso = 8 semanas (160 horas-aula)</b> e termina com um teste e um certificado conforme o CEFR – <b>incluído no preço do curso</b>. Para iniciantes sem conhecimento prévio, um novo curso intensivo começa no primeiro dia útil a cada dois meses; alunos avançados podem entrar praticamente a qualquer momento.`,
+"exam.eyebrow":`Exames & certificados`,"exam.h2":`Centro oficial de exames telc & TestDaF.`,
+"exam.p":`A activ lernen é um centro de exames licenciado para telc e TestDaF e membro da FaDaF – a associação profissional de Alemão como Língua Estrangeira. Seus certificados são oficialmente reconhecidos, para trabalho, estudos ou reconhecimento profissional.`,
+"exam.badge3":`Membro da FaDaF`,"exam.ecard.h":`Prestar um exame`,
+"exam.ecard.li1":`Cada nível do curso termina com um teste & certificado CEFR – incluído no preço.`,
+"exam.ecard.li2":`Exame externo A1–C1 (certificado activ lernen): 100&nbsp;€, datas combinadas individualmente.`,
+"exam.ecard.li3":`Preparação para os exames telc & TestDaF de todos os níveis.`,
+"exam.ecard.btn":`Solicitar data de exame`,
+"prices.eyebrow":`Preços`,"prices.h2":`Preços justos, listados com transparência.`,
+"prices.p":`Cursos intensivos em grupo – com valores pensados para o participante e comprovados desde 1998. Nivelamento, exame e certificado estão incluídos.`,
+"price.from":`a partir de`,"price.p1.dur":`1 mês`,"price.p1.s":`Curso intensivo`,"price.p2.dur":`2 meses`,"price.p2.s":`um nível`,
+"price.p3.tag":`Preço antecipado`,"price.p3.dur":`4 meses`,"price.p3.s":`dois níveis`,
+"price.p4.dur":`6 meses`,"price.p4.s":`Preço antecipado`,"price.p5.dur":`10 meses`,"price.p5.s":`Pacote completo`,
+"prices.note":`<b>Incluído:</b> teste de nivelamento, exame &amp; certificado CEFR. Além disso: <b>aulas individuais de alemão a partir de 39&nbsp;€</b> por hora-aula (45&nbsp;min), outros idiomas a partir de 44&nbsp;€, cada um mais uma taxa única de inscrição. Oferecemos sempre uma <b>aula experimental gratuita e sem compromisso</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Em caso de dúvidas, é só perguntar &rarr;</a>`,
+"reviews.eyebrow":`O que dizem nossos alunos`,"reviews.h2":`Excelentemente avaliada em Colônia.`,"reviews.count":`371 avaliações`,"reviews.src":`Avaliações públicas do Google`,
+"contact.eyebrow":`Contato & inscrição`,"contact.h2":`Garanta seu nivelamento gratuito.`,
+"contact.lead":`Escreva para nós – juntos encontramos o curso certo e a sua data de início. Atendimento pessoal em alemão, inglês, espanhol, francês & português.`,
+"contact.phone.s":`Ligue para nós`,"contact.email.s":`Envie um e-mail`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 Colônia<small>Centro · no MediaPark</small>`,
+"hours.title":`Horário do escritório`,"hours.r1a":`Segunda – sexta`,"hours.r1b":`10:00 – 17:00`,
+"hours.r2a":`Sem agendamento`,"hours.r2b":`é só passar`,"hours.r3a":`Aulas`,"hours.r3b":`Seg–sex, 09:00 – 21:30`,
+"form.h":`Nivelamento & aula experimental gratuitos`,"form.fh":`Preencha o formulário – retornamos com o curso ideal e a data de início.`,
+"form.name.l":`Nome & sobrenome`,"form.name.ph":`Seu nome`,"form.phone.l":`Telefone`,"form.phone.ph":`Seu número`,
+"form.email.l":`E-mail`,"form.email.ph":`voce@email.com`,"form.course.l":`Curso`,"form.level.l":`Nível`,
+"form.msg.l":`Mensagem (opcional)`,"form.msg.ph":`Quando você gostaria de começar? Sua pergunta para nós…`,
+"form.submit":`Enviar solicitação`,"form.note":`Ao enviar, você concorda com a nossa política de privacidade.`,
+"success.h":`Obrigado, recebemos a sua solicitação!`,"success.p":`Retornaremos o mais rápido possível com o curso ideal e a data de início. Até breve na activ lernen!`,
+"foot.desc":`Instituto de Idiomas e Reforço Escolar. Alemão como língua estrangeira & idiomas em Colônia – desde 1998, com exames oficiais telc & TestDaF.`,
+"foot.loc.h":`Localização`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 Colônia (centro)`,"foot.loc.hours":`Seg–sex 10:00–17:00<br>sem agendamento`,
+"foot.contact.h":`Contato`,"foot.copy":`© 2026 activ lernen – Instituto de Idiomas e Reforço Escolar`,"foot.legal":`Aviso legal · Privacidade`,
+"more":`Detalhes`,"modal.courseCat":`Curso`,"modal.disc":`Consultoria gratuita e sem compromisso na activ lernen em Colônia.`,
+"reqCourse":`Solicitar %s`,"modal.enqCat":`Inscrição`,"modal.enqH":`Garanta seu nivelamento gratuito`,
+"modal.enqDisc":`Retornaremos o mais rápido possível com o curso ideal e a data de início.`,
+courseOpts:[`Curso intensivo de alemão`,`Curso de alemão em grupo`,`Curso noturno`,`Miniturma para enfermeiros (B2)`,`Alemão individual`,`Língua estrangeira (individual)`,`Exame / certificado`,`Ainda não sei`],
+levelOpts:[`Iniciante (A1)`,`A2`,`B1`,`B2`,`C1`,`Não sei`]
+};
+I18N.es={
+title:`activ lernen Colonia – Aprende alemán en el corazón de Colonia | Cursos A1–C1, telc & TestDaF`,
+metaDesc:`Alemán como lengua extranjera en Colonia – desde 1998. Cursos intensivos, en grupo e individuales de A1 a C1, centro de exámenes autorizado telc & TestDaF. Grupos reducidos, precios justos, clase de prueba gratuita. 5,0 ★ en 371 reseñas.`,
+"nav.courses":`Cursos`,"nav.levels":`Niveles A1–C1`,"nav.exams":`Exámenes`,"nav.prices":`Precios`,"nav.reviews":`Reseñas`,"nav.contact":`Contacto`,
+"cta.trial":`Clase de prueba gratuita`,
+"hero.eyebrow":`Escuela de idiomas en Colonia · desde 1998`,
+"hero.h1":`Aprende alemán <span class="hl">en el corazón de Colonia</span>.`,
+"hero.lead":`Alemán como lengua extranjera de A1 a C1 – en grupos reducidos, con profesores con experiencia y exámenes oficiales telc &amp; TestDaF. Justo en la Kaiser-Wilhelm-Ring, en el MediaPark.`,
+"hero.slogan":`«El idioma es la llave del mundo.»`,
+"hero.cta1":`Consigue tu nivelación gratuita`,"hero.cta2":`Ver cursos`,
+"hero.chip1":`5,0 · 371 reseñas`,"hero.chip2":`Centro de exámenes telc & TestDaF`,"hero.chip3":`Clase de prueba gratuita`,
+"stat1.num":`desde<span> 1998</span>`,"stat1.lbl":`Experiencia en Colonia`,
+"stat2.num":`5,0<span> ★</span>`,"stat2.lbl":`371 reseñas`,
+"stat3.lbl":`todos los niveles`,"stat4.lbl":`Centro de exámenes`,
+"stat5.num":`1000<span>+</span>`,"stat5.lbl":`egresados con éxito`,
+"why.eyebrow":`Por qué activ lernen`,"why.h2":`Formación lingüística eficaz en un ambiente agradable.`,
+"why.p":`Desde nuestra fundación en 1998, miles de participantes han aprendido alemán o una lengua extranjera con nosotros con éxito – con profesores con experiencia y excelentemente formados, a precios justos.`,
+"why.c1.h":`Grupos reducidos`,"why.c1.p":`Un número limitado de participantes y una prueba de nivel garantizan que cada persona encuentre el grupo adecuado y pueda participar de verdad.`,
+"why.c2.h":`Exámenes oficiales`,"why.c2.p":`Centro de exámenes autorizado telc & TestDaF y miembro de FaDaF. Cada nivel termina con una prueba y un certificado reconocido – incluido en el precio del curso.`,
+"why.c3.h":`Ubicación céntrica`,"why.c3.p":`En pleno centro de Colonia, en la Kaiser-Wilhelm-Ring, justo al lado del MediaPark – con excelente acceso en tren y autobús.`,
+"why.c4.h":`Clases prácticas`,"why.c4.p":`Variadas en lugar de aburridas: debates, juegos de rol, entrevistas, además de trabajo en grupo e individual – alemán que funciona en el día a día y en el trabajo.`,
+"glimpse.cap1":`Aprender en grupos reducidos`,"glimpse.cap2":`En el corazón de Colonia, en el MediaPark`,
+"courses.eyebrow":`Nuestros cursos`,"courses.h2":`El curso adecuado para tu objetivo.`,
+"courses.p":`Ya sea curso intensivo, curso nocturno o clases individuales – toca un curso para ver todos los detalles.`,
+"courses.help":`¿No sabes qué curso te conviene? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Te asesoramos gratis &rarr;</a>`,
+"levels.eyebrow":`Niveles`,"levels.h2":`De la primera palabra al acceso a la universidad: de A1 a C1.`,
+"levels.p":`Nuestro sistema de niveles sigue el Marco Común Europeo de Referencia (MCER). Empiezas justo donde estás.`,
+"lvl.a1.n":`Principiante`,"lvl.a1.p":`Primeras frases para el día a día: presentarse, hacer y responder preguntas sencillas.`,
+"lvl.a2.n":`Básico`,"lvl.a2.p":`Manejar situaciones cotidianas – compras, trabajo, entorno inmediato y vida diaria.`,
+"lvl.b1.n":`Intermedio`,"lvl.b1.p":`Desenvolverte por tu cuenta en el día a día, describir experiencias, justificar opiniones.`,
+"lvl.b2.n":`Intermedio alto`,"lvl.b2.p":`Preparado para el trabajo y los estudios – incluido el examen B2 para la homologación del personal de enfermería.`,
+"lvl.c1.n":`Avanzado`,"lvl.c1.p":`Dominar con seguridad temas complejos – base para el TestDaF y para estudiar en Alemania.`,
+"levels.note":`Cada nivel dura <b>2 meses de curso = 8 semanas (160 horas lectivas)</b> y termina con una prueba y un certificado según el MCER – <b>incluido en el precio del curso</b>. Para principiantes sin conocimientos previos, cada dos meses comienza un nuevo curso intensivo el primer día hábil; el alumnado avanzado puede incorporarse prácticamente en cualquier momento.`,
+"exam.eyebrow":`Exámenes & certificados`,"exam.h2":`Centro oficial de exámenes telc & TestDaF.`,
+"exam.p":`activ lernen es un centro de exámenes autorizado para telc y TestDaF y miembro de FaDaF, la asociación profesional de Alemán como Lengua Extranjera. Tus certificados están reconocidos oficialmente, para el trabajo, los estudios o la homologación.`,
+"exam.badge3":`Miembro de FaDaF`,"exam.ecard.h":`Presentar un examen`,
+"exam.ecard.li1":`Cada nivel del curso termina con una prueba & certificado MCER – incluido en el precio.`,
+"exam.ecard.li2":`Examen externo A1–C1 (certificado activ lernen): 100&nbsp;€, fechas acordadas individualmente.`,
+"exam.ecard.li3":`Preparación para los exámenes telc & TestDaF de todos los niveles.`,
+"exam.ecard.btn":`Solicitar fecha de examen`,
+"prices.eyebrow":`Precios`,"prices.h2":`Precios justos, detallados con transparencia.`,
+"prices.p":`Cursos intensivos en grupo – con tarifas pensadas para el participante y probadas desde 1998. La nivelación, el examen y el certificado están incluidos.`,
+"price.from":`desde`,"price.p1.dur":`1 mes`,"price.p1.s":`Curso intensivo`,"price.p2.dur":`2 meses`,"price.p2.s":`un nivel`,
+"price.p3.tag":`Precio anticipado`,"price.p3.dur":`4 meses`,"price.p3.s":`dos niveles`,
+"price.p4.dur":`6 meses`,"price.p4.s":`Precio anticipado`,"price.p5.dur":`10 meses`,"price.p5.s":`Paquete completo`,
+"prices.note":`<b>Incluido:</b> prueba de nivel, examen &amp; certificado MCER. Además: <b>clases individuales de alemán desde 39&nbsp;€</b> por hora lectiva (45&nbsp;min), otros idiomas desde 44&nbsp;€, cada uno más una tasa única de matrícula. Siempre te ofrecemos una <b>clase de prueba gratuita y sin compromiso</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Si tienes dudas, solo pregunta &rarr;</a>`,
+"reviews.eyebrow":`Lo que dicen nuestros alumnos`,"reviews.h2":`Excelentemente valorada en Colonia.`,"reviews.count":`371 reseñas`,"reviews.src":`Reseñas públicas de Google`,
+"contact.eyebrow":`Contacto & inscripción`,"contact.h2":`Consigue tu nivelación gratuita.`,
+"contact.lead":`Escríbenos – juntos encontramos el curso adecuado y tu fecha de inicio. Asesoramiento personal en alemán, inglés, español, francés & portugués.`,
+"contact.phone.s":`Llámanos directamente`,"contact.email.s":`Envíanos un correo`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 Colonia<small>Centro · en el MediaPark</small>`,
+"hours.title":`Horario de oficina`,"hours.r1a":`Lunes – viernes`,"hours.r1b":`10:00 – 17:00`,
+"hours.r2a":`Sin cita previa`,"hours.r2b":`solo ven a vernos`,"hours.r3a":`Clases`,"hours.r3b":`Lun–vie, 09:00 – 21:30`,
+"form.h":`Nivelación & clase de prueba gratuitas`,"form.fh":`Rellena el formulario – te responderemos con tu curso ideal y tu fecha de inicio.`,
+"form.name.l":`Nombre & apellidos`,"form.name.ph":`Tu nombre`,"form.phone.l":`Teléfono`,"form.phone.ph":`Tu número`,
+"form.email.l":`Correo electrónico`,"form.email.ph":`tu@email.com`,"form.course.l":`Curso`,"form.level.l":`Nivel`,
+"form.msg.l":`Mensaje (opcional)`,"form.msg.ph":`¿Cuándo te gustaría empezar? Tu pregunta para nosotros…`,
+"form.submit":`Enviar solicitud`,"form.note":`Al enviar, aceptas nuestra política de privacidad.`,
+"success.h":`¡Gracias, hemos recibido tu solicitud!`,"success.p":`Te responderemos lo antes posible con tu curso ideal y tu fecha de inicio. ¡Hasta pronto en activ lernen!`,
+"foot.desc":`Instituto de Idiomas y Apoyo Escolar. Alemán como lengua extranjera & idiomas en Colonia – desde 1998, con exámenes oficiales telc & TestDaF.`,
+"foot.loc.h":`Ubicación`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 Colonia (centro)`,"foot.loc.hours":`Lun–vie 10:00–17:00<br>sin cita previa`,
+"foot.contact.h":`Contacto`,"foot.copy":`© 2026 activ lernen – Instituto de Idiomas y Apoyo Escolar`,"foot.legal":`Aviso legal · Privacidad`,
+"more":`Detalles`,"modal.courseCat":`Curso`,"modal.disc":`Asesoramiento gratuito y sin compromiso en activ lernen en Colonia.`,
+"reqCourse":`Solicitar %s`,"modal.enqCat":`Inscripción`,"modal.enqH":`Consigue tu nivelación gratuita`,
+"modal.enqDisc":`Te responderemos lo antes posible con tu curso ideal y tu fecha de inicio.`,
+courseOpts:[`Curso intensivo de alemán`,`Curso de alemán en grupo`,`Curso nocturno`,`Minigrupo para enfermería (B2)`,`Alemán individual`,`Lengua extranjera (individual)`,`Examen / certificado`,`Aún no lo sé`],
+levelOpts:[`Principiante (A1)`,`A2`,`B1`,`B2`,`C1`,`No lo sé`]
+};
+I18N.ar={
+title:`activ lernen كولونيا – تعلّم الألمانية في قلب كولونيا | دورات A1–C1، telc وTestDaF`,
+metaDesc:`الألمانية كلغة أجنبية في كولونيا – منذ 1998. دورات مكثّفة وجماعية وفردية من A1 إلى C1، مركز امتحانات معتمد لـ telc وTestDaF. مجموعات صغيرة، أسعار عادلة، حصة تجريبية مجانية. 5.0 ★ من 371 تقييمًا.`,
+"nav.courses":`الدورات`,"nav.levels":`المستويات A1–C1`,"nav.exams":`الامتحانات`,"nav.prices":`الأسعار`,"nav.reviews":`التقييمات`,"nav.contact":`التواصل`,
+"cta.trial":`حصة تجريبية مجانية`,
+"hero.eyebrow":`مدرسة لغات في كولونيا · منذ 1998`,
+"hero.h1":`تعلّم الألمانية <span class="hl">في قلب كولونيا</span>.`,
+"hero.lead":`الألمانية كلغة أجنبية من A1 إلى C1 – في مجموعات صغيرة، مع مدرّسين ذوي خبرة وامتحانات رسمية telc وTestDaF. مباشرةً في شارع Kaiser-Wilhelm-Ring، عند MediaPark.`,
+"hero.slogan":`«اللغة هي مفتاح العالم.»`,
+"hero.cta1":`احجز تقييم مستواك المجاني`,"hero.cta2":`تصفّح الدورات`,
+"hero.chip1":`5.0 · 371 تقييمًا`,"hero.chip2":`مركز امتحانات telc وTestDaF`,"hero.chip3":`حصة تجريبية مجانية`,
+"stat1.num":`منذ<span> 1998</span>`,"stat1.lbl":`خبرة في كولونيا`,
+"stat2.num":`5.0<span> ★</span>`,"stat2.lbl":`371 تقييمًا`,
+"stat3.lbl":`جميع المستويات`,"stat4.lbl":`مركز امتحانات`,
+"stat5.num":`1000<span>+</span>`,"stat5.lbl":`خريج ناجح`,
+"why.eyebrow":`لماذا activ lernen`,"why.h2":`تدريب لغوي فعّال في أجواء لطيفة.`,
+"why.p":`منذ تأسيسنا عام 1998، تعلّم آلاف المشاركين لدينا الألمانية أو لغة أجنبية بنجاح – مع مدرّسين ذوي خبرة ومؤهّلين تأهيلاً ممتازًا وبأسعار عادلة.`,
+"why.c1.h":`مجموعات صغيرة`,"why.c1.p":`عدد محدود من المشاركين واختبار تحديد مستوى يضمنان أن يجد كل شخص المجموعة المناسبة ويشارك فعلاً في الحديث.`,
+"why.c2.h":`امتحانات رسمية`,"why.c2.p":`مركز امتحانات معتمد لـ telc وTestDaF وعضو في FaDaF. ينتهي كل مستوى باختبار وشهادة معترف بها – مشمولة في سعر الدورة.`,
+"why.c3.h":`موقع مركزي`,"why.c3.p":`في وسط مدينة كولونيا في شارع Kaiser-Wilhelm-Ring، بجوار MediaPark مباشرةً – يسهل الوصول إليه بالقطار والحافلة.`,
+"why.c4.h":`دروس عملية`,"why.c4.p":`متنوّعة لا مملّة: نقاشات وتمثيل أدوار ومقابلات إلى جانب العمل الجماعي والفردي – ألمانية تنفع في الحياة اليومية والعمل.`,
+"glimpse.cap1":`التعلّم في مجموعات صغيرة`,"glimpse.cap2":`في قلب كولونيا، عند MediaPark`,
+"courses.eyebrow":`دوراتنا`,"courses.h2":`الدورة المناسبة لهدفك.`,
+"courses.p":`سواء كانت دورة مكثّفة أو مسائية أو دروسًا فردية – اضغط على أي دورة لمعرفة كل التفاصيل.`,
+"courses.help":`لست متأكدًا أي دورة تناسبك؟ <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">نقدّم لك استشارة مجانية &larr;</a>`,
+"levels.eyebrow":`المستويات`,"levels.h2":`من الكلمة الأولى إلى دخول الجامعة: من A1 إلى C1.`,
+"levels.p":`يتبع نظام مستوياتنا الإطار الأوروبي المرجعي المشترك للغات (CEFR). تبدأ من حيث أنت تمامًا.`,
+"lvl.a1.n":`مبتدئ`,"lvl.a1.p":`الجُمل الأولى للحياة اليومية: التعريف بالنفس وطرح أسئلة بسيطة والإجابة عنها.`,
+"lvl.a2.n":`أساسي`,"lvl.a2.p":`التعامل مع المواقف المألوفة – التسوّق والعمل والمحيط المباشر والحياة اليومية.`,
+"lvl.b1.n":`متوسط`,"lvl.b1.p":`التدبّر بمفردك في الحياة اليومية، ووصف التجارب، وتبرير الآراء.`,
+"lvl.b2.n":`متوسط متقدّم`,"lvl.b2.p":`جاهز للعمل والدراسة – بما في ذلك امتحان B2 لمعادلة الكوادر التمريضية.`,
+"lvl.c1.n":`متقدّم`,"lvl.c1.p":`إتقان المواضيع المعقّدة بثقة – أساس لامتحان TestDaF والدراسة الجامعية في ألمانيا.`,
+"levels.note":`يستمر كل مستوى <b>شهرين دراسيين = 8 أسابيع (160 ساعة تدريس)</b> وينتهي باختبار وشهادة وفق CEFR – <b>مشمولة في سعر الدورة</b>. بالنسبة للمبتدئين دون معرفة سابقة، تبدأ دورة مكثّفة جديدة في أول يوم عمل من كل شهرين؛ ويمكن للمتقدّمين الالتحاق في أي وقت تقريبًا.`,
+"exam.eyebrow":`الامتحانات والشهادات`,"exam.h2":`مركز امتحانات رسمي لـ telc وTestDaF.`,
+"exam.p":`activ lernen مركز امتحانات معتمد لـ telc وTestDaF وعضو في FaDaF – الجمعية المهنية للألمانية كلغة أجنبية. شهاداتك معترف بها رسميًا، للعمل أو الدراسة أو المعادلة.`,
+"exam.badge3":`عضو في FaDaF`,"exam.ecard.h":`أداء الامتحان`,
+"exam.ecard.li1":`ينتهي كل مستوى دراسي باختبار وشهادة CEFR – مشمولة في السعر.`,
+"exam.ecard.li2":`امتحان خارجي A1–C1 (شهادة activ lernen): 100&nbsp;€، تُحدَّد المواعيد بشكل فردي.`,
+"exam.ecard.li3":`التحضير لامتحانات telc وTestDaF لجميع المستويات.`,
+"exam.ecard.btn":`اطلب موعد امتحان`,
+"prices.eyebrow":`الأسعار`,"prices.h2":`أسعار عادلة ومعروضة بشفافية.`,
+"prices.p":`دورات مكثّفة ضمن مجموعات – محسوبة لصالح المشارك ومُجرّبة منذ 1998. تحديد المستوى والامتحان والشهادة مشمولة.`,
+"price.from":`ابتداءً من`,"price.p1.dur":`شهر واحد`,"price.p1.s":`دورة مكثّفة`,"price.p2.dur":`شهران`,"price.p2.s":`مستوى واحد`,
+"price.p3.tag":`سعر الحجز المبكر`,"price.p3.dur":`4 أشهر`,"price.p3.s":`مستويان`,
+"price.p4.dur":`6 أشهر`,"price.p4.s":`سعر الحجز المبكر`,"price.p5.dur":`10 أشهر`,"price.p5.s":`باقة كاملة`,
+"prices.note":`<b>يشمل:</b> اختبار تحديد المستوى والامتحان وشهادة CEFR. إضافةً إلى ذلك: <b>دروس ألمانية فردية ابتداءً من 39&nbsp;€</b> لكل ساعة تدريس (45&nbsp;دقيقة)، ولغات أخرى ابتداءً من 44&nbsp;€، مع رسم تسجيل لمرة واحدة لكل منها. نقدّم لك دائمًا <b>حصة تجريبية مجانية ودون التزام</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">لأي استفسار، تواصل معنا &larr;</a>`,
+"reviews.eyebrow":`ماذا يقول طلابنا`,"reviews.h2":`تقييم ممتاز في كولونيا.`,"reviews.count":`371 تقييمًا`,"reviews.src":`تقييمات Google العامة`,
+"contact.eyebrow":`التواصل والتسجيل`,"contact.h2":`احجز تقييم مستواك المجاني.`,
+"contact.lead":`راسِلنا – نجد معًا الدورة المناسبة وتاريخ بدئك. استشارة شخصية بالألمانية والإنجليزية والإسبانية والفرنسية والبرتغالية.`,
+"contact.phone.s":`اتصل بنا مباشرةً`,"contact.email.s":`أرسل لنا بريدًا إلكترونيًا`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 كولونيا<small>وسط المدينة · عند MediaPark</small>`,
+"hours.title":`ساعات عمل المكتب`,"hours.r1a":`الاثنين – الجمعة`,"hours.r1b":`10:00 – 17:00`,
+"hours.r2a":`بدون موعد`,"hours.r2b":`تفضّل بالمرور`,"hours.r3a":`الدروس`,"hours.r3b":`الاثنين–الجمعة، 09:00 – 21:30`,
+"form.h":`تقييم مستوى وحصة تجريبية مجانيان`,"form.fh":`املأ النموذج – سنعاود التواصل معك بالدورة المناسبة وتاريخ البدء.`,
+"form.name.l":`الاسم واللقب`,"form.name.ph":`اسمك`,"form.phone.l":`الهاتف`,"form.phone.ph":`رقمك`,
+"form.email.l":`البريد الإلكتروني`,"form.email.ph":`you@email.com`,"form.course.l":`الدورة`,"form.level.l":`المستوى`,
+"form.msg.l":`رسالة (اختياري)`,"form.msg.ph":`متى ترغب في البدء؟ سؤالك لنا…`,
+"form.submit":`إرسال الطلب`,"form.note":`بإرسالك النموذج فإنك توافق على سياسة الخصوصية لدينا.`,
+"success.h":`شكرًا، وصلنا طلبك!`,"success.p":`سنعاود التواصل معك في أقرب وقت بالدورة المناسبة وتاريخ البدء. إلى اللقاء في activ lernen!`,
+"foot.desc":`معهد للّغات والدروس الخصوصية. الألمانية كلغة أجنبية واللغات الأجنبية في كولونيا – منذ 1998، مع امتحانات رسمية telc وTestDaF.`,
+"foot.loc.h":`الموقع`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 كولونيا (وسط المدينة)`,"foot.loc.hours":`الاثنين–الجمعة 10:00–17:00<br>بدون موعد`,
+"foot.contact.h":`التواصل`,"foot.copy":`© 2026 activ lernen – معهد للّغات والدروس الخصوصية`,"foot.legal":`بيانات النشر · الخصوصية`,
+"more":`التفاصيل`,"modal.courseCat":`دورة`,"modal.disc":`استشارة مجانية ودون التزام في activ lernen بكولونيا.`,
+"reqCourse":`اطلب %s`,"modal.enqCat":`التسجيل`,"modal.enqH":`احجز تقييم مستواك المجاني`,
+"modal.enqDisc":`سنعاود التواصل معك في أقرب وقت بالدورة المناسبة وتاريخ البدء.`,
+courseOpts:[`دورة ألمانية مكثّفة`,`دورة ألمانية جماعية`,`دورة مسائية`,`مجموعة صغيرة للكوادر التمريضية (B2)`,`ألمانية فردية`,`لغة أجنبية (فردية)`,`امتحان / شهادة`,`لست متأكدًا بعد`],
+levelOpts:[`مبتدئ (A1)`,`A2`,`B1`,`B2`,`C1`,`لا أعرف`]
+};
+I18N.ru={
+title:`activ lernen Кёльн – Учите немецкий в самом центре Кёльна | Курсы A1–C1, telc и TestDaF`,
+metaDesc:`Немецкий как иностранный в Кёльне – с 1998 года. Интенсивные, групповые и индивидуальные курсы от A1 до C1, лицензированный экзаменационный центр telc и TestDaF. Небольшие группы, справедливые цены, бесплатное пробное занятие. 5,0 ★ по 371 отзыву.`,
+"nav.courses":`Курсы`,"nav.levels":`Уровни A1–C1`,"nav.exams":`Экзамены`,"nav.prices":`Цены`,"nav.reviews":`Отзывы`,"nav.contact":`Контакты`,
+"cta.trial":`Бесплатное пробное занятие`,
+"hero.eyebrow":`Языковая школа в Кёльне · с 1998 года`,
+"hero.h1":`Учите немецкий <span class="hl">в самом сердце Кёльна</span>.`,
+"hero.lead":`Немецкий как иностранный от A1 до C1 – в небольших группах, с опытными преподавателями и официальными экзаменами telc и TestDaF. Прямо на Kaiser-Wilhelm-Ring, у MediaPark.`,
+"hero.slogan":`«Язык — это ключ к миру.»`,
+"hero.cta1":`Получите бесплатное определение уровня`,"hero.cta2":`Посмотреть курсы`,
+"hero.chip1":`5,0 · 371 отзыв`,"hero.chip2":`Экзаменационный центр telc и TestDaF`,"hero.chip3":`Бесплатное пробное занятие`,
+"stat1.num":`с<span> 1998</span>`,"stat1.lbl":`Опыт в Кёльне`,
+"stat2.num":`5,0<span> ★</span>`,"stat2.lbl":`371 отзыв`,
+"stat3.lbl":`все уровни`,"stat4.lbl":`Экзаменационный центр`,
+"stat5.num":`1000<span>+</span>`,"stat5.lbl":`успешных выпускников`,
+"why.eyebrow":`Почему activ lernen`,"why.h2":`Эффективное обучение языку в приятной атмосфере.`,
+"why.p":`С момента основания в 1998 году несколько тысяч участников успешно выучили у нас немецкий или иностранный язык – с опытными, прекрасно подготовленными преподавателями и по справедливым ценам.`,
+"why.c1.h":`Небольшие группы`,"why.c1.p":`Ограниченное число участников и тест на определение уровня гарантируют, что каждый найдёт подходящую группу и действительно сможет говорить.`,
+"why.c2.h":`Официальные экзамены`,"why.c2.p":`Лицензированный экзаменационный центр telc и TestDaF и член FaDaF. Каждый уровень завершается тестом и признанным сертификатом – включено в стоимость курса.`,
+"why.c3.h":`Центральное расположение`,"why.c3.p":`В самом центре Кёльна на Kaiser-Wilhelm-Ring, прямо у MediaPark – отлично добираться на поезде и автобусе.`,
+"why.c4.h":`Практические занятия`,"why.c4.p":`Разнообразно, а не скучно: дискуссии, ролевые игры, интервью, а также работа в группе и индивидуально – немецкий, который работает в быту и на работе.`,
+"glimpse.cap1":`Обучение в небольших группах`,"glimpse.cap2":`В сердце Кёльна, у MediaPark`,
+"courses.eyebrow":`Наши курсы`,"courses.h2":`Подходящий курс для вашей цели.`,
+"courses.p":`Интенсивный курс, вечерний курс или индивидуальные занятия – нажмите на курс, чтобы увидеть все детали.`,
+"courses.help":`Не уверены, какой курс подходит? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Проконсультируем вас бесплатно &rarr;</a>`,
+"levels.eyebrow":`Уровни`,"levels.h2":`От первого слова до поступления в вуз: от A1 до C1.`,
+"levels.p":`Наша система уровней соответствует Общеевропейским компетенциям владения языком (CEFR). Вы начинаете именно с того уровня, на котором находитесь.`,
+"lvl.a1.n":`Начальный`,"lvl.a1.p":`Первые фразы для повседневной жизни: представиться, задавать и отвечать на простые вопросы.`,
+"lvl.a2.n":`Базовый`,"lvl.a2.p":`Справляться со знакомыми ситуациями – покупки, работа, ближайшее окружение и быт.`,
+"lvl.b1.n":`Средний`,"lvl.b1.p":`Самостоятельно ориентироваться в повседневной жизни, описывать опыт, обосновывать мнение.`,
+"lvl.b2.n":`Выше среднего`,"lvl.b2.p":`Готовность к работе и учёбе – включая экзамен B2 для признания квалификации медсестёр.`,
+"lvl.c1.n":`Продвинутый`,"lvl.c1.p":`Уверенно владеть сложными темами – основа для TestDaF и учёбы в вузе Германии.`,
+"levels.note":`Каждый уровень длится <b>2 учебных месяца = 8 недель (160 учебных часов)</b> и завершается тестом и сертификатом по CEFR – <b>включено в стоимость курса</b>. Для начинающих без предварительных знаний каждый второй месяц в первый рабочий день стартует новый интенсивный курс; продвинутые могут присоединиться практически в любое время.`,
+"exam.eyebrow":`Экзамены и сертификаты`,"exam.h2":`Официальный экзаменационный центр telc и TestDaF.`,
+"exam.p":`activ lernen — лицензированный экзаменационный центр telc и TestDaF и член FaDaF, профессиональной ассоциации преподавателей немецкого как иностранного. Ваши сертификаты официально признаны — для работы, учёбы или признания квалификации.`,
+"exam.badge3":`Член FaDaF`,"exam.ecard.h":`Сдать экзамен`,
+"exam.ecard.li1":`Каждый уровень курса завершается тестом и сертификатом CEFR – включено в цену.`,
+"exam.ecard.li2":`Внешний экзамен A1–C1 (сертификат activ lernen): 100&nbsp;€, даты согласуются индивидуально.`,
+"exam.ecard.li3":`Подготовка к экзаменам telc и TestDaF всех уровней.`,
+"exam.ecard.btn":`Запросить дату экзамена`,
+"prices.eyebrow":`Цены`,"prices.h2":`Справедливые цены, прозрачно указаны.`,
+"prices.p":`Интенсивные курсы в группе – рассчитаны в пользу участника и проверены с 1998 года. Определение уровня, экзамен и сертификат включены.`,
+"price.from":`от`,"price.p1.dur":`1 месяц`,"price.p1.s":`Интенсивный курс`,"price.p2.dur":`2 месяца`,"price.p2.s":`один уровень`,
+"price.p3.tag":`Цена при раннем бронировании`,"price.p3.dur":`4 месяца`,"price.p3.s":`два уровня`,
+"price.p4.dur":`6 месяцев`,"price.p4.s":`Цена при раннем бронировании`,"price.p5.dur":`10 месяцев`,"price.p5.s":`Полный пакет`,
+"prices.note":`<b>Включено:</b> тест на определение уровня, экзамен и сертификат CEFR. Дополнительно: <b>индивидуальные занятия по немецкому от 39&nbsp;€</b> за академический час (45&nbsp;мин), другие языки от 44&nbsp;€, каждый плюс единовременный регистрационный сбор. Мы всегда предлагаем вам <b>бесплатное пробное занятие без обязательств</b>. <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">Есть вопросы — просто спросите &rarr;</a>`,
+"reviews.eyebrow":`Что говорят наши студенты`,"reviews.h2":`Отличные оценки в Кёльне.`,"reviews.count":`371 отзыв`,"reviews.src":`Публичные отзывы Google`,
+"contact.eyebrow":`Контакты и запись`,"contact.h2":`Забронируйте бесплатное определение уровня.`,
+"contact.lead":`Напишите нам – вместе подберём подходящий курс и дату начала. Личная консультация на немецком, английском, испанском, французском и португальском.`,
+"contact.phone.s":`Позвоните нам напрямую`,"contact.email.s":`Напишите нам письмо`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 Кёльн<small>Центр города · у MediaPark</small>`,
+"hours.title":`Часы работы офиса`,"hours.r1a":`Понедельник – пятница`,"hours.r1b":`10:00 – 17:00`,
+"hours.r2a":`Без записи`,"hours.r2b":`просто заходите`,"hours.r3a":`Занятия`,"hours.r3b":`Пн–Пт, 09:00 – 21:30`,
+"form.h":`Бесплатное определение уровня и пробное занятие`,"form.fh":`Заполните форму – мы свяжемся с вами и предложим подходящий курс и дату начала.`,
+"form.name.l":`Имя и фамилия`,"form.name.ph":`Ваше имя`,"form.phone.l":`Телефон`,"form.phone.ph":`Ваш номер`,
+"form.email.l":`Эл. почта`,"form.email.ph":`you@email.com`,"form.course.l":`Курс`,"form.level.l":`Уровень`,
+"form.msg.l":`Сообщение (необязательно)`,"form.msg.ph":`Когда вы хотели бы начать? Ваш вопрос к нам…`,
+"form.submit":`Отправить заявку`,"form.note":`Отправляя форму, вы соглашаетесь с нашей политикой конфиденциальности.`,
+"success.h":`Спасибо, мы получили вашу заявку!`,"success.p":`Мы свяжемся с вами как можно скорее и предложим подходящий курс и дату начала. До скорой встречи в activ lernen!`,
+"foot.desc":`Институт языков и репетиторства. Немецкий как иностранный и иностранные языки в Кёльне – с 1998 года, с официальными экзаменами telc и TestDaF.`,
+"foot.loc.h":`Расположение`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 Кёльн (центр города)`,"foot.loc.hours":`Пн–Пт 10:00–17:00<br>без записи`,
+"foot.contact.h":`Контакты`,"foot.copy":`© 2026 activ lernen – Институт языков и репетиторства`,"foot.legal":`Выходные данные · Конфиденциальность`,
+"more":`Подробнее`,"modal.courseCat":`Курс`,"modal.disc":`Бесплатная консультация без обязательств в activ lernen в Кёльне.`,
+"reqCourse":`Запросить: %s`,"modal.enqCat":`Запись`,"modal.enqH":`Забронируйте бесплатное определение уровня`,
+"modal.enqDisc":`Мы свяжемся с вами как можно скорее и предложим подходящий курс и дату начала.`,
+courseOpts:[`Интенсивный курс немецкого`,`Групповой курс немецкого`,`Вечерний курс`,`Мини-группа для медсестёр (B2)`,`Индивидуальный немецкий`,`Иностранный язык (индивидуально)`,`Экзамен / сертификат`,`Пока не уверен(а)`],
+levelOpts:[`Начальный (A1)`,`A2`,`B1`,`B2`,`C1`,`Не знаю`]
+};
+I18N.hi={
+title:`activ lernen कोलोन – कोलोन के केंद्र में जर्मन सीखें | कोर्स A1–C1, telc और TestDaF`,
+metaDesc:`कोलोन में विदेशी भाषा के रूप में जर्मन – 1998 से। A1 से C1 तक इंटेंसिव, ग्रुप और वन-टू-वन कोर्स, लाइसेंस प्राप्त telc और TestDaF परीक्षा केंद्र। छोटे समूह, उचित शुल्क, निःशुल्क ट्रायल क्लास। 371 समीक्षाओं पर 5.0 ★।`,
+"nav.courses":`कोर्स`,"nav.levels":`स्तर A1–C1`,"nav.exams":`परीक्षाएँ`,"nav.prices":`शुल्क`,"nav.reviews":`समीक्षाएँ`,"nav.contact":`संपर्क`,
+"cta.trial":`निःशुल्क ट्रायल क्लास`,
+"hero.eyebrow":`कोलोन में भाषा विद्यालय · 1998 से`,
+"hero.h1":`<span class="hl">कोलोन के केंद्र में</span> जर्मन सीखें।`,
+"hero.lead":`A1 से C1 तक विदेशी भाषा के रूप में जर्मन – छोटे समूहों में, अनुभवी शिक्षकों और आधिकारिक telc और TestDaF परीक्षाओं के साथ। सीधे Kaiser-Wilhelm-Ring पर, MediaPark के पास।`,
+"hero.slogan":`“भाषा दुनिया की कुंजी है।”`,
+"hero.cta1":`अपना निःशुल्क स्तर-निर्धारण पाएँ`,"hero.cta2":`कोर्स देखें`,
+"hero.chip1":`5.0 · 371 समीक्षाएँ`,"hero.chip2":`telc और TestDaF परीक्षा केंद्र`,"hero.chip3":`निःशुल्क ट्रायल क्लास`,
+"stat1.num":`1998<span></span>`,"stat1.lbl":`कोलोन में 1998 से अनुभव`,
+"stat2.num":`5.0<span> ★</span>`,"stat2.lbl":`371 समीक्षाएँ`,
+"stat3.lbl":`सभी स्तर`,"stat4.lbl":`परीक्षा केंद्र`,
+"stat5.num":`1000<span>+</span>`,"stat5.lbl":`सफल स्नातक`,
+"why.eyebrow":`activ lernen क्यों`,"why.h2":`सुखद माहौल में प्रभावी भाषा प्रशिक्षण।`,
+"why.p":`1998 में अपनी स्थापना के बाद से, हज़ारों प्रतिभागियों ने हमारे यहाँ अनुभवी और बेहतरीन प्रशिक्षित शिक्षकों के साथ उचित शुल्क पर सफलतापूर्वक जर्मन या कोई विदेशी भाषा सीखी है।`,
+"why.c1.h":`छोटे समूह`,"why.c1.p":`सीमित प्रतिभागी संख्या और एक स्तर-निर्धारण परीक्षा यह सुनिश्चित करती है कि हर व्यक्ति को उपयुक्त समूह मिले और वह सचमुच बोलने का अवसर पाए।`,
+"why.c2.h":`आधिकारिक परीक्षाएँ`,"why.c2.p":`लाइसेंस प्राप्त telc और TestDaF परीक्षा केंद्र और FaDaF सदस्य। हर स्तर एक परीक्षा और मान्यता प्राप्त प्रमाणपत्र के साथ समाप्त होता है – कोर्स शुल्क में शामिल।`,
+"why.c3.h":`केंद्रीय स्थान`,"why.c3.p":`कोलोन के सिटी सेंटर में Kaiser-Wilhelm-Ring पर, MediaPark के ठीक बगल में – ट्रेन और बस से बेहद आसानी से पहुँचा जा सकता है।`,
+"why.c4.h":`व्यावहारिक कक्षाएँ`,"why.c4.p":`नीरस नहीं, विविध: चर्चाएँ, रोल-प्ले, इंटरव्यू के साथ-साथ समूह और व्यक्तिगत कार्य – ऐसी जर्मन जो रोज़मर्रा की ज़िंदगी और काम में काम आए।`,
+"glimpse.cap1":`छोटे समूहों में सीखना`,"glimpse.cap2":`कोलोन के केंद्र में, MediaPark में`,
+"courses.eyebrow":`हमारे कोर्स`,"courses.h2":`आपके लक्ष्य के लिए सही कोर्स।`,
+"courses.p":`चाहे इंटेंसिव कोर्स हो, शाम का कोर्स हो या वन-टू-वन ट्रेनिंग – पूरी जानकारी के लिए किसी कोर्स पर टैप करें।`,
+"courses.help":`पक्का नहीं कि कौन-सा कोर्स सही है? <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">हम आपको निःशुल्क सलाह देते हैं &rarr;</a>`,
+"levels.eyebrow":`स्तर`,"levels.h2":`पहले शब्द से विश्वविद्यालय प्रवेश तक: A1 से C1।`,
+"levels.p":`हमारी स्तर प्रणाली कॉमन यूरोपियन फ्रेमवर्क ऑफ रेफरेंस (CEFR) का अनुसरण करती है। आप ठीक वहीं से शुरू करते हैं जहाँ आप हैं।`,
+"lvl.a1.n":`शुरुआती`,"lvl.a1.p":`रोज़मर्रा के लिए पहले वाक्य: अपना परिचय देना, सरल प्रश्न पूछना और उत्तर देना।`,
+"lvl.a2.n":`बुनियादी`,"lvl.a2.p":`परिचित परिस्थितियों को संभालना – खरीदारी, काम, आसपास का माहौल और दैनिक जीवन।`,
+"lvl.b1.n":`मध्यम`,"lvl.b1.p":`रोज़मर्रा में स्वतंत्र रूप से काम चलाना, अनुभव बताना, राय के कारण देना।`,
+"lvl.b2.n":`उच्च-मध्यम`,"lvl.b2.p":`काम और पढ़ाई के लिए तैयार – नर्सिंग स्टाफ की मान्यता के लिए B2 परीक्षा सहित।`,
+"lvl.c1.n":`उन्नत`,"lvl.c1.p":`जटिल विषयों पर आत्मविश्वास से महारत – TestDaF और जर्मनी में विश्वविद्यालय अध्ययन का आधार।`,
+"levels.note":`हर स्तर <b>2 कोर्स माह = 8 सप्ताह (160 शिक्षण घंटे)</b> तक चलता है और CEFR के अनुसार एक परीक्षा व प्रमाणपत्र के साथ समाप्त होता है – <b>कोर्स शुल्क में शामिल</b>। बिना पूर्व ज्ञान वाले शुरुआती लोगों के लिए हर दूसरे माह के पहले कार्यदिवस पर एक नया इंटेंसिव कोर्स शुरू होता है; उन्नत शिक्षार्थी लगभग किसी भी समय जुड़ सकते हैं।`,
+"exam.eyebrow":`परीक्षाएँ और प्रमाणपत्र`,"exam.h2":`आधिकारिक telc और TestDaF परीक्षा केंद्र।`,
+"exam.p":`activ lernen, telc और TestDaF के लिए एक लाइसेंस प्राप्त परीक्षा केंद्र है और FaDaF – विदेशी भाषा के रूप में जर्मन के व्यावसायिक संघ – का सदस्य है। आपके प्रमाणपत्र काम, पढ़ाई या मान्यता के लिए आधिकारिक रूप से मान्य हैं।`,
+"exam.badge3":`FaDaF सदस्य`,"exam.ecard.h":`परीक्षा दें`,
+"exam.ecard.li1":`हर कोर्स स्तर एक परीक्षा और CEFR प्रमाणपत्र के साथ समाप्त होता है – शुल्क में शामिल।`,
+"exam.ecard.li2":`बाहरी परीक्षा A1–C1 (activ lernen प्रमाणपत्र): 100&nbsp;€, तिथियाँ व्यक्तिगत रूप से तय।`,
+"exam.ecard.li3":`सभी स्तरों की telc और TestDaF परीक्षाओं की तैयारी।`,
+"exam.ecard.btn":`परीक्षा तिथि का अनुरोध करें`,
+"prices.eyebrow":`शुल्क`,"prices.h2":`उचित शुल्क, पारदर्शी रूप से सूचीबद्ध।`,
+"prices.p":`समूह में इंटेंसिव कोर्स – प्रतिभागी-हितैषी रूप से तय और 1998 से आज़माए हुए। स्तर-निर्धारण, परीक्षा और प्रमाणपत्र शामिल हैं।`,
+"price.from":`न्यूनतम`,"price.p1.dur":`1 माह`,"price.p1.s":`इंटेंसिव कोर्स`,"price.p2.dur":`2 माह`,"price.p2.s":`एक स्तर`,
+"price.p3.tag":`अर्ली-बर्ड शुल्क`,"price.p3.dur":`4 माह`,"price.p3.s":`दो स्तर`,
+"price.p4.dur":`6 माह`,"price.p4.s":`अर्ली-बर्ड शुल्क`,"price.p5.dur":`10 माह`,"price.p5.s":`संपूर्ण पैकेज`,
+"prices.note":`<b>शामिल:</b> स्तर-निर्धारण परीक्षा, परीक्षा और CEFR प्रमाणपत्र। इसके अतिरिक्त: <b>वन-टू-वन जर्मन 39&nbsp;€ से</b> प्रति शिक्षण घंटा (45&nbsp;मिनट), अन्य भाषाएँ 44&nbsp;€ से, प्रत्येक के साथ एकमुश्त पंजीकरण शुल्क। हम आपको हमेशा एक <b>निःशुल्क, बिना बाध्यता ट्रायल क्लास</b> देते हैं। <a href="#" onclick="openEnquiry();return false" style="color:var(--accent);font-weight:600">कोई सवाल हो तो बस पूछें &rarr;</a>`,
+"reviews.eyebrow":`हमारे विद्यार्थी क्या कहते हैं`,"reviews.h2":`कोलोन में उत्कृष्ट रेटिंग।`,"reviews.count":`371 समीक्षाएँ`,"reviews.src":`सार्वजनिक Google समीक्षाएँ`,
+"contact.eyebrow":`संपर्क और पंजीकरण`,"contact.h2":`अपना निःशुल्क स्तर-निर्धारण सुरक्षित करें।`,
+"contact.lead":`हमें लिखें – हम मिलकर सही कोर्स और आपकी शुरुआत की तारीख तय करेंगे। जर्मन, अंग्रेज़ी, स्पेनिश, फ़्रेंच और पुर्तगाली में व्यक्तिगत परामर्श।`,
+"contact.phone.s":`हमें सीधे कॉल करें`,"contact.email.s":`हमें ईमेल भेजें`,
+"contact.addr":`Kaiser-Wilhelm-Ring 24, 50672 कोलोन<small>सिटी सेंटर · MediaPark में</small>`,
+"hours.title":`कार्यालय समय`,"hours.r1a":`सोमवार – शुक्रवार`,"hours.r1b":`10:00 – 17:00`,
+"hours.r2a":`बिना अपॉइंटमेंट`,"hours.r2b":`बस चले आएँ`,"hours.r3a":`कक्षाएँ`,"hours.r3b":`सोम–शुक्र, 09:00 – 21:30`,
+"form.h":`निःशुल्क स्तर-निर्धारण और ट्रायल क्लास`,"form.fh":`फ़ॉर्म भरें – हम आपके उपयुक्त कोर्स और शुरुआत की तारीख के साथ संपर्क करेंगे।`,
+"form.name.l":`नाम और उपनाम`,"form.name.ph":`आपका नाम`,"form.phone.l":`फ़ोन`,"form.phone.ph":`आपका नंबर`,
+"form.email.l":`ईमेल`,"form.email.ph":`you@email.com`,"form.course.l":`कोर्स`,"form.level.l":`स्तर`,
+"form.msg.l":`संदेश (वैकल्पिक)`,"form.msg.ph":`आप कब शुरू करना चाहेंगे? हमसे आपका सवाल…`,
+"form.submit":`अनुरोध भेजें`,"form.note":`भेजकर आप हमारी गोपनीयता नीति से सहमत होते हैं।`,
+"success.h":`धन्यवाद, हमें आपका अनुरोध मिल गया!`,"success.p":`हम आपके उपयुक्त कोर्स और शुरुआत की तारीख के साथ जल्द से जल्द संपर्क करेंगे। activ lernen में जल्द मिलते हैं!`,
+"foot.desc":`भाषा और ट्यूशन संस्थान। कोलोन में विदेशी भाषा के रूप में जर्मन और विदेशी भाषाएँ – 1998 से, आधिकारिक telc और TestDaF परीक्षाओं के साथ।`,
+"foot.loc.h":`स्थान`,"foot.loc.addr":`Kaiser-Wilhelm-Ring 24<br>50672 कोलोन (सिटी सेंटर)`,"foot.loc.hours":`सोम–शुक्र 10:00–17:00<br>बिना अपॉइंटमेंट`,
+"foot.contact.h":`संपर्क`,"foot.copy":`© 2026 activ lernen – भाषा और ट्यूशन संस्थान`,"foot.legal":`प्रकाशन विवरण · गोपनीयता`,
+"more":`विवरण`,"modal.courseCat":`कोर्स`,"modal.disc":`activ lernen कोलोन में निःशुल्क और बिना बाध्यता परामर्श।`,
+"reqCourse":`%s का अनुरोध करें`,"modal.enqCat":`पंजीकरण`,"modal.enqH":`अपना निःशुल्क स्तर-निर्धारण सुरक्षित करें`,
+"modal.enqDisc":`हम आपके उपयुक्त कोर्स और शुरुआत की तारीख के साथ जल्द से जल्द संपर्क करेंगे।`,
+courseOpts:[`इंटेंसिव जर्मन कोर्स`,`जर्मन ग्रुप कोर्स`,`शाम का कोर्स`,`नर्सों के लिए मिनी-ग्रुप (B2)`,`वन-टू-वन जर्मन`,`विदेशी भाषा (वन-टू-वन)`,`परीक्षा / प्रमाणपत्र`,`अभी तय नहीं`],
+levelOpts:[`शुरुआती (A1)`,`A2`,`B1`,`B2`,`C1`,`मुझे नहीं पता`]
+};
+const CICONS=[
+'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',
+'<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>',
+'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+'<path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>',
+'<circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>'
 ];
-const grid=document.getElementById('courseGrid');
-COURSES.forEach((c,i)=>{
-  const el=document.createElement('div');
-  el.className='course';
-  el.onclick=()=>openCourse(i);
-  el.innerHTML=`${c.tag?`<span class="tag">${c.tag}</span>`:''}
-    <div class="cicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${c.icon}</svg></div>
-    <h3>${c.name}</h3><p>${c.short}</p>
-    <span class="more">Details <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>`;
-  grid.appendChild(el);
-});
+const CKEYS=['intensiv','gruppe','abend','pflege','einzel','fremd'];
+const COURSE_T={};
+COURSE_T.en=[
+{tag:`Most popular`,name:`Intensive German course`,short:`German from Monday to Friday – the fastest way to your next level.`,desc:`Our flagship: the German intensive course from Monday to Friday. For complete beginners, a new course starts on the first working day of every second month. Advanced learners can join an ongoing course almost any time.`,points:[`Monday to Friday, in small groups`,`Each level = 8 weeks / 160 teaching hours`,`Placement test, exam &amp; certificate included`]},
+{tag:``,name:`German group course`,short:`Varied lessons in a limited group size.`,desc:`Learning German in a group – lively and hands-on. Thanks to the limited number of participants and a prior placement test, everyone finds the right group and actively gets to speak.`,points:[`Limited number of participants`,`Discussions, role-plays, interviews, group &amp; individual work`,`All levels A1 to C1`]},
+{tag:``,name:`Evening course`,short:`German after work – for working people.`,desc:`For everyone who works during the day: German in the evening, so your language course fits neatly into your daily routine. In small groups and with the same experienced teachers as in the intensive course.`,points:[`Class times in the evening`,`Small groups &amp; personal support`,`All levels A1 to C1`]},
+{tag:`B2 for recognition`,name:`Mini-group for nurses`,short:`Focused B2 preparation for nurses from abroad.`,desc:`Are you a nursing director or responsible for staff or continuing education at a hospital? For years we have successfully prepared nurses from abroad for the B2 exam – required for professional recognition.`,points:[`Focus on the B2 nursing exam`,`Small mini-groups`,`On request for clinics &amp; employers`]},
+{tag:``,name:`One-to-one German`,short:`Individual lessons, tailored entirely to your goal.`,desc:`Maximum flexibility in one-to-one lessons: pace, content and dates are all set around you. Ideal for fast progress, targeted exam preparation or professional German.`,points:[`39&nbsp;€ per teaching hour (45&nbsp;min), plus a one-time 40&nbsp;€ registration`,`Flexible dates by arrangement`,`Free, no-obligation trial lesson`]},
+{tag:``,name:`Foreign languages`,short:`One-to-one lessons in many other languages.`,desc:`In addition to German, activ lernen offers one-to-one lessons in a wide range of foreign languages on request – e.g. English, French, Spanish, Russian, Greek, Turkish and Portuguese.`,points:[`English, French, Spanish, Russian, Turkish &amp; many more`,`Individual one-to-one lessons`,`44&nbsp;€ per teaching hour (45&nbsp;min), plus registration`]}
+];
+COURSE_T.de=[
+{tag:`Beliebteste Wahl`,name:`Intensivkurs Deutsch`,short:`Deutsch von Montag bis Freitag – der schnellste Weg zum nächsten Niveau.`,desc:`Unser Herzstück: der Deutsch-Intensivkurs von Montag bis Freitag. Für Anfänger:innen ohne Vorkenntnisse beginnt am ersten Werktag jedes zweiten Monats ein neuer Kurs. Fortgeschrittene steigen in einen laufenden Kurs praktisch jederzeit ein.`,points:[`Montag bis Freitag, in kleinen Gruppen`,`Jede Niveaustufe = 8 Wochen / 160 Unterrichtsstunden`,`Einstufungstest, Prüfung &amp; Zertifikat inklusive`]},
+{tag:``,name:`Gruppenkurs Deutsch`,short:`Abwechslungsreicher Unterricht in einer begrenzten Gruppengröße.`,desc:`Deutsch lernen in der Gruppe – lebendig und praxisnah. Durch die begrenzte Teilnehmerzahl und einen vorherigen Einstufungstest findet jede:r die passende Gruppe und kommt aktiv zu Wort.`,points:[`Begrenzte Teilnehmeranzahl`,`Diskussionen, Rollenspiele, Interviews, Gruppen- &amp; Einzelarbeit`,`Alle Niveaustufen A1 bis C1`]},
+{tag:``,name:`Abendkurs`,short:`Deutsch nach Feierabend – für Berufstätige.`,desc:`Für alle, die tagsüber arbeiten: Deutsch am Abend, damit sich Dein Sprachkurs gut in Deinen Alltag einfügt. In kleinen Gruppen und mit denselben erfahrenen Lehrkräften wie im Intensivkurs.`,points:[`Kurszeiten am Abend`,`Kleine Gruppen &amp; persönliche Betreuung`,`Alle Niveaustufen A1 bis C1`]},
+{tag:`B2 für die Anerkennung`,name:`Minigruppe für Pflegekräfte`,short:`Zielgerichtete B2-Vorbereitung für Pflegekräfte aus dem Ausland.`,desc:`Sie sind Pflegedienstleiter:in oder verantwortlich für Personal bzw. Weiterbildung in einem Krankenhaus? Wir bereiten Pflegekräfte aus dem Ausland seit Jahren erfolgreich auf die B2-Prüfung vor – notwendig für die Anerkennung.`,points:[`Fokus B2-Prüfung Pflege`,`Kleine Minigruppen`,`Auf Wunsch für Kliniken &amp; Arbeitgeber`]},
+{tag:``,name:`Einzeltraining Deutsch`,short:`Individueller Unterricht, ganz auf Dein Ziel zugeschnitten.`,desc:`Maximale Flexibilität im Einzelunterricht: Tempo, Inhalte und Termine richten sich nach Dir. Ideal für schnelle Fortschritte, gezielte Prüfungsvorbereitung oder Fachdeutsch.`,points:[`39&nbsp;€ pro Unterrichtsstunde (45&nbsp;Min), zzgl. einmalig 40&nbsp;€ Anmeldung`,`Flexible Termine nach Absprache`,`Kostenlose, unverbindliche Probestunde`]},
+{tag:``,name:`Fremdsprachen`,short:`Einzelunterricht in vielen weiteren Sprachen.`,desc:`Neben Deutsch bietet activ lernen auf Anfrage Einzelunterricht in einer Vielzahl von Fremdsprachen – z. B. Englisch, Französisch, Spanisch, Russisch, Griechisch, Türkisch und Portugiesisch.`,points:[`Englisch, Französisch, Spanisch, Russisch, Türkisch u.&nbsp;v.&nbsp;m.`,`Individueller Einzelunterricht`,`44&nbsp;€ pro Unterrichtsstunde (45&nbsp;Min), zzgl. Anmeldung`]}
+];
+COURSE_T.tr=[
+{tag:`En popüler seçim`,name:`Yoğun Almanca kursu`,short:`Pazartesiden cumaya Almanca – bir sonraki seviyeye en hızlı yol.`,desc:`Bizim can damarımız: Pazartesiden cumaya Almanca yoğun kursu. Ön bilgisi olmayan başlangıç seviyesindekiler için her iki ayda bir, ayın ilk iş gününde yeni bir kurs başlar. İleri seviyedekiler devam eden bir kursa neredeyse her zaman katılabilir.`,points:[`Pazartesiden cumaya, küçük gruplarda`,`Her seviye = 8 hafta / 160 ders saati`,`Seviye tespit sınavı, sınav &amp; sertifika dahil`]},
+{tag:``,name:`Almanca grup kursu`,short:`Sınırlı grup büyüklüğünde çeşitli dersler.`,desc:`Grup hâlinde Almanca öğrenmek – canlı ve uygulamalı. Sınırlı katılımcı sayısı ve önceden yapılan bir seviye tespit sınavı sayesinde herkes kendine uygun grubu bulur ve etkin biçimde söz alır.`,points:[`Sınırlı katılımcı sayısı`,`Tartışmalar, rol yapma, röportajlar, grup &amp; bireysel çalışma`,`A1'den C1'e tüm seviyeler`]},
+{tag:``,name:`Akşam kursu`,short:`İş çıkışı Almanca – çalışanlar için.`,desc:`Gündüz çalışan herkes için: dil kursunuzun günlük hayatınıza rahatça oturması için akşam Almanca. Küçük gruplarda ve yoğun kurstaki aynı deneyimli öğretmenlerle.`,points:[`Akşam ders saatleri`,`Küçük gruplar &amp; kişisel ilgi`,`A1'den C1'e tüm seviyeler`]},
+{tag:`Denklik için B2`,name:`Hemşireler için mini grup`,short:`Yurt dışından gelen hemşireler için hedefe yönelik B2 hazırlığı.`,desc:`Bir hastanede hemşirelik hizmetleri yöneticisi misiniz ya da personel veya sürekli eğitimden mi sorumlusunuz? Yurt dışından gelen hemşireleri yıllardır B2 sınavına başarıyla hazırlıyoruz – denklik için gereklidir.`,points:[`B2 hemşirelik sınavına odak`,`Küçük mini gruplar`,`Talep üzerine klinikler &amp; işverenler için`]},
+{tag:``,name:`Birebir Almanca`,short:`Hedefinize tümüyle uyarlanmış bireysel ders.`,desc:`Birebir derste azami esneklik: hız, içerik ve tarihler size göre belirlenir. Hızlı ilerleme, hedefe yönelik sınav hazırlığı veya mesleki Almanca için idealdir.`,points:[`Ders saati başına 39&nbsp;€ (45&nbsp;dk), ayrıca tek seferlik 40&nbsp;€ kayıt`,`Anlaşmaya göre esnek tarihler`,`Ücretsiz, bağlayıcı olmayan deneme dersi`]},
+{tag:``,name:`Yabancı diller`,short:`Diğer birçok dilde birebir ders.`,desc:`Almancanın yanı sıra activ lernen, talep üzerine pek çok yabancı dilde birebir ders sunar – örneğin İngilizce, Fransızca, İspanyolca, Rusça, Yunanca, Türkçe ve Portekizce.`,points:[`İngilizce, Fransızca, İspanyolca, Rusça, Türkçe ve daha fazlası`,`Bireysel birebir ders`,`Ders saati başına 44&nbsp;€ (45&nbsp;dk), ayrıca kayıt`]}
+];
+COURSE_T.pt=[
+{tag:`Mais popular`,name:`Curso intensivo de alemão`,short:`Alemão de segunda a sexta – o caminho mais rápido para o próximo nível.`,desc:`Nosso carro-chefe: o curso intensivo de alemão de segunda a sexta. Para iniciantes sem conhecimento prévio, um novo curso começa no primeiro dia útil a cada dois meses. Alunos avançados podem entrar em um curso em andamento praticamente a qualquer momento.`,points:[`De segunda a sexta, em turmas pequenas`,`Cada nível = 8 semanas / 160 horas-aula`,`Teste de nivelamento, exame &amp; certificado incluídos`]},
+{tag:``,name:`Curso de alemão em grupo`,short:`Aulas variadas em um tamanho de turma limitado.`,desc:`Aprender alemão em grupo – dinâmico e prático. Graças ao número limitado de participantes e a um teste de nivelamento prévio, cada pessoa encontra a turma certa e participa ativamente.`,points:[`Número limitado de participantes`,`Debates, dramatizações, entrevistas, trabalho em grupo &amp; individual`,`Todos os níveis de A1 a C1`]},
+{tag:``,name:`Curso noturno`,short:`Alemão após o trabalho – para quem trabalha.`,desc:`Para todos que trabalham durante o dia: alemão à noite, para que o seu curso se encaixe bem na sua rotina. Em turmas pequenas e com os mesmos professores experientes do curso intensivo.`,points:[`Horários à noite`,`Turmas pequenas &amp; acompanhamento pessoal`,`Todos os níveis de A1 a C1`]},
+{tag:`B2 para o reconhecimento`,name:`Miniturma para enfermeiros`,short:`Preparação focada para o B2 para enfermeiros do exterior.`,desc:`Você é responsável pela enfermagem ou pelo pessoal e pela formação em um hospital? Há anos preparamos com sucesso enfermeiros vindos do exterior para o exame B2 – necessário para o reconhecimento profissional.`,points:[`Foco no exame B2 de enfermagem`,`Miniturmas pequenas`,`Sob solicitação para clínicas &amp; empregadores`]},
+{tag:``,name:`Alemão individual`,short:`Aulas individuais, totalmente adaptadas ao seu objetivo.`,desc:`Máxima flexibilidade nas aulas individuais: ritmo, conteúdo e datas são definidos de acordo com você. Ideal para progresso rápido, preparação específica para exames ou alemão técnico.`,points:[`39&nbsp;€ por hora-aula (45&nbsp;min), mais taxa única de 40&nbsp;€ de inscrição`,`Datas flexíveis combinadas`,`Aula experimental gratuita e sem compromisso`]},
+{tag:``,name:`Línguas estrangeiras`,short:`Aulas individuais em muitos outros idiomas.`,desc:`Além do alemão, a activ lernen oferece, sob solicitação, aulas individuais em uma grande variedade de idiomas – por exemplo, inglês, francês, espanhol, russo, grego, turco e português.`,points:[`Inglês, francês, espanhol, russo, turco &amp; muito mais`,`Aulas individuais personalizadas`,`44&nbsp;€ por hora-aula (45&nbsp;min), mais inscrição`]}
+];
+COURSE_T.es=[
+{tag:`Más popular`,name:`Curso intensivo de alemán`,short:`Alemán de lunes a viernes – el camino más rápido a tu siguiente nivel.`,desc:`Nuestro buque insignia: el curso intensivo de alemán de lunes a viernes. Para principiantes sin conocimientos previos, cada dos meses comienza un nuevo curso el primer día hábil. El alumnado avanzado puede incorporarse a un curso en marcha casi en cualquier momento.`,points:[`De lunes a viernes, en grupos reducidos`,`Cada nivel = 8 semanas / 160 horas lectivas`,`Prueba de nivel, examen &amp; certificado incluidos`]},
+{tag:``,name:`Curso de alemán en grupo`,short:`Clases variadas en un tamaño de grupo limitado.`,desc:`Aprender alemán en grupo – dinámico y práctico. Gracias al número limitado de participantes y a una prueba de nivel previa, cada persona encuentra el grupo adecuado y participa activamente.`,points:[`Número limitado de participantes`,`Debates, juegos de rol, entrevistas, trabajo en grupo &amp; individual`,`Todos los niveles de A1 a C1`]},
+{tag:``,name:`Curso nocturno`,short:`Alemán después del trabajo – para quienes trabajan.`,desc:`Para todos los que trabajan durante el día: alemán por la tarde-noche, para que tu curso encaje bien en tu rutina. En grupos reducidos y con los mismos profesores con experiencia que en el curso intensivo.`,points:[`Horarios por la tarde-noche`,`Grupos reducidos &amp; atención personal`,`Todos los niveles de A1 a C1`]},
+{tag:`B2 para la homologación`,name:`Minigrupo para enfermería`,short:`Preparación específica del B2 para personal de enfermería del extranjero.`,desc:`¿Eres responsable de enfermería o del personal y la formación en un hospital? Desde hace años preparamos con éxito a personal de enfermería del extranjero para el examen B2 – necesario para la homologación.`,points:[`Enfoque en el examen B2 de enfermería`,`Minigrupos reducidos`,`A petición para clínicas &amp; empresas`]},
+{tag:``,name:`Alemán individual`,short:`Clases individuales, totalmente adaptadas a tu objetivo.`,desc:`Máxima flexibilidad en las clases individuales: el ritmo, los contenidos y las fechas se ajustan a ti. Ideal para avanzar rápido, una preparación específica de exámenes o alemán profesional.`,points:[`39&nbsp;€ por hora lectiva (45&nbsp;min), más una matrícula única de 40&nbsp;€`,`Fechas flexibles acordadas`,`Clase de prueba gratuita y sin compromiso`]},
+{tag:``,name:`Lenguas extranjeras`,short:`Clases individuales en muchos otros idiomas.`,desc:`Además del alemán, activ lernen ofrece a petición clases individuales en una gran variedad de idiomas – por ejemplo, inglés, francés, español, ruso, griego, turco y portugués.`,points:[`Inglés, francés, español, ruso, turco &amp; muchos más`,`Clases individuales personalizadas`,`44&nbsp;€ por hora lectiva (45&nbsp;min), más matrícula`]}
+];
+COURSE_T.ar=[
+{tag:`الخيار الأكثر شعبية`,name:`دورة ألمانية مكثّفة`,short:`الألمانية من الاثنين إلى الجمعة – أسرع طريق إلى المستوى التالي.`,desc:`جوهرنا: دورة الألمانية المكثّفة من الاثنين إلى الجمعة. بالنسبة للمبتدئين دون معرفة سابقة، تبدأ دورة جديدة في أول يوم عمل من كل شهرين. أما المتقدّمون فيمكنهم الالتحاق بدورة جارية في أي وقت تقريبًا.`,points:[`من الاثنين إلى الجمعة، في مجموعات صغيرة`,`كل مستوى = 8 أسابيع / 160 ساعة تدريس`,`اختبار تحديد المستوى والامتحان والشهادة مشمولة`]},
+{tag:``,name:`دورة ألمانية جماعية`,short:`دروس متنوّعة ضمن حجم مجموعة محدود.`,desc:`تعلّم الألمانية في مجموعة – حيوي وعملي. بفضل العدد المحدود من المشاركين واختبار تحديد مستوى مسبق، يجد كل شخص المجموعة المناسبة ويشارك بنشاط في الحديث.`,points:[`عدد محدود من المشاركين`,`نقاشات وتمثيل أدوار ومقابلات وعمل جماعي وفردي`,`جميع المستويات من A1 إلى C1`]},
+{tag:``,name:`دورة مسائية`,short:`الألمانية بعد العمل – للموظفين.`,desc:`لكل من يعمل نهارًا: الألمانية في المساء، لتتناسب دورتك اللغوية مع يومك بسلاسة. في مجموعات صغيرة ومع المدرّسين ذوي الخبرة أنفسهم كما في الدورة المكثّفة.`,points:[`أوقات الدروس في المساء`,`مجموعات صغيرة ورعاية شخصية`,`جميع المستويات من A1 إلى C1`]},
+{tag:`B2 للمعادلة`,name:`مجموعة صغيرة للكوادر التمريضية`,short:`تحضير مركّز لامتحان B2 للكوادر التمريضية القادمة من الخارج.`,desc:`هل أنت مدير خدمات التمريض أو مسؤول عن الموظفين أو التدريب في مستشفى؟ نحضّر منذ سنوات الكوادر التمريضية القادمة من الخارج بنجاح لامتحان B2 – وهو ضروري للمعادلة.`,points:[`التركيز على امتحان B2 للتمريض`,`مجموعات صغيرة مصغّرة`,`عند الطلب للمستشفيات وأصحاب العمل`]},
+{tag:``,name:`ألمانية فردية`,short:`دروس فردية مصمّمة بالكامل وفق هدفك.`,desc:`أقصى مرونة في الدروس الفردية: الوتيرة والمحتوى والمواعيد تُحدَّد وفقًا لك. مثالية للتقدّم السريع أو التحضير المركّز للامتحان أو الألمانية المتخصّصة.`,points:[`39&nbsp;€ لكل ساعة تدريس (45&nbsp;دقيقة)، بالإضافة إلى رسم تسجيل لمرة واحدة 40&nbsp;€`,`مواعيد مرنة بالاتفاق`,`حصة تجريبية مجانية ودون التزام`]},
+{tag:``,name:`اللغات الأجنبية`,short:`دروس فردية في العديد من اللغات الأخرى.`,desc:`إلى جانب الألمانية، تقدّم activ lernen عند الطلب دروسًا فردية في مجموعة واسعة من اللغات الأجنبية – مثل الإنجليزية والفرنسية والإسبانية والروسية واليونانية والتركية والبرتغالية.`,points:[`الإنجليزية والفرنسية والإسبانية والروسية والتركية وغيرها`,`دروس فردية شخصية`,`44&nbsp;€ لكل ساعة تدريس (45&nbsp;دقيقة)، بالإضافة إلى التسجيل`]}
+];
+COURSE_T.ru=[
+{tag:`Самый популярный выбор`,name:`Интенсивный курс немецкого`,short:`Немецкий с понедельника по пятницу – самый быстрый путь к следующему уровню.`,desc:`Наша визитная карточка: интенсивный курс немецкого с понедельника по пятницу. Для начинающих без предварительных знаний новый курс стартует в первый рабочий день каждого второго месяца. Продвинутые могут присоединиться к идущему курсу практически в любое время.`,points:[`С понедельника по пятницу, в небольших группах`,`Каждый уровень = 8 недель / 160 учебных часов`,`Тест на уровень, экзамен &amp; сертификат включены`]},
+{tag:``,name:`Групповой курс немецкого`,short:`Разнообразные занятия в ограниченной по размеру группе.`,desc:`Изучение немецкого в группе – живо и практично. Благодаря ограниченному числу участников и предварительному тесту на уровень каждый находит подходящую группу и активно участвует в разговоре.`,points:[`Ограниченное число участников`,`Дискуссии, ролевые игры, интервью, работа в группе &amp; индивидуально`,`Все уровни от A1 до C1`]},
+{tag:``,name:`Вечерний курс`,short:`Немецкий после работы – для работающих.`,desc:`Для всех, кто работает днём: немецкий по вечерам, чтобы языковой курс удобно вписывался в ваш распорядок. В небольших группах и с теми же опытными преподавателями, что и на интенсивном курсе.`,points:[`Занятия по вечерам`,`Небольшие группы &amp; личное сопровождение`,`Все уровни от A1 до C1`]},
+{tag:`B2 для признания`,name:`Мини-группа для медсестёр`,short:`Целенаправленная подготовка к B2 для медсестёр из-за рубежа.`,desc:`Вы руководитель сестринской службы или отвечаете за персонал и повышение квалификации в больнице? Мы уже много лет успешно готовим медсестёр из-за рубежа к экзамену B2 – он необходим для признания квалификации.`,points:[`Фокус на экзамене B2 для медработников`,`Небольшие мини-группы`,`По запросу для клиник &amp; работодателей`]},
+{tag:``,name:`Индивидуальный немецкий`,short:`Индивидуальные занятия, полностью под вашу цель.`,desc:`Максимальная гибкость на индивидуальных занятиях: темп, содержание и время подбираются под вас. Идеально для быстрого прогресса, целенаправленной подготовки к экзамену или профессионального немецкого.`,points:[`39&nbsp;€ за академический час (45&nbsp;мин), плюс единовременная регистрация 40&nbsp;€`,`Гибкое время по договорённости`,`Бесплатное пробное занятие без обязательств`]},
+{tag:``,name:`Иностранные языки`,short:`Индивидуальные занятия по многим другим языкам.`,desc:`Помимо немецкого, activ lernen по запросу предлагает индивидуальные занятия по множеству иностранных языков – например, английскому, французскому, испанскому, русскому, греческому, турецкому и португальскому.`,points:[`Английский, французский, испанский, русский, турецкий и другие`,`Индивидуальные персональные занятия`,`44&nbsp;€ за академический час (45&nbsp;мин), плюс регистрация`]}
+];
+COURSE_T.hi=[
+{tag:`सबसे लोकप्रिय`,name:`इंटेंसिव जर्मन कोर्स`,short:`सोमवार से शुक्रवार जर्मन – अगले स्तर तक सबसे तेज़ रास्ता।`,desc:`हमारा प्रमुख कोर्स: सोमवार से शुक्रवार का जर्मन इंटेंसिव कोर्स। बिना पूर्व ज्ञान वाले शुरुआती लोगों के लिए हर दूसरे माह के पहले कार्यदिवस पर एक नया कोर्स शुरू होता है। उन्नत शिक्षार्थी चल रहे कोर्स में लगभग किसी भी समय जुड़ सकते हैं।`,points:[`सोमवार से शुक्रवार, छोटे समूहों में`,`हर स्तर = 8 सप्ताह / 160 शिक्षण घंटे`,`स्तर-निर्धारण परीक्षा, परीक्षा &amp; प्रमाणपत्र शामिल`]},
+{tag:``,name:`जर्मन ग्रुप कोर्स`,short:`सीमित समूह आकार में विविध कक्षाएँ।`,desc:`समूह में जर्मन सीखना – जीवंत और व्यावहारिक। सीमित प्रतिभागी संख्या और पूर्व स्तर-निर्धारण परीक्षा के कारण हर व्यक्ति को उपयुक्त समूह मिलता है और वह सक्रिय रूप से बोलता है।`,points:[`सीमित प्रतिभागी संख्या`,`चर्चाएँ, रोल-प्ले, इंटरव्यू, समूह &amp; व्यक्तिगत कार्य`,`A1 से C1 तक सभी स्तर`]},
+{tag:``,name:`शाम का कोर्स`,short:`काम के बाद जर्मन – कामकाजी लोगों के लिए।`,desc:`उन सभी के लिए जो दिन में काम करते हैं: शाम को जर्मन, ताकि आपका भाषा कोर्स आपकी दिनचर्या में अच्छी तरह बैठे। छोटे समूहों में और इंटेंसिव कोर्स जैसे ही अनुभवी शिक्षकों के साथ।`,points:[`शाम को कक्षा समय`,`छोटे समूह &amp; व्यक्तिगत सहयोग`,`A1 से C1 तक सभी स्तर`]},
+{tag:`मान्यता के लिए B2`,name:`नर्सों के लिए मिनी-ग्रुप`,short:`विदेश से आई नर्सों के लिए लक्षित B2 तैयारी।`,desc:`क्या आप किसी अस्पताल में नर्सिंग प्रमुख हैं या स्टाफ अथवा प्रशिक्षण के लिए ज़िम्मेदार हैं? हम वर्षों से विदेश से आई नर्सों को B2 परीक्षा के लिए सफलतापूर्वक तैयार करते आ रहे हैं – जो मान्यता के लिए आवश्यक है।`,points:[`B2 नर्सिंग परीक्षा पर ध्यान`,`छोटे मिनी-ग्रुप`,`अनुरोध पर क्लीनिक &amp; नियोक्ताओं के लिए`]},
+{tag:``,name:`वन-टू-वन जर्मन`,short:`पूरी तरह आपके लक्ष्य के अनुरूप व्यक्तिगत कक्षाएँ।`,desc:`वन-टू-वन कक्षाओं में अधिकतम लचीलापन: गति, सामग्री और तिथियाँ आपके अनुसार तय होती हैं। तेज़ प्रगति, लक्षित परीक्षा तैयारी या व्यावसायिक जर्मन के लिए आदर्श।`,points:[`प्रति शिक्षण घंटा 39&nbsp;€ (45&nbsp;मिनट), साथ ही एकमुश्त 40&nbsp;€ पंजीकरण`,`आपसी सहमति से लचीली तिथियाँ`,`निःशुल्क, बिना बाध्यता ट्रायल क्लास`]},
+{tag:``,name:`विदेशी भाषाएँ`,short:`कई अन्य भाषाओं में वन-टू-वन कक्षाएँ।`,desc:`जर्मन के अलावा, activ lernen अनुरोध पर कई विदेशी भाषाओं में वन-टू-वन कक्षाएँ प्रदान करता है – जैसे अंग्रेज़ी, फ़्रेंच, स्पेनिश, रूसी, ग्रीक, तुर्की और पुर्तगाली।`,points:[`अंग्रेज़ी, फ़्रेंच, स्पेनिश, रूसी, तुर्की और भी बहुत कुछ`,`व्यक्तिगत वन-टू-वन कक्षाएँ`,`प्रति शिक्षण घंटा 44&nbsp;€ (45&nbsp;मिनट), साथ ही पंजीकरण`]}
+];
+const COURSES={};
+Object.keys(COURSE_T).forEach(lang=>{COURSES[lang]=COURSE_T[lang].map((c,i)=>Object.assign({icon:CICONS[i],key:CKEYS[i]},c));});
+/* ================= i18n ENGINE ================= */
+const LANGS=[
+  {c:'en',flag:'🇬🇧',name:'English'},
+  {c:'de',flag:'🇩🇪',name:'Deutsch'},
+  {c:'tr',flag:'🇹🇷',name:'Türkçe'},
+  {c:'pt',flag:'🇧🇷',name:'Português'},
+  {c:'es',flag:'🇪🇸',name:'Español'},
+  {c:'ar',flag:'🇸🇦',name:'العربية'},
+  {c:'ru',flag:'🇷🇺',name:'Русский'},
+  {c:'hi',flag:'🇮🇳',name:'हिन्दी'}
+];
+let LANG='en';
+function t(key){const d=I18N[LANG]||I18N.en;return (d[key]!==undefined?d[key]:(I18N.en[key]!==undefined?I18N.en[key]:key));}
 
+/* build switcher menus */
+(function buildSwitchers(){
+  const menu=document.getElementById('langMenu');
+  const mob=document.getElementById('langMob');
+  LANGS.forEach(l=>{
+    const b=document.createElement('button');
+    b.innerHTML=`<span class="lang-flag">${l.flag}</span><span>${l.name}</span><span class="lc">${l.c.toUpperCase()}</span>`;
+    b.setAttribute('data-lang',l.c);
+    b.onclick=()=>{setLang(l.c);closeLangMenu();};
+    menu.appendChild(b);
+    const m=document.createElement('button');
+    m.innerHTML=`<span class="lang-flag">${l.flag}</span><span>${l.c.toUpperCase()}</span>`;
+    m.setAttribute('data-lang',l.c);
+    m.onclick=()=>{setLang(l.c);};
+    mob.appendChild(m);
+  });
+})();
+
+function toggleLang(e){if(e)e.stopPropagation();document.getElementById('langSwitch').classList.toggle('open');}
+function closeLangMenu(){document.getElementById('langSwitch').classList.remove('open');}
+document.addEventListener('click',e=>{const s=document.getElementById('langSwitch');if(s&&!s.contains(e.target))s.classList.remove('open');});
+
+function renderCourses(){
+  const grid=document.getElementById('courseGrid');
+  const list=COURSES[LANG]||COURSES.en;
+  grid.innerHTML='';
+  list.forEach((c,i)=>{
+    const el=document.createElement('div');
+    el.className='course';
+    el.onclick=()=>openCourse(i);
+    el.innerHTML=`${c.tag?`<span class="tag">${c.tag}</span>`:''}
+      <div class="cicon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">${c.icon}</svg></div>
+      <h3>${c.name}</h3><p>${c.short}</p>
+      <span class="more">${t('more')} <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>`;
+    grid.appendChild(el);
+  });
+}
+
+function setLang(lang){
+  if(!I18N[lang])lang='en';
+  LANG=lang;
+  const rtl=(lang==='ar');
+  document.documentElement.setAttribute('lang',lang);
+  document.documentElement.setAttribute('dir',rtl?'rtl':'ltr');
+  /* text nodes */
+  document.querySelectorAll('[data-i18n]').forEach(el=>{const v=t(el.getAttribute('data-i18n'));if(v!==undefined)el.textContent=v;});
+  document.querySelectorAll('[data-i18n-html]').forEach(el=>{const v=t(el.getAttribute('data-i18n-html'));if(v!==undefined)el.innerHTML=v;});
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>{const v=t(el.getAttribute('data-i18n-ph'));if(v!==undefined)el.setAttribute('placeholder',v);});
+  document.querySelectorAll('[data-i18n-opts]').forEach(el=>{
+    const opts=t(el.getAttribute('data-i18n-opts'));if(!Array.isArray(opts))return;
+    const prev=el.selectedIndex;
+    el.innerHTML=opts.map(o=>`<option>${o}</option>`).join('');
+    if(prev>=0&&prev<opts.length)el.selectedIndex=prev;
+  });
+  /* meta */
+  document.getElementById('pageTitle').textContent=t('title');
+  document.title=t('title');
+  const md=document.getElementById('metaDesc');if(md)md.setAttribute('content',t('metaDesc'));
+  /* switcher display */
+  const cur=LANGS.find(l=>l.c===lang)||LANGS[0];
+  document.getElementById('langFlag').textContent=cur.flag;
+  document.getElementById('langCode').textContent=cur.c.toUpperCase();
+  document.querySelectorAll('#langMenu button, #langMob button').forEach(b=>{
+    b.classList.toggle('active',b.getAttribute('data-lang')===lang);
+  });
+  renderCourses();
+  try{localStorage.setItem('actl_lang',lang);}catch(e){}
+}
+
+/* ================= MODALS / FORM ================= */
 const modal=document.getElementById('modal'), box=document.getElementById('modalBox');
 function openCourse(i){
-  const c=COURSES[i];
+  const c=(COURSES[LANG]||COURSES.en)[i];
   box.innerHTML=`
     <div class="modal-head">
-      <button class="modal-close" onclick="closeModal()" aria-label="Schließen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-      <span class="cat">Kurs</span>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <span class="cat">${t('modal.courseCat')}</span>
       <h3>${c.name}</h3>
     </div>
     <div class="modal-body">
       <p>${c.desc}</p>
       <ul>${c.points.map(p=>`<li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span>${p}</span></li>`).join('')}</ul>
-      <button class="btn btn-primary" onclick="closeModal();openEnquiry('${c.name.replace(/'/g,'')}')">${c.name} anfragen</button>
-      <p class="disc">Kostenlose &amp; unverbindliche Beratung bei activ lernen in Köln.</p>
+      <button class="btn btn-primary" onclick="closeModal();openEnquiry('${c.key}')">${t('reqCourse').replace('%s',c.name)}</button>
+      <p class="disc">${t('modal.disc')}</p>
     </div>`;
   modal.classList.add('open'); document.body.style.overflow='hidden';
 }
 function openImg(src){
-  box.innerHTML=`<button class="modal-close" onclick="closeModal()" style="position:absolute;top:16px;right:16px;z-index:3" aria-label="Schließen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button><img src="${src}" alt="activ lernen Köln" style="border-radius:22px;width:100%">`;
+  box.innerHTML=`<button class="modal-close" onclick="closeModal()" style="position:absolute;top:16px;right:16px;z-index:3" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button><img src="${src}" alt="activ lernen Cologne" style="border-radius:22px;width:100%">`;
   box.style.background='transparent';box.style.boxShadow='none';box.style.position='relative';box.style.maxWidth='640px';
   modal.classList.add('open'); document.body.style.overflow='hidden';
 }
-function openEnquiry(course){
+function openEnquiry(courseKey){
   box.style.background='';box.style.boxShadow='';box.style.position='';box.style.maxWidth='';
-  const opts=['Intensivkurs Deutsch','Gruppenkurs Deutsch','Abendkurs','Minigruppe Pflegekräfte (B2)','Einzeltraining Deutsch','Fremdsprache (Einzelunterricht)','Prüfung / Zertifikat','Noch unsicher'];
-  const sel=opts.map(o=>`<option ${course&&o.startsWith(course.split(' ')[0])?'selected':''}>${o}</option>`).join('');
+  const opts=t('courseOpts');
+  const map={};(COURSES[LANG]||COURSES.en).forEach((c,i)=>{map[c.key]=i;});
+  let selIdx=-1;if(courseKey&&map[courseKey]!==undefined)selIdx=map[courseKey];
+  if(courseKey==='exam')selIdx=opts.length-2;
+  const sel=opts.map((o,i)=>`<option ${i===selIdx?'selected':''}>${o}</option>`).join('');
   box.innerHTML=`
     <div class="modal-head">
-      <button class="modal-close" onclick="closeModal()" aria-label="Schließen"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-      <span class="cat">Anmeldung</span>
-      <h3>Kostenlose Einstufung sichern</h3>
+      <button class="modal-close" onclick="closeModal()" aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      <span class="cat">${t('modal.enqCat')}</span>
+      <h3>${t('modal.enqH')}</h3>
     </div>
     <div class="modal-body" id="mBody">
       <form onsubmit="submitForm(event,true)">
-        <div class="field"><label>Vor- &amp; Nachname</label><input required type="text" placeholder="Dein Name"></div>
+        <div class="field"><label>${t('form.name.l')}</label><input required type="text" placeholder="${t('form.name.ph')}"></div>
         <div class="frow">
-          <div class="field"><label>Telefon</label><input required type="tel" placeholder="Deine Nummer"></div>
-          <div class="field"><label>E-Mail</label><input type="email" placeholder="deine@email.de"></div>
+          <div class="field"><label>${t('form.phone.l')}</label><input required type="tel" placeholder="${t('form.phone.ph')}"></div>
+          <div class="field"><label>${t('form.email.l')}</label><input type="email" placeholder="${t('form.email.ph')}"></div>
         </div>
-        <div class="field"><label>Kurs</label><select>${sel}</select></div>
-        <button type="submit" class="btn btn-primary" style="width:100%">Anfrage absenden</button>
-        <p class="disc" style="margin-top:12px">Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin.</p>
+        <div class="field"><label>${t('form.course.l')}</label><select>${sel}</select></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">${t('form.submit')}</button>
+        <p class="disc" style="margin-top:12px">${t('modal.enqDisc')}</p>
       </form>
     </div>`;
   modal.classList.add('open'); document.body.style.overflow='hidden';
@@ -774,8 +1471,8 @@ function submitForm(e,inModal){
   if(inModal){
     document.getElementById('mBody').innerHTML=`<div style="text-align:center;padding:20px 6px">
       <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="#e0673a" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>
-      <h3 style="margin:14px 0 8px;font-family:Fraunces,serif;font-weight:600">Danke, wir haben Deine Anfrage!</h3>
-      <p style="color:var(--muted)">Wir melden uns schnellstmöglich mit Deinem passenden Kurs und Termin. Bis bald bei activ lernen!</p></div>`;
+      <h3 style="margin:14px 0 8px;font-family:Fraunces,serif;font-weight:600">${t('success.h')}</h3>
+      <p style="color:var(--muted)">${t('success.p')}</p></div>`;
   }else{
     document.getElementById('formInner').style.display='none';
     document.getElementById('formSuccess').style.display='block';
@@ -783,6 +1480,13 @@ function submitForm(e,inModal){
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 function toggleMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+
+/* ================= INIT ================= */
+(function init(){
+  let saved='en';
+  try{const s=localStorage.getItem('actl_lang');if(s&&I18N[s])saved=s;}catch(e){}
+  setLang(saved);
+})();
 </script>
 </body>
 </html>
