@@ -195,7 +195,8 @@
   .price-note b{color:var(--ink)}
 
   /* REVIEWS */
-  .rev-wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:40px;align-items:center}
+  .rev-wrap{display:block}
+  .rev-score{max-width:340px;margin:0 auto 40px}
   .rev-score{background:linear-gradient(150deg,var(--cream),var(--cream-2));border:1px solid var(--line);border-radius:24px;padding:44px 40px;text-align:center}
   .rev-score .big{font-family:'Fraunces',serif;font-weight:700;font-size:4.4rem;color:var(--blue-deep);line-height:1}
   .rev-score .stars{color:var(--gold);font-size:1.5rem;letter-spacing:3px;margin:10px 0 8px}
@@ -206,6 +207,18 @@
   .rev-pt .ri{width:44px;height:44px;border-radius:12px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent)}
   .rev-pt h4{font-size:1.06rem;font-weight:600;margin-bottom:3px}
   .rev-pt p{color:var(--muted);font-size:.92rem}
+  .rev-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px}
+  .rev-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px 26px 28px;box-shadow:var(--shadow-sm);display:flex;flex-direction:column;transition:transform .25s ease,box-shadow .25s ease}
+  .rev-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+  .rev-card-top{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+  .rev-av{position:relative;width:52px;height:52px;flex:none;border-radius:50%;overflow:hidden;background:var(--blue-deep);display:flex;align-items:center;justify-content:center}
+  .rev-av img{width:100%;height:100%;object-fit:cover;position:relative;z-index:1}
+  .rev-av-fb{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:.02em}
+  .rev-meta{flex:1;min-width:0}
+  .rev-name{font-family:'Fraunces',serif;font-weight:600;font-size:1.08rem;color:var(--blue-deep);line-height:1.2}
+  .rev-stars{color:var(--gold);font-size:1rem;letter-spacing:2px;margin-top:3px}
+  .rev-g{flex:none;opacity:.9}
+  .rev-text{color:var(--ink);font-size:.95rem;line-height:1.62;display:-webkit-box;-webkit-line-clamp:9;-webkit-box-orient:vertical;overflow:hidden}
 
   /* LOCATION / CONTACT */
   .contact{background:var(--blue-deep);color:#fff}
@@ -505,19 +518,62 @@
         <div class="cnt">über 200 Bewertungen</div>
         <div class="src">Öffentliche Google-Bewertungen</div>
       </div>
-      <div class="rev-points">
-        <div class="rev-pt">
-          <div class="ri"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-6 0v4H4l1 12h14l1-12z"/></svg></div>
-          <div><h4>Kompetente, freundliche Lehrkräfte</h4><p>Erfahrene, bestens ausgebildete Lehrer:innen und eine angenehme Lernatmosphäre – immer wieder das meistgenannte Lob.</p></div>
-        </div>
-        <div class="rev-pt">
-          <div class="ri"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-          <div><h4>Starkes Preis-Leistungs-Verhältnis</h4><p>Unterricht auf hohem Niveau zu fairen, teilnehmerfreundlichen Preisen – seit über 25 Jahren.</p></div>
-        </div>
-        <div class="rev-pt">
-          <div class="ri"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg></div>
-          <div><h4>Echte Lernerfolge</h4><p>Teilnehmer:innen erreichen ihre Ziele – vom ersten Wort bis zur bestandenen telc- oder TestDaF-Prüfung.</p></div>
-        </div>
+      <div class="rev-cards">
+        <figure class="rev-card">
+          <div class="rev-card-top">
+            <div class="rev-av"><img src="assets/rev1.jpg" alt="Frederiko Ribeiro" loading="lazy"><span class="rev-av-fb">FR</span></div>
+            <div class="rev-meta">
+              <figcaption class="rev-name">Frederiko Ribeiro</figcaption>
+              <div class="rev-stars">★★★★★</div>
+            </div>
+            <svg class="rev-g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          </div>
+          <p class="rev-text">The best school for learning German in Cologne. Both my brother and my sister in law studied here and was capable of speak German in less than 3 months. They have really good teachers. But most important, Markus, the owner, is a really nice guy and always available to help, specially with the papers for the VISA application and guidance. Top school. 100% recommend.</p>
+        </figure>
+        <figure class="rev-card">
+          <div class="rev-card-top">
+            <div class="rev-av"><img src="assets/rev2.jpg" alt="Inaya" loading="lazy"><span class="rev-av-fb">I</span></div>
+            <div class="rev-meta">
+              <figcaption class="rev-name">Inaya</figcaption>
+              <div class="rev-stars">★★★★★</div>
+            </div>
+            <svg class="rev-g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          </div>
+          <p class="rev-text">I am a student from China, and I am delighted that I found the Activ Lernen language school through a Google Maps review. I am now happy to leave my own positive rating. The school is highly recommended and has exceeded my expectations: Visa Support Applying for a language visa from China is quite complex, and I had many questions regarding the required documents. The school administration was incredibly patient and prompt in responding to every single one of my emails, which was an enormous help during my stressful preparation period. Organization and Services The school offered very useful assistance with accommodation listings, which solved a major problem for me.（One of my Chinese friends who attends other language institutions still hasn&#x27;t managed to find suitable accommodation. Her institutions also gave her an outrageously expensive quote, which was quite a shock to me, and it made me feel very lucky.）The school is centrally located and very close to the subway/U-Bahn station, which is ideal. The surrounding area is pleasant. The internal facilities are modern and clean, and they even provide affordable tea and coffee, which I really appreciate. Quality of Teaching The teachers are highly professional, dedicated, and extremely patient! ❤️ The curriculum design is also very reasonable: while explaining grammar, they integrate a large amount of speaking and writing practice. In the two months since I started here, my German proficiency has improved by leaps and bounds. 🥰 I highly recommend  Activ Lernen to all students, especially those coming from abroad. Finally, a big thank you to the entire team for the outstanding support!!!</p>
+        </figure>
+        <figure class="rev-card">
+          <div class="rev-card-top">
+            <div class="rev-av"><img src="assets/rev3.jpg" alt="Bit Wraith" loading="lazy"><span class="rev-av-fb">BW</span></div>
+            <div class="rev-meta">
+              <figcaption class="rev-name">Bit Wraith</figcaption>
+              <div class="rev-stars">★★★★★</div>
+            </div>
+            <svg class="rev-g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          </div>
+          <p class="rev-text">I really wanted to leave this review because my experience here felt genuinely good, not just correct. The vibe in the school is super welcoming, the teachers are approachable, and everything feels well organized without being stiff or bureaucratic. You don’t feel like just another student, more like part of a small community that actually wants you to succeed. The location in Cologne is also very convenient, which makes going to class much easier and less stressful. Overall, it’s a place where you can learn German in a relaxed but effective way, and I’d definitely recommend it to anyone starting their journey here in German</p>
+        </figure>
+        <figure class="rev-card">
+          <div class="rev-card-top">
+            <div class="rev-av"><img src="assets/rev4.jpg" alt="Alejandro Abril" loading="lazy"><span class="rev-av-fb">AA</span></div>
+            <div class="rev-meta">
+              <figcaption class="rev-name">Alejandro Abril</figcaption>
+              <div class="rev-stars">★★★★★</div>
+            </div>
+            <svg class="rev-g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          </div>
+          <p class="rev-text">I’ve been studying here for just over 3 weeks and I’m really happy so far. The atmosphere at the school is welcoming, the teachers are patient and make the lessons engaging. I already feel motivated and I’m learning faster than I expected. I definitely recommend this school to anyone who wants to start learning German!</p>
+        </figure>
+        <figure class="rev-card">
+          <div class="rev-card-top">
+            <div class="rev-av"><img src="assets/rev5.jpg" alt="Duy Trịnh" loading="lazy"><span class="rev-av-fb">DT</span></div>
+            <div class="rev-meta">
+              <figcaption class="rev-name">Duy Trịnh</figcaption>
+              <div class="rev-stars">★★★★★</div>
+            </div>
+            <svg class="rev-g" width="20" height="20" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          </div>
+          <p class="rev-text">A very professional and well-organized language school. The staff are friendly, patient, and always willing to help with questions. Communication was clear and reliable throughout the process, which made everything much easier. I really appreciate their supportive attitude and would definitely recommend this school to others who are looking for a serious and pleasant learning environment.</p>
+        </figure>
       </div>
     </div>
   </div>
